@@ -1,0 +1,91 @@
+/*------------------------------------------------------------
+	Clearfix
+------------------------------------------------------------*/
+@mixin clear {
+	*zoom: 1;
+	&:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+/*------------------------------------------------------------
+	Media
+------------------------------------------------------------*/
+@mixin max($point) {
+    @media screen and (max-width: $point) {
+        @content;
+    }
+}
+@mixin min($point) {
+    @media screen and (min-width: $point) {
+        @content;
+    }
+}
+@mixin sp {
+	@media screen and (max-width: #{$breakpoint1}) {
+		@content;
+	}
+}
+
+/*------------------------------------------------------------
+	Flex Box
+------------------------------------------------------------*/
+@mixin flex-jcenter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+@mixin flex-jstart {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+@mixin flex-jbetween {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+@mixin flex-abetween {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+@mixin flex-jbetween-icenter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin flex-jbetween-abetween {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+@mixin flex-jcenter-abetween {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-between;
+}
+@mixin flex-jstart-abetween {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: space-between;
+}
+
+@mixin flex-jstart-icenter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+@mixin flex-jcenter-icenter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}

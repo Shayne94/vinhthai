@@ -1,0 +1,68 @@
+.content {
+    &__profile {
+        position: relative;
+        &--info {
+            @include flex-jstart;
+            padding: 40px 40px 0;
+            .ava {
+                width: 120px;
+                height: 120px;
+                border-radius: 140px;
+                background-color: #fff;
+                margin-right: 40px;
+            }
+            .about {
+                @include flex-abetween;
+                width: 600px;
+                line-height: 1;
+                .name {
+                    font-size: 40px;
+                    font-weight: 500;
+                    filter: drop-shadow(0px 0px 1px $color3) drop-shadow(0px 0px 3px $color3)  drop-shadow(0px 0px 5px $color3);
+                }
+                .career {
+                    font-size: 20px;
+                    font-style: italic;
+                }
+                .intro {
+                    font-size: 16px;
+                    padding: 10px 20px;
+                    background-color: rgba(11, 158, 217, 0.8);
+                    border-radius: 20px;
+                }
+            }
+           
+        }
+        &--exp {
+            height: 300px;
+        }
+        &--contact{
+            ul {
+                @include flex-jbetween-icenter;
+                padding: 20px 40px;
+                font-size: 16px;
+                height: 70px;    
+                background-color: rgba(0, 0, 0, 0.4);
+                border-radius: 0 0 20px 20px;
+                li {
+                    @include flex-jstart-icenter;
+                    position: relative; 
+                    height: 30px;
+                    &:nth-child(1) {
+                        background: url(../../assets/images/common/phone.png) no-repeat;
+                        padding-left: 50px;
+                    }   
+                    &:nth-child(2) {
+                        background: url(../../assets/images/common/mail.png) no-repeat;
+                        padding-left: 63px;
+                    }  
+                    &:nth-child(3) {
+                        background: url(../../assets/images/common/address.png) no-repeat;
+                        padding-left: 43px;
+                    }               
+                }
+            }
+            
+        }
+    }
+}
