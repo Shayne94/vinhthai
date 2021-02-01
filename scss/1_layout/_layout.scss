@@ -8,7 +8,10 @@ html {
 .container {
     width: 1200px;
     margin: 0 auto;
-    max-width: 100%;
+	max-width: 100%;
+	@include max(1200px) {
+		padding: 0 20px;
+	}
 }
 body {
 	margin: 0;
@@ -30,15 +33,15 @@ body {
 		background-attachment: fixed;
 	}
 	40% {
-		background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
+		background: url(../../assets/images/common/bg03.jpg) no-repeat center top;
 		background-attachment: fixed;
 	}
 	60% {
-		background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
+		background: url(../../assets/images/common/bg04.jpg) no-repeat center top;
 		background-attachment: fixed;
 	}
 	80% {
-		background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
+		background: url(../../assets/images/common/bg05.jpg) no-repeat center top;
 		background-attachment: fixed;
     }
     100% {

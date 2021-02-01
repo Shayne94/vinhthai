@@ -1,0 +1,95 @@
+.poster {
+    margin: 100px 0;
+    &__inner {        
+	    background-color: rgba($color: #fff, $alpha: 0.3);
+        padding: 20px 0 100px;
+        &--protect {
+            margin-top: 80px;
+            padding: 0 80px;
+            .gallery {
+                @include flex-between;
+                margin-top: 25px;
+                padding: 10px 50px 50px;
+                border: 2px solid #56CCF2;
+                background-color: rgba($color: #fff, $alpha: 0.5);
+                li {
+                    width: 22%;
+                    margin-top: 40px;
+                    box-shadow: 5px 5px 5px rgba($color: #000, $alpha: 0.2);
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &--softbank {
+            margin-top: 80px;
+            padding: 0 80px;
+            .gallery {
+                @include flex-jbetween;
+                margin-top: 25px;
+                padding: 50px;
+                border: 2px solid #56CCF2;
+                background-color: rgba($color: #fff, $alpha: 0.5);
+                li {
+                    width: 47%;
+                    box-shadow: 5px 5px 5px rgba($color: #000, $alpha: 0.2); 
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &--food {
+            margin-top: 80px;
+            padding: 0 80px;
+            .gallery {
+                @include flex-jbetween;
+                margin-top: 25px;
+                padding: 50px;
+                border: 2px solid #56CCF2;
+                background-color: rgba($color: #fff, $alpha: 0.5);
+                &__poster {
+                    width: 38%;
+                    box-shadow: 5px 5px 5px rgba($color: #000, $alpha: 0.2); 
+                    img {
+                        width: 100%;
+                    }
+                }
+                &__banner {
+                    width: 57%;
+                    @include flex-jbetween;
+                    flex-direction: column;
+                    div {
+                        box-shadow: 5px 5px 5px rgba($color: #000, $alpha: 0.2); 
+                        img {
+                            width: 100%;
+                        }
+                    }                       
+                }                    
+            }
+        }
+        &--bbskin {
+            margin-top: 80px;
+            padding: 0 80px;
+            .gallery {
+                @include flex-between;
+                margin-top: 25px;
+                padding: 0 50px 50px;
+                border: 2px solid #56CCF2;
+                background-color: rgba($color: #fff, $alpha: 0.5);
+                li {
+                    width: 30%; 
+                    margin-top: 50px;   
+                    box-shadow: 5px 5px 5px rgba($color: #000, $alpha: 0.2);  
+                    &:hover {
+                        border: none;
+                    }              
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }       
+    }
+}

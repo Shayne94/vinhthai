@@ -24,3 +24,33 @@
 		display: none;
 	}
 }
+
+.html5-prev-inside .mh-icon-left {
+    background: url(../images/common/lightbox-button-prev.png);
+}
+.html5-next-inside .mh-icon-right {
+    background: url(../images/common/lightbox-button-next.png);
+}
+.html5-timer {
+	background-color: rgb(86, 204, 242) !important;
+	height: 4px !important;
+}
+.html5boxSeekerBuffer, .html5boxVolumeBarBg {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.html5boxSeekerPlay {
+    background-color: #0575e6 !important;
+}
+
+.html5boxVolumeBarActive {
+    background-color: #0575e6 !important;
+}
+.html5-title-caption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0575e6;
+    margin-top: 4px;
+    float: right;
+}

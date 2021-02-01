@@ -3,12 +3,13 @@
 ------------------------------------------------------------*/
 .header-main {
 	@include flex-between;
-	clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+	clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
 	background-color: rgba($color: #fff, $alpha: 0.3);
 	width: 90%;
-	height: 100px;
+	height: 75px;
 	margin: 50px auto 0;
 	padding: 0px 200px;
+	box-shadow: 10px 10px 10px #56CCF2;
 	// backdrop-filter: blur(5px);
 	&__name {
 		font-family: 'Playball', cursive;
@@ -33,9 +34,10 @@
 	}
 }
 .header-sub {
-	clip-path: polygon(85% 0, 20% 0, 90% 100%);
+	clip-path: polygon(90% 0, 15% 0, 95% 100%);
 	background-color: rgba($color: #fff, $alpha: 0.3);
 	width: 90%;
 	height: 75px;
 	box-shadow: 10px 10px 10px rgba($color: #000, $alpha: 0.3) inset;
+	// backdrop-filter: blur(5px);
 }

@@ -173,6 +173,9 @@ html {
   width: 1200px;
   margin: 0 auto;
   max-width: 100%; }
+  @media screen and (max-width: 1200px) {
+    .container {
+      padding: 0 20px; } }
 
 body {
   margin: 0;
@@ -191,13 +194,13 @@ body {
     background: url(../../assets/images/common/bg02.jpg) no-repeat center top;
     background-attachment: fixed; }
   40% {
-    background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
+    background: url(../../assets/images/common/bg03.jpg) no-repeat center top;
     background-attachment: fixed; }
   60% {
-    background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
+    background: url(../../assets/images/common/bg04.jpg) no-repeat center top;
     background-attachment: fixed; }
   80% {
-    background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
+    background: url(../../assets/images/common/bg05.jpg) no-repeat center top;
     background-attachment: fixed; }
   100% {
     background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
@@ -211,12 +214,13 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
   background-color: rgba(255, 255, 255, 0.3);
   width: 90%;
-  height: 100px;
+  height: 75px;
   margin: 50px auto 0;
-  padding: 0px 200px; }
+  padding: 0px 200px;
+  box-shadow: 10px 10px 10px #56CCF2; }
   .header-main__name {
     font-family: 'Playball', cursive;
     font-size: 36px;
@@ -238,7 +242,7 @@ body {
           filter: drop-shadow(0 0 5px #56CCF2) drop-shadow(0 0 10px #2F80ED); }
 
 .header-sub {
-  clip-path: polygon(85% 0, 20% 0, 90% 100%);
+  clip-path: polygon(90% 0, 15% 0, 95% 100%);
   background-color: rgba(255, 255, 255, 0.3);
   width: 90%;
   height: 75px;
@@ -262,6 +266,17 @@ body {
 /*------------------------------------------------------------
 	Title
 ------------------------------------------------------------*/
+.poster-title {
+  font-size: 24px;
+  font-weight: 500;
+  border-bottom: 2px solid #56CCF2;
+  text-align: center; }
+  .poster-title p {
+    max-width: 280px;
+    background-color: #56CCF2;
+    padding: 9px 0 4px;
+    border-radius: 0 20px 0 0; }
+
 /*------------------------------------------------------------
 	Text
 ------------------------------------------------------------*/
@@ -298,3 +313,119 @@ body {
 @media (min-width: 1200px) {
   .pc-1200 {
     display: none; } }
+
+.html5-prev-inside .mh-icon-left {
+  background: url(../images/common/lightbox-button-prev.png); }
+
+.html5-next-inside .mh-icon-right {
+  background: url(../images/common/lightbox-button-next.png); }
+
+.html5-timer {
+  background-color: #56ccf2 !important;
+  height: 4px !important; }
+
+.html5boxSeekerBuffer, .html5boxVolumeBarBg {
+  background-color: white !important; }
+
+.html5boxSeekerPlay {
+  background-color: #0575e6 !important; }
+
+.html5boxVolumeBarActive {
+  background-color: #0575e6 !important; }
+
+.html5-title-caption {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #0575e6;
+  margin-top: 4px;
+  float: right; }
+
+.about {
+  margin: 100px 0; }
+  .about__inner {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 120px 0; }
+
+.poster {
+  margin: 100px 0; }
+  .poster__inner {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px 0 100px; }
+    .poster__inner--protect {
+      margin-top: 80px;
+      padding: 0 80px; }
+      .poster__inner--protect .gallery {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        padding: 10px 50px 50px;
+        border: 2px solid #56CCF2;
+        background-color: rgba(255, 255, 255, 0.5); }
+        .poster__inner--protect .gallery li {
+          width: 22%;
+          margin-top: 40px;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+          .poster__inner--protect .gallery li img {
+            width: 100%; }
+    .poster__inner--softbank {
+      margin-top: 80px;
+      padding: 0 80px; }
+      .poster__inner--softbank .gallery {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        padding: 50px;
+        border: 2px solid #56CCF2;
+        background-color: rgba(255, 255, 255, 0.5); }
+        .poster__inner--softbank .gallery li {
+          width: 47%;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+          .poster__inner--softbank .gallery li img {
+            width: 100%; }
+    .poster__inner--food {
+      margin-top: 80px;
+      padding: 0 80px; }
+      .poster__inner--food .gallery {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        padding: 50px;
+        border: 2px solid #56CCF2;
+        background-color: rgba(255, 255, 255, 0.5); }
+        .poster__inner--food .gallery__poster {
+          width: 38%;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+          .poster__inner--food .gallery__poster img {
+            width: 100%; }
+        .poster__inner--food .gallery__banner {
+          width: 57%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column; }
+          .poster__inner--food .gallery__banner div {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+            .poster__inner--food .gallery__banner div img {
+              width: 100%; }
+    .poster__inner--bbskin {
+      margin-top: 80px;
+      padding: 0 80px; }
+      .poster__inner--bbskin .gallery {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        padding: 0 50px 50px;
+        border: 2px solid #56CCF2;
+        background-color: rgba(255, 255, 255, 0.5); }
+        .poster__inner--bbskin .gallery li {
+          width: 30%;
+          margin-top: 50px;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+          .poster__inner--bbskin .gallery li:hover {
+            border: none; }
+          .poster__inner--bbskin .gallery li img {
+            width: 100%; }

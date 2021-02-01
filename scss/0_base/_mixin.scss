@@ -62,6 +62,10 @@
 	display: flex;
     align-items: center;	
 }
+@mixin flex-abetween {
+	display: flex;
+	align-content: space-between;	
+}
 @mixin flex-jcenter {
 	display: flex;
     justify-content: center;	
