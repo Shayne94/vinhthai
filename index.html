@@ -9,213 +9,30 @@
 	<script src="assets/js/jquery-3.2.0.js" type="text/javascript"></script>
 	<script src="assets/js/html5lightbox/html5lightbox.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playball&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
-<body onload="startTime()">
-	<div class="background">
-		<video autoplay muted loop>
-			<source src="assets/images/common/bg.mp4" type="video/mp4">
-		</video>
-	</div>
-	<div class="main">
-		<div class="container">
-			<div class="content">
-				<div class="content__profile">
-					<div class="content__profile--info">
-						<div class="ava"></div>
-						<div class="about">
-							<p class="name">VO PHAM VINH THAI</p>
-							<p class="career">Graphic Designer & Video Producer</p>
-							<p class="intro">I love creation and always try my best to create quality products for my
-								clients</p>
-						</div>
-					</div>
-					<div class="content__profile--exp"></div>
-					<div class="content__profile--contact">
-						<ul>
-							<li>0383 240 370</li>
-							<li>vinhthai.150194@gmail.com</li>
-							<li>40/9 Nguyen Khuyet Street, Binh Thanh District, Ho Chi Minh City</li>
-						</ul>
-					</div>
-				</div>
-				<div class="content__webcode">
-					<div class="content__webcode--header">
-						<div class="title EN">League of Legends</div>
-						<div class="title VN">Liên Minh Huyền Thoại</div>
-						<ul class="nav EN">
-							<li class="about active">About Us</li>
-							<li class="cine">Cinematic</li>
-							<li class="reg">Regions</li>
-							<li class="champ">Champions</li>
-							<li class="skin">Skin Universes</li>
-						</ul>
-						<ul class="nav VN">
-							<li class="about active">Giới Thiệu</li>
-							<li class="cine">Phim Ngắn</li>
-							<li class="reg">Khu Vực</li>
-							<li class="champ">Tướng</li>
-							<li class="skin">Vũ Trụ Trang Phục</li>
-						</ul>
-					</div>
-					<div class="content__webcode--body">
-						<div class="webcode__about">
-							<div class="intro EN">
-								<p>League of Legends (LoL) is a multiplayer online battle arena video game developed and
-									published by Riot Games for Microsoft Windows and macOS. The game was released on
-									October 27, 2009.</p>
-								<p>League of Legends has become popular and has built competitive environments. Riot
-									Games
-									organizes regional tournaments. These regional leagues select the best regional
-									teams to
-									compete in the Mid-Season Invitational and Worlds.</p>
-							</div>
-							<div class="intro VN">
-								<p>Liên Minh Huyền Thoại là một trò chơi video đấu trường trận chiến trực tuyến nhiều
-									người chơi được Riot Games phát triển và phát hành trên nền tảng Windows và MacOS.
-									Trò chơi được phát hành vào ngày 27 tháng 10 năm 2009.</p>
-								<p>Liên Minh Huyền Thoại đã trở nên phổ biến và xây dựng được những môi trường thi đấu
-									cạnh tranh cao. Riot Games tổ chức những giải đấu theo khu vực. Những giải đấu vùng
-									này chọn ra những đội tuyển xuất sắc nhất các khu vực để tham dự Mid-Season
-									Invitational và Chung kết thế giới.</p>
-							</div>
-							<div id="aa" class="video">
-								<video autoplay muted loop height="292">
-									<source src="assets/images/webcode/about.mp4" type="video/mp4">
-								</video>
-							</div>
-						</div>
-						<div class="webcode__cine">
-							<div class="prev"><a onclick="plusSlides(-1)">aa</a></div>
-							<div class="slideshow">
-								<div class="slideshow__slides fade">
-									<a href="images/port-1/cine-vid1.mp4" class="html5lightbox" data-width="960"
-										data-height="540"><img src="assets/images/webcode/cine.png"></a>
-									<div class="slideshow__text EN">The Path, An Ionian Myth</div>
-									<div class="slideshow__text VN">Hành Trình, Truyền Thuyết Ionia</div>
-								</div>
-								<div class="slideshow__slides fade">
-									<a href="images/port-1/cine-vid2.mp4" class="html5lightbox" data-width="960"
-										data-height="540"><img src="images/port-1/cine-vid2.png"
-											style="border-radius: 10px;"></a>
-									<div class="slideshow__text EN">Welcome Aboard</div>
-									<div class="slideshow__text VN">Phi Đội Không Gian: Lời Mời Nhập Hội</div>
-								</div>
-
-								<div class="slideshow__slides fade">
-									<a href="images/port-1/cine-vid3.mp4" class="html5lightbox" data-width="960"
-										data-height="540"><img src="images/port-1/cine-vid3.png"
-											style="border-radius: 10px;"></a>
-									<div class="slideshow__text EN">Warriors</div>
-									<div class="slideshow__text VN">Những Chiến Binh</div>
-								</div>
-								<div class="slideshow__slides fade">
-									<a href="images/port-1/cine-vid4.mp4" class="html5lightbox" data-width="960"
-										data-height="540"><img src="images/port-1/cine-vid4.png"
-											style="border-radius: 10px;"></a>
-									<div class="slideshow__text EN">Light and Shadow</div>
-									<div class="slideshow__text VN">Ánh Sáng và Bóng Tối</div>
-								</div>
-								<div class="slideshow__slides fade">
-									<a href="images/port-1/cine-vid5.mp4" class="html5lightbox" data-width="960"
-										data-height="540"><img src="images/port-1/cine-vid5.png"
-											style="border-radius: 10px;"></a>
-									<div class="slideshow__text EN">Awaken</div>
-									<div class="slideshow__text VN">Thức Tỉnh</div>
-								</div>
-								<div class="slideshow__slides fade">
-									<a href="images/port-1/cine-vid6.mp4" class="html5lightbox" data-width="960"
-										data-height="540"><img src="images/port-1/cine-vid6.png"
-											style="border-radius: 10px;"></a>
-									<div class="slideshow__text EN">Kin Of The Stained Blade</div>
-									<div class="slideshow__text VN">Lãng Khách và Kẻ Săn</div>
-								</div>
-								<div class="slideshow__pagi">
-									<span class="dot" onclick="currentSlide(1)"></span>
-									<span class="dot" onclick="currentSlide(2)"></span>
-									<span class="dot" onclick="currentSlide(3)"></span>
-									<span class="dot" onclick="currentSlide(4)"></span>
-									<span class="dot" onclick="currentSlide(5)"></span>
-									<span class="dot" onclick="currentSlide(6)"></span>
-								</div>
-							</div>
-							<div class="next"><a onclick="plusSlides(1)">&#10147;</a></div>
-						</div>
-					</div>
-					<div class="content__webcode--footer">
-						<ul class="logo">
-							<li><img src="assets/images/webcode/logo-riot.png" alt="logo-riot"></li>
-							<li><img src="assets/images/webcode/logo-lol.png" alt="logo-lol"></li>
-							<li><img src="assets/images/webcode/logo-garena.png" alt="logo-garena"></li>
-						</ul>
-						<ul class="social">
-							<li><a href="https://www.facebook.com/leagueoflegends" target="_blank"><img
-										src="assets/images/webcode/social-fb.png" alt="social-fb"></a></li>
-							<li><a href="https://twitter.com/LeagueOfLegends" target="_blank"><img
-										src="assets/images/webcode/social-tw.png" alt="social-tw"></a></li>
-							<li><a href="https://www.instagram.com/leagueoflegends" target="_blank"><img
-										src="assets/images/webcode/social-ins.png" alt="social-ins"></a></li>
-							<li><a href="https://na.leagueoflegends.com/en-us/" target="_blank"><img
-										src="assets/images/webcode/social-web.png" alt="social-web"></a></li>
-							<li><a href="https://www.youtube.com/user/RiotGamesInc" target="_blank"><img
-										src="assets/images/webcode/social-yt.png" alt="social-yt"></a></li>
-						</ul>
-						<div class="lang">
-							<div class="lang__EN active">EN</div>
-							<div class="lang__VN">VN</div>
-							<div class="lang__bg"></div>
-						</div>
-					</div>
-				</div>
-				<div class="content__webdesign">ccccc</div>
-				<div class="content__poster">ddddd</div>
-				<div class="content__video">eeeee</div>
-				<div class="content__3dmodel">fffff</div>
-				<div class="content__passion">ggggg</div>
-			</div>
-			<div class="navi">
-				<div class="navi__inner">
-					<div class="navi__inner--today">
-						<div id="time"></div>
-						<div id="date"></div>
-					</div>
-					<div class="navi__inner--ava">
-						<img src="assets/images/common/avatar.png" alt="avatar">
-					</div>
-					<div class="navi__inner--menu">
-						<ul>
-							<li class="profile active">
-								<img src="assets/images/common/profile.png" alt="profile">
-							</li>
-							<li class="webcode">
-								<img src="assets/images/common/webcode.png" alt="webcode">
-							</li>
-							<li class="webdesign">
-								<img src="assets/images/common/webdesign.png" alt="webdesign">
-							</li>
-							<li class="poster">
-								<img src="assets/images/common/poster.png" alt="poster">
-							</li>
-							<li class="video">
-								<img src="assets/images/common/video.png" alt="video">
-							</li>
-							<li class="3dmodel">
-								<img src="assets/images/common/3dmodel.png" alt="3dmodel">
-							</li>
-							<li class="passion">
-								<img src="assets/images/common/passion.png" alt="passion">
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+<body>
+	<header>
+		<div class="header-main">
+			<div class="header-main__name only-pc">Vo Pham Vinh Thai</div>
+			<ul class="header-main__menu">
+				<li><a href="" class="active">about me</a></li>
+				<li><a href="">poster</a></li>
+				<li><a href="">web code</a></li>
+				<li><a href="">web design</a></li>
+				<li><a href="">3d model</a></li>
+				<li><a href="">video</a></li>
+			</ul>
 		</div>
-	</div>
+		<div class="header-sub"></div>
+	</header><!-- /header -->
 
-	<script src="assets/js/common.js" type="text/javascript"></script>
-	<script src="assets/js/webcode.js" type="text/javascript"></script>
+	<main>
+		
+	</main><!-- /main -->
+
+	<footer>
+	</footer><!-- /footer -->
 </body>
-
 </html>

@@ -11,6 +11,16 @@
 }
 
 /*------------------------------------------------------------
+	Font
+------------------------------------------------------------*/
+@mixin mincyo() {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+@mixin mincho() {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+/*------------------------------------------------------------
 	Media
 ------------------------------------------------------------*/
 @mixin max($point) {
@@ -32,60 +42,31 @@
 /*------------------------------------------------------------
 	Flex Box
 ------------------------------------------------------------*/
+@mixin flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+@mixin flex-between {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	flex-wrap: wrap;	
+}
+@mixin flex-center {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-wrap: wrap;	
+}
+@mixin flex-icenter {
+	display: flex;
+    align-items: center;	
+}
 @mixin flex-jcenter {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-@mixin flex-jstart {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+    justify-content: center;	
 }
 @mixin flex-jbetween {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-@mixin flex-abetween {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: space-between;
-}
-@mixin flex-jbetween-icenter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-}
-@mixin flex-jbetween-abetween {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: space-between;
-}
-@mixin flex-jcenter-abetween {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: space-between;
-}
-@mixin flex-jstart-abetween {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-content: space-between;
-}
-
-@mixin flex-jstart-icenter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-}
-@mixin flex-jcenter-icenter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+    justify-content: space-between;	
 }

@@ -1,10 +1,41 @@
 /*------------------------------------------------------------
 	Header
 ------------------------------------------------------------*/
-.c-header {
-	width: 100%;
-	padding: 50px 0;
-	text-align: center;
-	background: $color3;
-	transition: 0.3s ease-in-out;
+.header-main {
+	@include flex-between;
+	clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+	background-color: rgba($color: #fff, $alpha: 0.3);
+	width: 90%;
+	height: 100px;
+	margin: 50px auto 0;
+	padding: 0px 200px;
+	// backdrop-filter: blur(5px);
+	&__name {
+		font-family: 'Playball', cursive;
+		font-size: 36px;
+		filter: drop-shadow(0 0 5px #56CCF2) drop-shadow(0 0 10px #2F80ED);
+	}
+	&__menu {
+		@include flex-between;
+		li {
+			margin: 0 20px;
+			a {
+				font-size: 24px;
+				font-weight: 500;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #fff;	
+				&:hover, &.active {
+					filter: drop-shadow(0 0 5px #56CCF2) drop-shadow(0 0 10px #2F80ED);
+				}			
+			}			
+		}		
+	}
+}
+.header-sub {
+	clip-path: polygon(85% 0, 20% 0, 90% 100%);
+	background-color: rgba($color: #fff, $alpha: 0.3);
+	width: 90%;
+	height: 75px;
+	box-shadow: 10px 10px 10px rgba($color: #000, $alpha: 0.3) inset;
 }
