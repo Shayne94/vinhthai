@@ -4,17 +4,17 @@
 .header-main {
 	@include flex-between;
 	clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
-	background-color: rgba($color: #fff, $alpha: 0.3);
+	background-color: rgba($color: #000, $alpha: 0.5);
 	width: 90%;
 	height: 75px;
 	margin: 50px auto 0;
 	padding: 0px 200px;
-	box-shadow: 10px 10px 10px #56CCF2;
-	// backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba($color: #56CCF2, $alpha: 1);
 	&__name {
 		font-family: 'Playball', cursive;
 		font-size: 36px;
-		filter: drop-shadow(0 0 5px #56CCF2) drop-shadow(0 0 10px #2F80ED);
+		filter: drop-shadow(0 0 3px #56CCF2) drop-shadow(0 0 5px #56CCF2);
 	}
 	&__menu {
 		@include flex-between;
@@ -27,7 +27,7 @@
 				text-decoration: none;
 				color: #fff;	
 				&:hover, &.active {
-					filter: drop-shadow(0 0 5px #56CCF2) drop-shadow(0 0 10px #2F80ED);
+					filter: drop-shadow(0 0 3px #56CCF2) drop-shadow(0 0 5px #56CCF2);
 				}			
 			}			
 		}		
@@ -35,9 +35,9 @@
 }
 .header-sub {
 	clip-path: polygon(90% 0, 15% 0, 95% 100%);
-	background-color: rgba($color: #fff, $alpha: 0.3);
+	background-color: rgba($color: #000, $alpha: 0.5);
 	width: 90%;
 	height: 75px;
-	box-shadow: 10px 10px 10px rgba($color: #000, $alpha: 0.3) inset;
-	// backdrop-filter: blur(5px);
+	box-shadow: 10px 10px 10px rgba($color: #56CCF2, $alpha: 0.5) inset;
+	backdrop-filter: blur(5px);
 }

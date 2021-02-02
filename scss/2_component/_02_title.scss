@@ -3,15 +3,26 @@
 ------------------------------------------------------------*/
 
 
-.poster-title {	
-	font-size: 24px;
-	font-weight: 500;
-	border-bottom: 2px solid #56CCF2;
-	text-align: center;
-	p {
-		max-width: 280px;
-		background-color: #56CCF2;
-		padding: 9px 0 4px;
-		border-radius: 0 20px 0 0;
-	}
+.title01 {	
+	font-size: 36px;
+	font-weight: 500;	
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;	
+	
+	span {
+		padding-bottom: 15px;
+		filter: drop-shadow(0 0 3px #56CCF2) drop-shadow(0 0 5px #56CCF2);
+		&:before {
+			content: '';
+			background-color: #56CCF2;
+			width: 50%;
+			height: 2px;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			filter: drop-shadow(0 0 0);
+		}
+	}	
 }
