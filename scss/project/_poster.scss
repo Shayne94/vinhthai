@@ -5,11 +5,36 @@
         backdrop-filter: blur(5px);
         padding: 100px;
         &--list {
-            @include flex-between;
+            @include flex-jcenter;
+            cursor: pointer;
+            text-transform: uppercase;
+            .all {
+                padding: 10px 20px;
+                border: 2px solid #56CCF2;
+                margin: 0 5px;
+                &:hover, &.active {
+                    color: #56CCF2;
+                    background-color: #fff;
+                    filter: drop-shadow(0 0 1px #56CCF2) drop-shadow(0 0 3px #56CCF2);
+                }
+            }
+            .cate {
+                @include flex-between;
+                div {
+                    padding: 10px 20px;
+                    border: 2px solid #56CCF2;
+                    margin: 0 5px;
+                    &:hover, &.active {
+                        color: #56CCF2;
+                        background-color: #fff;
+                        filter: drop-shadow(0 0 1px #56CCF2) drop-shadow(0 0 3px #56CCF2);              
+                    }
+                }
+            }
         }
         &--protect {
-            margin-top: 90px;
-            background-color: rgba($color: #fff, $alpha: 0.5);
+            margin-top: 50px;
+            background-color: rgba($color: #fff, $alpha: 0.22);
             box-shadow: 5px 5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset, -5px -5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset;
             padding: 50px;
             .gallery {
@@ -26,7 +51,7 @@
             }
         }
         &--softbank {
-            margin-top: 100px;
+            margin-top: 50px;
             background-color: rgba($color: #fff, $alpha: 0.5);
             box-shadow: 5px 5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset, -5px -5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset;
             padding: 50px;
@@ -43,7 +68,7 @@
             }
         }
         &--food {
-            margin-top: 100px;
+            margin-top: 50px;
             background-color: rgba($color: #fff, $alpha: 0.5);
             box-shadow: 5px 5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset, -5px -5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset;
             padding: 50px;
@@ -71,7 +96,7 @@
             }
         }
         &--bbskin {
-            margin-top: 100px;
+            margin-top: 50px;
             background-color: rgba($color: #fff, $alpha: 0.5);
             box-shadow: 5px 5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset, -5px -5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset;
             padding: 50px;

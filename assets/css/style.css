@@ -219,22 +219,20 @@ body {
   width: 90%;
   height: 75px;
   margin: 50px auto 0;
-  padding: 0px 200px;
+  padding: 0 7%;
   backdrop-filter: blur(5px);
   border: 1px solid #56ccf2; }
   .header-main__name {
     font-family: 'Playball', cursive;
-    font-size: 36px;
+    font-size: 28px;
     filter: drop-shadow(0 0 3px #56CCF2) drop-shadow(0 0 5px #56CCF2); }
   .header-main__menu {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; }
+    justify-content: space-between; }
     .header-main__menu li {
-      margin: 0 20px; }
+      margin-left: 25px; }
       .header-main__menu li a {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
         text-transform: uppercase;
         text-decoration: none;
@@ -366,12 +364,33 @@ body {
     padding: 100px; }
     .poster__inner--list {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap; }
+      justify-content: center;
+      cursor: pointer;
+      text-transform: uppercase; }
+      .poster__inner--list .all {
+        padding: 10px 20px;
+        border: 2px solid #56CCF2;
+        margin: 0 5px; }
+        .poster__inner--list .all:hover, .poster__inner--list .all.active {
+          color: #56CCF2;
+          background-color: #fff;
+          filter: drop-shadow(0 0 1px #56CCF2) drop-shadow(0 0 3px #56CCF2); }
+      .poster__inner--list .cate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .poster__inner--list .cate div {
+          padding: 10px 20px;
+          border: 2px solid #56CCF2;
+          margin: 0 5px; }
+          .poster__inner--list .cate div:hover, .poster__inner--list .cate div.active {
+            color: #56CCF2;
+            background-color: #fff;
+            filter: drop-shadow(0 0 1px #56CCF2) drop-shadow(0 0 3px #56CCF2); }
     .poster__inner--protect {
-      margin-top: 90px;
-      background-color: rgba(255, 255, 255, 0.5);
+      margin-top: 50px;
+      background-color: rgba(255, 255, 255, 0.22);
       box-shadow: 5px 5px 5px rgba(86, 204, 242, 0.5) inset, -5px -5px 5px rgba(86, 204, 242, 0.5) inset;
       padding: 50px; }
       .poster__inner--protect .gallery {
@@ -387,7 +406,7 @@ body {
           .poster__inner--protect .gallery li img {
             width: 100%; }
     .poster__inner--softbank {
-      margin-top: 100px;
+      margin-top: 50px;
       background-color: rgba(255, 255, 255, 0.5);
       box-shadow: 5px 5px 5px rgba(86, 204, 242, 0.5) inset, -5px -5px 5px rgba(86, 204, 242, 0.5) inset;
       padding: 50px; }
@@ -401,7 +420,7 @@ body {
           .poster__inner--softbank .gallery li img {
             width: 100%; }
     .poster__inner--food {
-      margin-top: 100px;
+      margin-top: 50px;
       background-color: rgba(255, 255, 255, 0.5);
       box-shadow: 5px 5px 5px rgba(86, 204, 242, 0.5) inset, -5px -5px 5px rgba(86, 204, 242, 0.5) inset;
       padding: 50px; }
@@ -424,7 +443,7 @@ body {
             .poster__inner--food .gallery__banner div img {
               width: 100%; }
     .poster__inner--bbskin {
-      margin-top: 100px;
+      margin-top: 50px;
       background-color: rgba(255, 255, 255, 0.5);
       box-shadow: 5px 5px 5px rgba(86, 204, 242, 0.5) inset, -5px -5px 5px rgba(86, 204, 242, 0.5) inset;
       padding: 50px; }
@@ -446,22 +465,57 @@ body {
 .webdesign {
   margin: 100px 0; }
   .webdesign__inner {
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 20px 0 100px; }
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 100px; }
     .webdesign__inner--sbc {
-      margin-top: 80px;
-      padding: 0 80px; }
+      margin-top: 50px;
+      padding: 50px;
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 5px 5px 5px rgba(86, 204, 242, 0.5) inset, -5px -5px 5px rgba(86, 204, 242, 0.5) inset;
+      position: relative; }
       .webdesign__inner--sbc .gallery {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 25px;
-        padding: 10px 50px 50px;
-        border: 2px solid #56CCF2;
-        background-color: rgba(255, 255, 255, 0.5); }
+        align-items: flex-start;
+        margin-top: 15px; }
         .webdesign__inner--sbc .gallery li {
-          width: 100%;
-          margin-top: 40px; }
+          width: 30%;
+          margin-top: 40px;
+          background-color: white;
+          padding: 20px; }
           .webdesign__inner--sbc .gallery li img {
+            width: 100%; }
+        .webdesign__inner--sbc .gallery .blue {
+          box-shadow: 3px 3px 3px rgba(86, 204, 242, 0.5) inset, -3px -3px 3px rgba(86, 204, 242, 0.5) inset; }
+        .webdesign__inner--sbc .gallery .yellow {
+          box-shadow: 3px 3px 3px rgba(235, 208, 65, 0.5) inset, -3px -3px 3px rgba(235, 208, 65, 0.5) inset; }
+        .webdesign__inner--sbc .gallery .pink {
+          box-shadow: 3px 3px 3px rgba(252, 78, 141, 0.5) inset, -3px -3px 3px rgba(252, 78, 141, 0.5) inset; }
+    .webdesign__inner--bread {
+      margin-top: 50px;
+      padding: 50px;
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 5px 5px 5px rgba(86, 204, 242, 0.5) inset, -5px -5px 5px rgba(86, 204, 242, 0.5) inset;
+      position: relative; }
+      .webdesign__inner--bread:before {
+        content: '';
+        width: 400px;
+        height: 305px;
+        background: url(../../assets/images/common/decor01.png) no-repeat;
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        transform: scale(0.75);
+        transform-origin: 0% 100%;
+        filter: drop-shadow(0 0 3px rgba(86, 204, 242, 0.5)) drop-shadow(0 0 5px rgba(86, 204, 242, 0.5)); }
+      .webdesign__inner--bread .gallery {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 55px; }
+        .webdesign__inner--bread .gallery li {
+          width: 47%;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+          .webdesign__inner--bread .gallery li img {
             width: 100%; }
