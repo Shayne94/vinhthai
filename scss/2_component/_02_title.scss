@@ -2,26 +2,19 @@
 	Title
 ------------------------------------------------------------*/
 
-
-.title01 {	
+.title01 {
+	font-family: 'Playball', cursive;
 	font-size: 36px;
-	font-weight: 500;	
-	text-transform: uppercase;
-	color: #fff;
-	text-align: center;		
-	span {
-		padding-bottom: 15px;
-		filter: drop-shadow(0 0 3px #56CCF2) drop-shadow(0 0 5px #56CCF2);
-		&:before {
-			content: '';
-			background-color: #56CCF2;
-			width: 50%;
-			height: 2px;
-			position: absolute;
-			left: 50%;
-			bottom: 0;
-			transform: translateX(-50%);
-			filter: drop-shadow(0 0 0);
-		}
-	}	
+	color: $color3;
+	position: relative;
+	padding-bottom: 5px;
+	&:before {
+		content: '';
+		width: 50%;
+		height: 2px;
+		background-color: $color2;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
 }

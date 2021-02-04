@@ -1,43 +1,41 @@
 /*------------------------------------------------------------
 	Header
 ------------------------------------------------------------*/
-.header-main {
-	@include flex-between;
-	clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
-	background-color: rgba($color: #000, $alpha: 0.5);
-	width: 90%;
-	height: 75px;
-	margin: 50px auto 0;
-	padding: 0 7%;
-	backdrop-filter: blur(5px);
-	border: 1px solid rgba($color: #56CCF2, $alpha: 1);
+.header {
+	@include flex-jbetween;
 	&__name {
-		font-family: 'Playball', cursive;
-		font-size: 28px;
-		filter: drop-shadow(0 0 3px #56CCF2) drop-shadow(0 0 5px #56CCF2);
+		&--main {
+			font-family: 'Playball', cursive;
+			font-size: 48px;
+			color: $color3;
+			@include max(1440px) {
+				font-size: 36px;
+			}
+		}
+		&--sub {
+			font-size: 24px;
+			margin-top: 6px;
+			@include max(1440px) {
+				font-size: 20px;
+			}
+		}
 	}
 	&__menu {
 		@include flex-jbetween;		
 		li {
-			margin-left: 25px;
+			margin-left: 50px;
 			a {
-				font-size: 20px;
+				font-size: 24px;
 				font-weight: 500;
-				text-transform: uppercase;
-				text-decoration: none;
-				color: #fff;	
+				text-decoration: none;	
+				color: $color2;
 				&:hover, &.active {
-					filter: drop-shadow(0 0 3px #56CCF2) drop-shadow(0 0 5px #56CCF2);
-				}			
+					color: $color3;
+				}	
+				@include max(1440px) {
+					font-size: 20px;
+				}		
 			}			
 		}		
 	}
-}
-.header-sub {
-	clip-path: polygon(90% 0, 15% 0, 95% 100%);
-	background-color: rgba($color: #000, $alpha: 0.5);
-	width: 90%;
-	height: 75px;
-	box-shadow: 10px 10px 10px rgba($color: #56CCF2, $alpha: 0.5) inset;
-	backdrop-filter: blur(5px);
 }

@@ -15,37 +15,12 @@ html {
 }
 body {
 	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
+	padding: 50px;
+	overflow: hidden;
 	font-size: 16px;
-	color: #fff;	
-	animation: bg 20s infinite;
+	color: $color2;	
 	font-family: 'Roboto', sans-serif;
-
-}
-@keyframes bg {
-    0% {
-		background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
-		background-attachment: fixed;
-	}
-	20% {
-		background: url(../../assets/images/common/bg02.jpg) no-repeat center top;
-		background-attachment: fixed;
-	}
-	40% {
-		background: url(../../assets/images/common/bg03.jpg) no-repeat center top;
-		background-attachment: fixed;
-	}
-	60% {
-		background: url(../../assets/images/common/bg04.jpg) no-repeat center top;
-		background-attachment: fixed;
-	}
-	80% {
-		background: url(../../assets/images/common/bg05.jpg) no-repeat center top;
-		background-attachment: fixed;
-    }
-    100% {
-		background: url(../../assets/images/common/bg01.jpg) no-repeat center top;
-		background-attachment: fixed;
-    }
+	width: 100vw;
+	height: 100vh;
+	background: url(../../assets/images/common/background.png) no-repeat;	
 }

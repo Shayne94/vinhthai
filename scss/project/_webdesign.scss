@@ -1,69 +1,34 @@
 .webdesign {
-    margin: 100px 0;
-    &__inner {        
-	    background-color: rgba($color: #000, $alpha: 0.5);
-        backdrop-filter: blur(5px);
-        padding: 100px;
-        &--sbc {
-            margin-top: 50px;            
-            padding: 50px;
-            background-color: rgba($color: #fff, $alpha: 0.5);
-            box-shadow: 5px 5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset, -5px -5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset;
-            position: relative;
-            .gallery {
-                @include flex-jbetween;
-                align-items: flex-start;
-                margin-top: 15px;
-                li {
-                    width: 30%;
-                    margin-top: 40px;
-                    background-color: rgba($color: #fff, $alpha: 1);
-                    padding: 20px;
-                    img {
-                        width: 100%;
-                    }
-                }                
-                .blue {
-                    box-shadow: 3px 3px 3px rgba($color: #56CCF2, $alpha: 0.5) inset, -3px -3px 3px rgba($color: #56CCF2, $alpha: 0.5) inset;
-                }
-                .yellow {
-                    box-shadow: 3px 3px 3px rgba($color: #ebd041, $alpha: 0.5) inset, -3px -3px 3px rgba($color: #ebd041, $alpha: 0.5) inset;
-                }
-                .pink {
-                    box-shadow: 3px 3px 3px rgba($color: #fc4e8d, $alpha: 0.5) inset, -3px -3px 3px rgba($color: #fc4e8d, $alpha: 0.5) inset;
-                }
-            }
-        }
-        &--bread {
-            margin-top: 50px;            
-            padding: 50px;
-            background-color: rgba($color: #fff, $alpha: 0.5);
-            box-shadow: 5px 5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset, -5px -5px 5px rgba($color: #56CCF2, $alpha: 0.5) inset;
-            position: relative;
+    margin-top: 50px;
+    @include flex-jbetween;
+    &__menu {
+        @include flex-jend;
+        flex-direction: column;
+        li {
+            padding: 15px 20px 11px 30px;
+            background-color: $color1;
+            box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;    
+            cursor: pointer;        
             &:before {
                 content: '';
-                width: 400px;
-                height: 305px;
-                background: url(../../assets/images/common/decor01.png) no-repeat;
+                width: 10px;
+                height: 100%;
+                background-color: $color3;
                 position: absolute;
-                left: 40px;
-                bottom: 40px;
-                transform: scale(0.75);
-                transform-origin: 0% 100%;
-                filter: drop-shadow(0 0 3px rgba($color: #56CCF2, $alpha: 0.5)) drop-shadow(0 0 5px rgba($color: #56CCF2, $alpha: 0.5));
+                left: 0;
+                top: 0;
             }
-            .gallery {
-                @include flex-jbetween;
-                align-items: flex-start;
-                margin-top: 55px;
-                li {
-                    width: 47%;
-                    box-shadow: 5px 5px 5px rgba($color: #000, $alpha: 0.2); 
-                    img {
-                        width: 100%;
-                    }
-                }            
+            &:hover, &.active {
+                color: $color3;
+                box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
             }
         }
+    }
+    &__inner {
+        @include flex-jbetween;
+        flex-direction: column;
     }
 }
