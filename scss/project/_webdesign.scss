@@ -2,9 +2,11 @@
     margin-top: 50px;
     @include flex-jbetween;
     &__menu {
-        @include flex-jend;
+        @include flex-jstart;
         flex-direction: column;
+        margin-right: 50px;   
         li {
+            min-width: 275px;
             padding: 15px 20px 11px 30px;
             background-color: $color1;
             box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
@@ -28,7 +30,52 @@
         }
     }
     &__inner {
-        @include flex-jbetween;
-        flex-direction: column;
+        &--sbc {
+            @include flex-jbetween;
+            flex-direction: column;
+            .box {
+                @include flex-jbetween;
+                margin-top: 25px;
+                li {
+                    width: 30%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                    }
+                    .text {
+                        margin-top: 20px;
+                        padding: 15px 20px 11px 30px;
+                        background-color: $color1;
+                        position: relative;  
+                        font-weight: 500;
+                        box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                        &:before {
+                            content: '';
+                            width: 10px;
+                            height: 100%;
+                            background-color: $color3;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }   
+                    }
+                    .blue, .gold, .pink {
+                        height: calc(100vh - 380.4px);                        
+                        box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                        overflow-y: auto;
+                        &::-webkit-scrollbar {
+                            width: 0px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                        }                           
+                        &::-webkit-scrollbar-thumb {
+                            background-color: darkgrey;
+                            outline: 1px solid slategrey;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

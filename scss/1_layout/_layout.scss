@@ -23,4 +23,9 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background: url(../../assets/images/common/background.png) no-repeat;	
+	@include flex-jbetween;
+	flex-direction: column;
+}
+main {
+	height: 100%;
 }

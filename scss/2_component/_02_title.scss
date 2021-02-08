@@ -7,14 +7,17 @@
 	font-size: 36px;
 	color: $color3;
 	position: relative;
-	padding-bottom: 5px;
-	&:before {
-		content: '';
-		width: 50%;
-		height: 2px;
-		background-color: $color2;
-		position: absolute;
-		left: 0;
-		bottom: 0;
+	span {
+		position: relative;
+		padding-bottom: 5px;
+		&:before {
+			content: '';
+			width: 50%;
+			height: 2px;
+			background-color: $color2;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
 	}
 }
