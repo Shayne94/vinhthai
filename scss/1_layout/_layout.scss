@@ -23,6 +23,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background: url(../../assets/images/common/background.png) no-repeat;	
+	background-color: rgba($color: $color2, $alpha: 0.05);
 	@include flex-jbetween;
 	flex-direction: column;
 }

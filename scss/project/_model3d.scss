@@ -38,20 +38,35 @@
                 @include flex-jbetween;
                 margin-top: 25px;                
                 li:first-child {
+                    width: 70%;
                     max-width: 1021px;
                     max-height: 625px;
+                    padding: 25px;
+                    background-color: $color1;
+                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                    &:hover {
+                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                    }
                     img {
-                        width: 100%;                    
+                        width: 100%;   
+                        max-height: 575px;                 
                     }
                 }
                 &__sideview {
                     @include flex-jbetween;
+                    align-content: space-between;
                     flex-wrap: wrap;
                     width: 30%;
-                    padding: -25px;
+                    margin-left: 50px;
                     div {
-                        width: 50%;
-                        padding: 25px;
+                        width: 45%;
+                        max-height: 300px;
+                        padding: 20px;
+                        background-color: $color1;
+                        box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                        &:hover {
+                            box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                        }
                         img {
                             width: 100%;
                         }

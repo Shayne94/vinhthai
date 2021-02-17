@@ -187,6 +187,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: url(../../assets/images/common/background.png) no-repeat;
+  background-color: rgba(51, 51, 51, 0.05);
   display: flex;
   justify-content: space-between;
   flex-direction: column; }
@@ -511,6 +512,27 @@ main {
             .webdesign__inner--sbc .box li .blue::-webkit-scrollbar-thumb, .webdesign__inner--sbc .box li .gold::-webkit-scrollbar-thumb, .webdesign__inner--sbc .box li .pink::-webkit-scrollbar-thumb {
               background-color: darkgrey;
               outline: 1px solid slategrey; }
+    .webdesign__inner--bread .box, .webdesign__inner--cheese .box, .webdesign__inner--star .box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 25px; }
+      .webdesign__inner--bread .box .arrows, .webdesign__inner--cheese .box .arrows, .webdesign__inner--star .box .arrows {
+        writing-mode: vertical-rl;
+        font-size: 50px; }
+      .webdesign__inner--bread .box .image, .webdesign__inner--cheese .box .image, .webdesign__inner--star .box .image {
+        height: calc(100vh - 315px);
+        box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
+        overflow-y: auto; }
+        .webdesign__inner--bread .box .image::-webkit-scrollbar, .webdesign__inner--cheese .box .image::-webkit-scrollbar, .webdesign__inner--star .box .image::-webkit-scrollbar {
+          width: 0px; }
+        .webdesign__inner--bread .box .image::-webkit-scrollbar-track, .webdesign__inner--cheese .box .image::-webkit-scrollbar-track, .webdesign__inner--star .box .image::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+        .webdesign__inner--bread .box .image::-webkit-scrollbar-thumb, .webdesign__inner--cheese .box .image::-webkit-scrollbar-thumb, .webdesign__inner--star .box .image::-webkit-scrollbar-thumb {
+          background-color: darkgrey;
+          outline: 1px solid slategrey; }
+        .webdesign__inner--bread .box .image img, .webdesign__inner--cheese .box .image img, .webdesign__inner--star .box .image img {
+          width: 100%; }
 
 .model3d {
   margin-top: 50px;
@@ -552,18 +574,31 @@ main {
         justify-content: space-between;
         margin-top: 25px; }
         .model3d__inner--talon .box li:first-child {
+          width: 70%;
           max-width: 1021px;
-          max-height: 625px; }
+          max-height: 625px;
+          padding: 25px;
+          background-color: #fff;
+          box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15); }
+          .model3d__inner--talon .box li:first-child:hover {
+            box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
           .model3d__inner--talon .box li:first-child img {
-            width: 100%; }
+            width: 100%;
+            max-height: 575px; }
         .model3d__inner--talon .box__sideview {
           display: flex;
           justify-content: space-between;
+          align-content: space-between;
           flex-wrap: wrap;
           width: 30%;
-          padding: -25px; }
+          margin-left: 50px; }
           .model3d__inner--talon .box__sideview div {
-            width: 50%;
-            padding: 25px; }
+            width: 45%;
+            max-height: 300px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15); }
+            .model3d__inner--talon .box__sideview div:hover {
+              box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
             .model3d__inner--talon .box__sideview div img {
               width: 100%; }
