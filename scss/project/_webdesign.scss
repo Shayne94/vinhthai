@@ -30,6 +30,7 @@
         }
     }
     &__inner {
+        width: 100%;
         &--sbc {
             @include flex-jbetween;
             flex-direction: column;
@@ -37,7 +38,8 @@
                 @include flex-jbetween;
                 margin-top: 25px;
                 li {
-                    width: 30%;
+                    max-width: 465px;
+                    width: 32%;
                     height: 100%;
                     img {
                         width: 100%;
