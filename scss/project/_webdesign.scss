@@ -34,62 +34,91 @@
         &--sbc {
             @include flex-jbetween;
             flex-direction: column;
-            .box {
+            .content {
                 @include flex-jbetween;
+                align-items: center;
                 margin-top: 25px;
-                li {
-                    max-width: 465px;
-                    width: 32%;
-                    height: 100%;
-                    img {
-                        width: 100%;
+                &:hover {
+                    p {
+                        color: $color3;
                     }
-                    .text {
-                        margin-top: 20px;
-                        padding: 15px 20px 11px 30px;
+                }
+                .arrows {
+                    @include flex-icenter;
+                    writing-mode: vertical-rl;                    
+                    font-size: 36px;
+                    user-select: none;
+                    span {
+                        margin: 20px 0;
+                    }
+                    p {
+                        font-size: 24px;
+                        margin-right: 5px;
+                    }
+                }      
+                .box {
+                    @include flex-jbetween;  
+                    li {
+                        max-width: 465px;
+                        width: 32%;
+                        padding: 25px;
                         background-color: $color1;
-                        position: relative;  
-                        font-weight: 500;
-                        box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
-                        &:before {
-                            content: '';
-                            width: 10px;
-                            height: 100%;
-                            background-color: $color3;
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                        }   
-                    }
-                    .blue, .gold, .pink {
-                        height: calc(100vh - 380.4px);                        
-                        box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
-                        overflow-y: auto;
-                        &::-webkit-scrollbar {
-                            width: 0px;
-                        }
-                        &::-webkit-scrollbar-track {
-                            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                        }                           
-                        &::-webkit-scrollbar-thumb {
-                            background-color: darkgrey;
-                            outline: 1px solid slategrey;
-                        }
-                    }
+                        box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15); 
+                        .blue, .gold, .pink {
+                            height: calc(100vh - 379px);
+                            overflow-y: auto;
+                            &::-webkit-scrollbar {
+                                width: 0px;
+                            }
+                            &::-webkit-scrollbar-track {
+                                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                            }                           
+                            &::-webkit-scrollbar-thumb {
+                                background-color: darkgrey;
+                                outline: 1px solid slategrey;
+                            }
+                            img {
+                                width: 100%;
+                            }  
+                        }              
+                    }                
+                    li:nth-child(1) {
+                        border: 7px solid #03497b;
+                    }  
+                    li:nth-child(2) {
+                        border: 7px solid #faca21;
+                    }  
+                    li:nth-child(3) {
+                        border: 7px solid #ea1966;
+                    } 
                 }
             }
         }
-        &--bread, &--cheese, &--star {
+        &--bread, &--cheese, &--star, &--lol {
             .box {
                 @include flex-jbetween;
                 align-items: center;
-                margin-top: 25px;   
+                margin-top: 25px;     
+                &:hover {
+                    p {
+                        color: $color3;
+                    }
+                }              
                 .arrows {
-                    writing-mode: vertical-rl;
-                    font-size: 50px;
-
+                    @include flex-icenter;
+                    writing-mode: vertical-rl;                    
+                    font-size: 36px;
+                    user-select: none;
+                    span {
+                        margin: 20px 0;
+                    }
+                    p {
+                        font-size: 24px;
+                        margin-right: 5px;
+                    }
                 }      
                 .image {
+                    margin: 0 10px;
                     height: calc(100vh - 315px);                  
                     box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
                     overflow-y: auto;
@@ -105,7 +134,7 @@
                     }                
                     img {
                         width: 100%;
-                    }                
+                    }              
                 }
             }
         }

@@ -476,62 +476,82 @@ main {
       display: flex;
       justify-content: space-between;
       flex-direction: column; }
-      .webdesign__inner--sbc .box {
+      .webdesign__inner--sbc .content {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-top: 25px; }
-        .webdesign__inner--sbc .box li {
-          max-width: 465px;
-          width: 32%;
-          height: 100%; }
-          .webdesign__inner--sbc .box li img {
-            width: 100%; }
-          .webdesign__inner--sbc .box li .text {
-            margin-top: 20px;
-            padding: 15px 20px 11px 30px;
+        .webdesign__inner--sbc .content:hover p {
+          color: #0099f7; }
+        .webdesign__inner--sbc .content .arrows {
+          display: flex;
+          align-items: center;
+          writing-mode: vertical-rl;
+          font-size: 36px;
+          user-select: none; }
+          .webdesign__inner--sbc .content .arrows span {
+            margin: 20px 0; }
+          .webdesign__inner--sbc .content .arrows p {
+            font-size: 24px;
+            margin-right: 5px; }
+        .webdesign__inner--sbc .content .box {
+          display: flex;
+          justify-content: space-between; }
+          .webdesign__inner--sbc .content .box li {
+            max-width: 465px;
+            width: 32%;
+            padding: 25px;
             background-color: #fff;
-            position: relative;
-            font-weight: 500;
             box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15); }
-            .webdesign__inner--sbc .box li .text:before {
-              content: '';
-              width: 10px;
-              height: 100%;
-              background-color: #0099f7;
-              position: absolute;
-              left: 0;
-              top: 0; }
-          .webdesign__inner--sbc .box li .blue, .webdesign__inner--sbc .box li .gold, .webdesign__inner--sbc .box li .pink {
-            height: calc(100vh - 380.4px);
-            box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
-            overflow-y: auto; }
-            .webdesign__inner--sbc .box li .blue::-webkit-scrollbar, .webdesign__inner--sbc .box li .gold::-webkit-scrollbar, .webdesign__inner--sbc .box li .pink::-webkit-scrollbar {
-              width: 0px; }
-            .webdesign__inner--sbc .box li .blue::-webkit-scrollbar-track, .webdesign__inner--sbc .box li .gold::-webkit-scrollbar-track, .webdesign__inner--sbc .box li .pink::-webkit-scrollbar-track {
-              box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
-            .webdesign__inner--sbc .box li .blue::-webkit-scrollbar-thumb, .webdesign__inner--sbc .box li .gold::-webkit-scrollbar-thumb, .webdesign__inner--sbc .box li .pink::-webkit-scrollbar-thumb {
-              background-color: darkgrey;
-              outline: 1px solid slategrey; }
-    .webdesign__inner--bread .box, .webdesign__inner--cheese .box, .webdesign__inner--star .box {
+            .webdesign__inner--sbc .content .box li .blue, .webdesign__inner--sbc .content .box li .gold, .webdesign__inner--sbc .content .box li .pink {
+              height: calc(100vh - 379px);
+              overflow-y: auto; }
+              .webdesign__inner--sbc .content .box li .blue::-webkit-scrollbar, .webdesign__inner--sbc .content .box li .gold::-webkit-scrollbar, .webdesign__inner--sbc .content .box li .pink::-webkit-scrollbar {
+                width: 0px; }
+              .webdesign__inner--sbc .content .box li .blue::-webkit-scrollbar-track, .webdesign__inner--sbc .content .box li .gold::-webkit-scrollbar-track, .webdesign__inner--sbc .content .box li .pink::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+              .webdesign__inner--sbc .content .box li .blue::-webkit-scrollbar-thumb, .webdesign__inner--sbc .content .box li .gold::-webkit-scrollbar-thumb, .webdesign__inner--sbc .content .box li .pink::-webkit-scrollbar-thumb {
+                background-color: darkgrey;
+                outline: 1px solid slategrey; }
+              .webdesign__inner--sbc .content .box li .blue img, .webdesign__inner--sbc .content .box li .gold img, .webdesign__inner--sbc .content .box li .pink img {
+                width: 100%; }
+          .webdesign__inner--sbc .content .box li:nth-child(1) {
+            border: 7px solid #03497b; }
+          .webdesign__inner--sbc .content .box li:nth-child(2) {
+            border: 7px solid #faca21; }
+          .webdesign__inner--sbc .content .box li:nth-child(3) {
+            border: 7px solid #ea1966; }
+    .webdesign__inner--bread .box, .webdesign__inner--cheese .box, .webdesign__inner--star .box, .webdesign__inner--lol .box {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 25px; }
-      .webdesign__inner--bread .box .arrows, .webdesign__inner--cheese .box .arrows, .webdesign__inner--star .box .arrows {
+      .webdesign__inner--bread .box:hover p, .webdesign__inner--cheese .box:hover p, .webdesign__inner--star .box:hover p, .webdesign__inner--lol .box:hover p {
+        color: #0099f7; }
+      .webdesign__inner--bread .box .arrows, .webdesign__inner--cheese .box .arrows, .webdesign__inner--star .box .arrows, .webdesign__inner--lol .box .arrows {
+        display: flex;
+        align-items: center;
         writing-mode: vertical-rl;
-        font-size: 50px; }
-      .webdesign__inner--bread .box .image, .webdesign__inner--cheese .box .image, .webdesign__inner--star .box .image {
+        font-size: 36px;
+        user-select: none; }
+        .webdesign__inner--bread .box .arrows span, .webdesign__inner--cheese .box .arrows span, .webdesign__inner--star .box .arrows span, .webdesign__inner--lol .box .arrows span {
+          margin: 20px 0; }
+        .webdesign__inner--bread .box .arrows p, .webdesign__inner--cheese .box .arrows p, .webdesign__inner--star .box .arrows p, .webdesign__inner--lol .box .arrows p {
+          font-size: 24px;
+          margin-right: 5px; }
+      .webdesign__inner--bread .box .image, .webdesign__inner--cheese .box .image, .webdesign__inner--star .box .image, .webdesign__inner--lol .box .image {
+        margin: 0 10px;
         height: calc(100vh - 315px);
         box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
         overflow-y: auto; }
-        .webdesign__inner--bread .box .image::-webkit-scrollbar, .webdesign__inner--cheese .box .image::-webkit-scrollbar, .webdesign__inner--star .box .image::-webkit-scrollbar {
+        .webdesign__inner--bread .box .image::-webkit-scrollbar, .webdesign__inner--cheese .box .image::-webkit-scrollbar, .webdesign__inner--star .box .image::-webkit-scrollbar, .webdesign__inner--lol .box .image::-webkit-scrollbar {
           width: 0px; }
-        .webdesign__inner--bread .box .image::-webkit-scrollbar-track, .webdesign__inner--cheese .box .image::-webkit-scrollbar-track, .webdesign__inner--star .box .image::-webkit-scrollbar-track {
+        .webdesign__inner--bread .box .image::-webkit-scrollbar-track, .webdesign__inner--cheese .box .image::-webkit-scrollbar-track, .webdesign__inner--star .box .image::-webkit-scrollbar-track, .webdesign__inner--lol .box .image::-webkit-scrollbar-track {
           box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
-        .webdesign__inner--bread .box .image::-webkit-scrollbar-thumb, .webdesign__inner--cheese .box .image::-webkit-scrollbar-thumb, .webdesign__inner--star .box .image::-webkit-scrollbar-thumb {
+        .webdesign__inner--bread .box .image::-webkit-scrollbar-thumb, .webdesign__inner--cheese .box .image::-webkit-scrollbar-thumb, .webdesign__inner--star .box .image::-webkit-scrollbar-thumb, .webdesign__inner--lol .box .image::-webkit-scrollbar-thumb {
           background-color: darkgrey;
           outline: 1px solid slategrey; }
-        .webdesign__inner--bread .box .image img, .webdesign__inner--cheese .box .image img, .webdesign__inner--star .box .image img {
+        .webdesign__inner--bread .box .image img, .webdesign__inner--cheese .box .image img, .webdesign__inner--star .box .image img, .webdesign__inner--lol .box .image img {
           width: 100%; }
 
 .model3d {
