@@ -1,0 +1,143 @@
+.lol {
+    margin-top: 50px;
+    @include flex-jbetween;
+    &__menu {
+        @include flex-jstart;
+        flex-direction: column;
+        margin-right: 50px;
+        li {
+            min-width: 215px;
+            padding: 15px 20px 11px 30px;
+            background-color: $color1;
+            box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            position: relative;    
+            cursor: pointer;  
+            &:before {
+                content: '';
+                width: 10px;
+                height: 100%;
+                background-color: $color3;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            &:hover, &.active {
+                color: $color3;
+                box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+            }
+        }
+    }
+    &__inner {
+        height: calc(100vh - 285px);
+        position: relative;
+        &--about {
+            .intro {
+                line-height: 28px;                
+                position: relative;
+                padding: 25px 50px;
+                &:before {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    background: url(../../assets/images/common/border01.png) no-repeat;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &:after {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    background: url(../../assets/images/common/border01.png) no-repeat;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transform: scale(-1);
+                }
+                p {
+                    padding: 25px 0;
+                    position: relative;
+                    span {
+                        font-family: 'Playball', cursive;
+                        font-size: 32px;
+                        color: $color3;
+                    }
+                    &:before {
+                        content: '';
+                        width: 25%;
+                        height: 2px;
+                        background-color: $color3;
+                        position: absolute;
+                        top: 0;
+                        right: -50px;
+                    }
+                    &:after {
+                        content: '';
+                        width: 25%;
+                        height: 2px;
+                        background-color: $color3;
+                        position: absolute;
+                        bottom: 0;
+                        left: -50px;
+                    }
+                }
+                
+                .video {
+                    width: 50%;
+                    margin: 0 auto;
+                    video {
+                        width: 100%;
+                    }
+                }
+            }
+            .gallery {
+                @include flex-jbetween;
+                margin-top: 25px;
+                li {
+                    width: 10%;
+                    padding: 10px;
+                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                    background-color: $color1;
+                    position: relative;
+                    &:hover {
+                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &--footer {
+            @include flex-jcenter;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            margin-top: 25px;
+            height: 40px;
+            .logo {
+                height: 40px;
+                margin: 0 25px;
+                img {
+                    margin: 0 15px;
+                }
+            }
+            .social {
+                margin: 0 25px;
+                img {
+                    border-radius: 20px;
+                    margin: 0 15px;
+                    background-color: $color1;
+                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                    &:hover{
+                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                    }
+                }
+            }
+        }
+       
+    }    
+} 

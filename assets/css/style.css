@@ -187,7 +187,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: url(../../assets/images/common/background.png) no-repeat;
-  background-color: rgba(51, 51, 51, 0.05);
+  background-color: rgba(51, 51, 51, 0.2);
   display: flex;
   justify-content: space-between;
   flex-direction: column; }
@@ -199,6 +199,7 @@ main {
 	Header
 ------------------------------------------------------------*/
 .header {
+  visibility: hidden;
   display: flex;
   justify-content: space-between; }
   .header__name--main {
@@ -456,6 +457,7 @@ main {
       background-color: #fff;
       box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
       font-size: 20px;
+      font-weight: 500;
       margin-bottom: 20px;
       position: relative;
       cursor: pointer; }
@@ -622,3 +624,122 @@ main {
               box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
             .model3d__inner--talon .box__sideview div img {
               width: 100%; }
+
+.lol {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between; }
+  .lol__menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 50px; }
+    .lol__menu li {
+      min-width: 215px;
+      padding: 15px 20px 11px 30px;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      position: relative;
+      cursor: pointer; }
+      .lol__menu li:before {
+        content: '';
+        width: 10px;
+        height: 100%;
+        background-color: #0099f7;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .lol__menu li:hover, .lol__menu li.active {
+        color: #0099f7;
+        box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
+  .lol__inner {
+    height: calc(100vh - 285px);
+    position: relative; }
+    .lol__inner--about .intro {
+      line-height: 28px;
+      position: relative;
+      padding: 25px 50px; }
+      .lol__inner--about .intro:before {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: url(../../assets/images/common/border01.png) no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .lol__inner--about .intro:after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: url(../../assets/images/common/border01.png) no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: scale(-1); }
+      .lol__inner--about .intro p {
+        padding: 25px 0;
+        position: relative; }
+        .lol__inner--about .intro p span {
+          font-family: 'Playball', cursive;
+          font-size: 32px;
+          color: #0099f7; }
+        .lol__inner--about .intro p:before {
+          content: '';
+          width: 25%;
+          height: 2px;
+          background-color: #0099f7;
+          position: absolute;
+          top: 0;
+          right: -50px; }
+        .lol__inner--about .intro p:after {
+          content: '';
+          width: 25%;
+          height: 2px;
+          background-color: #0099f7;
+          position: absolute;
+          bottom: 0;
+          left: -50px; }
+      .lol__inner--about .intro .video {
+        width: 50%;
+        margin: 0 auto; }
+        .lol__inner--about .intro .video video {
+          width: 100%; }
+    .lol__inner--about .gallery {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px; }
+      .lol__inner--about .gallery li {
+        width: 10%;
+        padding: 10px;
+        box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
+        background-color: #fff;
+        position: relative; }
+        .lol__inner--about .gallery li:hover {
+          box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
+        .lol__inner--about .gallery li img {
+          width: 100%; }
+    .lol__inner--footer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      margin-top: 25px;
+      height: 40px; }
+      .lol__inner--footer .logo {
+        height: 40px;
+        margin: 0 25px; }
+        .lol__inner--footer .logo img {
+          margin: 0 15px; }
+      .lol__inner--footer .social {
+        margin: 0 25px; }
+        .lol__inner--footer .social img {
+          border-radius: 20px;
+          margin: 0 15px;
+          background-color: #fff;
+          box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15); }
+          .lol__inner--footer .social img:hover {
+            box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }

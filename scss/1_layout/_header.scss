@@ -2,6 +2,7 @@
 	Header
 ------------------------------------------------------------*/
 .header {
+	 visibility: hidden;
 	@include flex-jbetween;
 	&__name {
 		&--main {
