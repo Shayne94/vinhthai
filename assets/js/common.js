@@ -68,4 +68,75 @@ $(document).ready(function (e) {
     $(".model3d__inner--hog, .model3d__inner--talon").hide();  
     $(".model3d__inner--tank").fadeIn(1000);
   });
+
+   //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+  // League of Legends
+  //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+  var StopVideo = { function() {    
+    
+  }
+}
+  $(".lol__inner li:not(:last-child)").hide(); 
+  $(".lol__inner li:first-child").show();  
+  $(".lol__menu--about").click(function () {   
+    const video = document.querySelector(".cine__video");
+    video.pause();
+    video.currentTime = 0; 
+    $(".lol__menu li").removeClass("active"); 
+    $(this).addClass("active");
+    $(".lol__inner li:not(:last-child)").hide();  
+    $(".lol__inner--about").fadeIn(1000);
+  });
+  $(".lol__menu--cine").click(function () {    
+    const video = document.querySelector(".cine__video");
+    video.pause();
+    video.currentTime = 0; 
+    $(".lol__menu li").removeClass("active"); 
+    $(this).addClass("active"); 
+    $(".lol__inner li:not(:last-child)").hide();  
+    $(".lol__inner--cine").fadeIn(1000);
+  });
+  $(".lol__menu--reg").click(function () {  
+    const video = document.querySelector(".cine__video");
+    video.pause();
+    video.currentTime = 0;   
+    $(".lol__menu li").removeClass("active"); 
+    $(this).addClass("active"); 
+    $(".lol__inner li:not(:last-child)").hide();  
+    $(".lol__inner--reg").fadeIn(1000);
+  });
+  $(".lol__menu--champ").click(function () {    
+    const video = document.querySelector(".cine__video");
+    video.pause();
+    video.currentTime = 0; 
+    $(".lol__menu li").removeClass("active"); 
+    $(this).addClass("active"); 
+    $(".lol__inner li:not(:last-child)").hide();  
+    $(".lol__inner--champ").fadeIn(1000);
+  });
+  $(".lol__menu--skin").click(function () {   
+    const video = document.querySelector(".cine__video");
+    video.pause();
+    video.currentTime = 0;  
+    $(".lol__menu li").removeClass("active"); 
+    $(this).addClass("active"); 
+    $(".lol__inner li:not(:last-child)").hide();  
+    $(".lol__inner--skin").fadeIn(1000);
+  });
+
+  //Cinematic
+  $(function() {
+    $(".lol__inner--cine .list div").on("click", function() {
+        $(".cine__video").attr({
+            "src": $(this).attr("movieurl"),
+            "autoplay": "autoplay"
+
+        });
+        $(".lol__inner--cine .list div").removeClass("active"); 
+        $(this).addClass("active");
+    })
+    $(".cine__video").attr({
+        "src": $(".lol__inner--cine .list div").eq(0).attr("movieurl"),
+    })
+})
 });
