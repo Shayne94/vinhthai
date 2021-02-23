@@ -133,71 +133,127 @@
             }
         }
         &--reg {
-            position: relative;
-            height: calc(100% - 80px);
-            &:before {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background: url(../../assets/images/lol/reg-map.png) no-repeat center center;
-                background-size: cover;
-                position: absolute;
-                z-index: 1;
-            }
+            position: relative;                   
             .reg__list {
-                @include flex-between;
-                align-content: space-between;
-                height: 100%;
-                padding: 30px 50px 50px;
+                @include flex-jbetween;
+                height: calc(100vh - 315px);
                 position: relative;
                 z-index: 3;
                 div {
-                    position: relative;
-                    width: 15%;
-                    margin-top: 20px;
+                    width: 7%;
+                    position: relative;   
                     text-align: center;
-                    box-shadow: 5px 5px 5px rgba($color: $color1, $alpha: 0.3);
-                    transition: all 2s ease-in-out;
+                    border: 5px solid $color1;
+                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
                     cursor: pointer;
                     img {
-                        width: 100%;
+                        margin: 25px 0;
+                        height: 60px;
+                        position: relative;
+                        z-index: 3;
                     }
                     p {
-                        font-weight: 500;
-                        padding: 7px 0 5px;
-                        background-color: $color1;
+                        color: $color1;
+                        line-height: 24px;
+                        padding: 0 10px;  
                         position: relative;
-                        &:before {
-                            content: '';
-                            width: 5px;
-                            height: 100%;
-                            background-color: $color3;
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                        }
+                        transition: 0.2s ease-in-out;
+                        z-index: 3;
+                    }
+                    &:before {
+                        content: '';    
+                        width: 100%;
+                        height: 100%;   
+                        background-size: cover;                
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+                    &:after {                        
+                        content: '';    
+                        width: 100%;
+                        height: 100%;   
+                        background-image: linear-gradient(to bottom, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0.2));
+                        background-size: cover;                
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
                     }
                     &:hover {
-                        img {
-                            outline: 2px solid $color1;
+                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                        p {
+                            text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
                         }
-                        &:before {
-                            opacity: 0;
+                        &:after {
+                            background-image: linear-gradient(to bottom, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
                         }
                     }
                 }
                 &--bandle {
                     &:before {
-                        content: '';
-                        background: url(../../assets/images/lol/reg-bandle-logo.png) no-repeat center center;
-                        width: 50px;
-                        height: 50px;
-                        background-size: 100%;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-80%);
-                        z-index: 3;
+                        background: url(../../assets/images/lol/reg-bandle-bg.png) no-repeat center center;
+                    }
+                }
+                &--bilge {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-bilge-bg.png) no-repeat center center;
+                    }
+                }
+                &--demacia {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-demacia-bg.png) no-repeat center center;
+                    }
+                }
+                &--ionia {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-ionia-bg.png) no-repeat center center;
+                    }
+                }
+                &--ixtal {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-ixtal-bg.png) no-repeat center center;
+                    }
+                }
+                &--noxus {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-noxus-bg.png) no-repeat center center;
+                    }
+                }
+                &--piltover {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-piltover-bg.png) no-repeat center center;
+                    }
+                }
+                &--shadow {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-shadow-bg.png) no-repeat center center;
+                    }
+                }
+                &--shurima {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-shurima-bg.png) no-repeat center center;
+                    }
+                }
+                &--targon {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-targon-bg.png) no-repeat center center;
+                    }
+                }
+                &--frel {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-frel-bg.png) no-repeat center center;
+                    }
+                }
+                &--void {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-void-bg.png) no-repeat center center;
+                    }
+                }
+                &--zaun {
+                    &:before {
+                        background: url(../../assets/images/lol/reg-zaun-bg.png) no-repeat center center;
                     }
                 }
             }
