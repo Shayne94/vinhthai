@@ -21,3 +21,22 @@
 		}
 	}
 }
+.title02 {
+	font-weight: 500;
+	font-size: 24px;
+	color: $color3;
+	position: relative;
+	span {
+		position: relative;
+		padding-bottom: 10px;
+		&:before {
+			content: '';
+			width: 25%;
+			height: 2px;
+			background-color: $color2;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+}

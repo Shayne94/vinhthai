@@ -151,6 +151,7 @@
                         height: 60px;
                         position: relative;
                         z-index: 3;
+                        transition: 0.2s ease-in-out;
                     }
                     p {
                         color: $color1;
@@ -185,6 +186,10 @@
                         box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
                         p {
                             text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
+                        }
+                        img {      
+                            -webkit-filter: drop-shadow(0px 0px 3px $color3) drop-shadow(0px 0px 7px $color3);
+                            filter: drop-shadow(0px 0px 3 px $color3) drop-shadow(0px 0px 7px $color3);
                         }
                         &:after {
                             background-image: linear-gradient(to bottom, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
@@ -254,6 +259,69 @@
                 &--zaun {
                     &:before {
                         background: url(../../assets/images/lol/reg-zaun-bg.png) no-repeat center center;
+                    }
+                }
+            }
+            .reg__detail {
+                div {
+                    .intro {
+                        @include flex-jbetween;
+                        margin-bottom: 30px;
+                        &__logo {
+                            margin-right: 25px;
+                        }
+                        &__text {
+                            &--title {
+                                margin-bottom: 5px;
+                            }
+                            &--voice {
+                                font-size: 18px;
+                                font-weight: 500;
+                                font-style: italic;
+                                margin-bottom: 10px;
+                                span {
+                                    font-style: normal;
+                                }
+                            }                            
+                            &--words {                                
+	                            line-height: 28px;
+                                p {
+                                    margin: 10px 0 0;
+                                }
+                            }
+                        }
+                    }
+                    .image {
+                        @include flex-jbetween;
+                        &__champ {                         
+                            &--title {
+                                margin-bottom: 35px;
+                            }
+                            &--list {
+                                @include flex-jbetween;
+                                align-content: flex-start;
+                                flex-direction: column;
+                                height: calc(100vh - 585px);
+                                flex-wrap: wrap;
+                                .item {
+                                    background-color: $color1;
+                                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                                    text-align: center;
+                                    font-weight: 500;
+                                    margin: 0 25px 0 0;
+                                    cursor: pointer;
+                                    p {
+                                        padding: 6px 0 5px;
+                                        background-color: $color1;
+                                        border-left: 5px solid $color3;
+                                    }
+                                    &:hover {
+                                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                                        color: $color3;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
