@@ -334,16 +334,16 @@ main {
   background-color: white !important; }
 
 .html5boxSeekerPlay {
-  background-color: #0575e6 !important; }
+  background-color: #0099f7 !important; }
 
 .html5boxVolumeBarActive {
-  background-color: #0575e6 !important; }
+  background-color: #0099f7 !important; }
 
 .html5-title-caption {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: #0575e6;
+  color: #0099f7;
   margin-top: 4px;
   float: right; }
 
@@ -772,7 +772,7 @@ main {
           position: relative;
           text-align: center;
           border: 5px solid #fff;
-          box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
+          box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
           cursor: pointer; }
           .lol__inner--reg .reg__list div img {
             margin: 25px 0;
@@ -807,7 +807,7 @@ main {
             left: 0;
             z-index: 1; }
           .lol__inner--reg .reg__list div:hover {
-            box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
+            box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }
             .lol__inner--reg .reg__list div:hover p {
               text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7; }
             .lol__inner--reg .reg__list div:hover img {
@@ -842,11 +842,14 @@ main {
         .lol__inner--reg .reg__list--zaun:before {
           background: url(../../assets/images/lol/reg-zaun-bg.png) no-repeat center center; }
       .lol__inner--reg .reg__detail div .intro {
-        display: flex;
-        justify-content: space-between;
+        display: block;
         margin-bottom: 30px; }
         .lol__inner--reg .reg__detail div .intro__logo {
-          margin-right: 25px; }
+          float: left;
+          margin-right: 25px;
+          padding: 10px;
+          background-color: #fff;
+          box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
         .lol__inner--reg .reg__detail div .intro__text--title {
           margin-bottom: 5px; }
         .lol__inner--reg .reg__detail div .intro__text--voice {
@@ -863,29 +866,120 @@ main {
       .lol__inner--reg .reg__detail div .image {
         display: flex;
         justify-content: space-between; }
-        .lol__inner--reg .reg__detail div .image__champ--title {
-          margin-bottom: 35px; }
-        .lol__inner--reg .reg__detail div .image__champ--list {
-          display: flex;
-          justify-content: space-between;
-          align-content: flex-start;
-          flex-direction: column;
-          height: calc(100vh - 585px);
-          flex-wrap: wrap; }
-          .lol__inner--reg .reg__detail div .image__champ--list .item {
-            background-color: #fff;
-            box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
-            text-align: center;
-            font-weight: 500;
-            margin: 0 25px 0 0;
-            cursor: pointer; }
-            .lol__inner--reg .reg__detail div .image__champ--list .item p {
-              padding: 6px 0 5px;
+        .lol__inner--reg .reg__detail div .image__champ {
+          width: calc((100% + 70px) / 2 - 50px); }
+          .lol__inner--reg .reg__detail div .image__champ--title {
+            margin-bottom: 35px; }
+          .lol__inner--reg .reg__detail div .image__champ--list {
+            display: flex;
+            justify-content: flex-start;
+            align-content: space-between;
+            height: calc(100vh - 585px);
+            flex-wrap: wrap; }
+            .lol__inner--reg .reg__detail div .image__champ--list .item {
               background-color: #fff;
-              border-left: 5px solid #0099f7; }
-            .lol__inner--reg .reg__detail div .image__champ--list .item:hover {
-              box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3);
-              color: #0099f7; }
+              box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
+              text-align: center;
+              font-weight: 500;
+              margin: 0 25px 0 0;
+              cursor: pointer; }
+              .lol__inner--reg .reg__detail div .image__champ--list .item p {
+                padding: 6px 0 5px;
+                background-color: #fff;
+                border-left: 5px solid #0099f7; }
+              .lol__inner--reg .reg__detail div .image__champ--list .item:hover {
+                box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3);
+                color: #0099f7; }
+        .lol__inner--reg .reg__detail div .image__vision {
+          width: calc((100% - 570px) / 2 - 50px); }
+          .lol__inner--reg .reg__detail div .image__vision--title {
+            margin-bottom: 35px; }
+          .lol__inner--reg .reg__detail div .image__vision--list {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+            height: calc(100vh - 585px); }
+            .lol__inner--reg .reg__detail div .image__vision--list .vision01 {
+              width: calc(100% / 3 - 10px);
+              height: calc(50% - 10px);
+              position: relative;
+              cursor: pointer; }
+            .lol__inner--reg .reg__detail div .image__vision--list .vision02 {
+              width: calc(50% - 10px);
+              height: calc(50% - 10px);
+              position: relative;
+              cursor: pointer; }
+          .lol__inner--reg .reg__detail div .image__vision--inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+            .lol__inner--reg .reg__detail div .image__vision--inner:hover .vision-text {
+              background-color: rgba(0, 0, 0, 0.7); }
+              .lol__inner--reg .reg__detail div .image__vision--inner:hover .vision-text__box {
+                opacity: 1; }
+            .lol__inner--reg .reg__detail div .image__vision--inner .vision-bg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              background-attachment: local;
+              background-color: #0a0a0c;
+              background-repeat: no-repeat;
+              background-size: cover;
+              transition: opacity .3s ease;
+              width: 100%; }
+            .lol__inner--reg .reg__detail div .image__vision--inner .vision-text {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              width: 100%;
+              transition: all .3s ease; }
+              .lol__inner--reg .reg__detail div .image__vision--inner .vision-text__box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+                position: absolute;
+                text-align: center;
+                top: 5px;
+                right: 5px;
+                bottom: 5px;
+                left: 5px;
+                border: 1px solid #fff;
+                color: #fff;
+                line-height: 28px;
+                z-index: 5;
+                transition: .2s;
+                opacity: 0; }
+        .lol__inner--reg .reg__detail div .image__other {
+          width: 250px; }
+          .lol__inner--reg .reg__detail div .image__other--title {
+            margin-bottom: 35px; }
+          .lol__inner--reg .reg__detail div .image__other--list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: calc(100vh - 585px); }
+            .lol__inner--reg .reg__detail div .image__other--list .other-reg {
+              width: 27%;
+              box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
+              transition: all .3s ease;
+              cursor: pointer; }
+              .lol__inner--reg .reg__detail div .image__other--list .other-reg img {
+                width: 100%; }
+              .lol__inner--reg .reg__detail div .image__other--list .other-reg:hover {
+                transform: scale(1.2); }
     .lol__inner--footer {
       display: flex;
       justify-content: center;

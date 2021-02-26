@@ -144,7 +144,7 @@
                     position: relative;   
                     text-align: center;
                     border: 5px solid $color1;
-                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                     cursor: pointer;
                     img {
                         margin: 25px 0;
@@ -183,7 +183,7 @@
                         z-index: 1;
                     }
                     &:hover {
-                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                         p {
                             text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
                         }
@@ -265,10 +265,14 @@
             .reg__detail {
                 div {
                     .intro {
-                        @include flex-jbetween;
+                        display: block;
                         margin-bottom: 30px;
                         &__logo {
+                            float: left;
                             margin-right: 25px;
+                            padding: 10px;
+                            background-color: $color1;
+                            box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                         }
                         &__text {
                             &--title {
@@ -293,19 +297,19 @@
                     }
                     .image {
                         @include flex-jbetween;
-                        &__champ {                         
+                        &__champ {     
+                            width: calc((100% + 70px) / 2 - 50px);               
                             &--title {
                                 margin-bottom: 35px;
                             }
                             &--list {
-                                @include flex-jbetween;
-                                align-content: flex-start;
-                                flex-direction: column;
+                                @include flex-jstart;
+                                align-content: space-between;
                                 height: calc(100vh - 585px);
                                 flex-wrap: wrap;
                                 .item {
                                     background-color: $color1;
-                                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                                     text-align: center;
                                     font-weight: 500;
                                     margin: 0 25px 0 0;
@@ -316,8 +320,112 @@
                                         border-left: 5px solid $color3;
                                     }
                                     &:hover {
-                                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                                         color: $color3;
+                                    }
+                                }
+                            }
+                        }
+                        &__vision {
+                            width: calc((100% - 570px) / 2 - 50px);  
+                            &--title {                                
+                                margin-bottom: 35px;                                
+                            }
+                            &--list {
+                                @include flex-jbetween;
+                                align-content: space-between;
+                                flex-wrap: wrap;
+                                height: calc(100vh - 585px);
+                                .vision01 {
+                                    width: calc(100% / 3 - 10px); 
+                                    height: calc(50% - 10px);
+                                    position: relative;
+                                    cursor: pointer;
+                                }
+                                .vision02 {
+                                    width: calc(50% - 10px);
+                                    height: calc(50% - 10px);
+                                    position: relative;
+                                    cursor: pointer;
+                                }                            
+                            }
+                            &--inner {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                bottom: 0;
+                                right: 0;
+                                overflow: hidden;
+                                z-index: 1;
+                                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                                &:hover {
+                                    .vision-text {
+                                        background-color: rgba($color: #000000, $alpha: 0.7);
+                                        &__box {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                .vision-bg {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    background-attachment: local;
+                                    background-color: #0a0a0c;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    transition: opacity .3s ease;
+                                    width: 100%;
+                                }
+                                .vision-text {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    width: 100%;
+                                    transition: all .3s ease;
+                                    &__box {
+                                        @include flex-center;
+                                        flex-direction: column;
+                                        position: absolute;
+                                        text-align: center;
+                                        top: 5px;
+                                        right: 5px;
+                                        bottom: 5px;
+                                        left: 5px;
+                                        border: 1px solid $color1;
+                                        color: $color1;
+                                        line-height: 28px;
+                                        z-index: 5;
+                                        transition: .2s;
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &__other {     
+                            width: 250px;               
+                            &--title {
+                                margin-bottom: 35px;
+                            }
+                            &--list {
+                                @include flex-jbetween;
+                                flex-wrap: wrap;
+                                align-content: space-between;
+                                height: calc(100vh - 585px);
+                                .other-reg {
+                                    width: 27%;
+                                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                                    transition: all .3s ease;
+                                    cursor: pointer;
+                                    img {
+                                        width: 100%;
+                                    }
+                                    &:hover {
+                                        transform: scale(1.2);
                                     }
                                 }
                             }
