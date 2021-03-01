@@ -144,11 +144,11 @@ $(document).ready(function (e) {
   //Regions
   $("[class*='reg__detail--']").hide();
   $("[class*='reg__list--']").on('click', function() {
-      let iconClass = $(this).attr('class').split('--')[1];
+      let reglist = $(this).attr('class').split('--')[1];
       $(".reg__detail").fadeIn(1000);
       $("[class*='reg__detail--']").each(function() {
-          let divClass = $(this).attr('class').split('--')[1];
-          if (iconClass === divClass) {
+          let regdetail = $(this).attr('class').split('--')[1];
+          if (reglist === regdetail) {
               $(".reg__list").hide();
               $(this).fadeIn(1000);
           } else {

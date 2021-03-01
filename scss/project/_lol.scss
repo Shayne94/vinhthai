@@ -34,7 +34,7 @@
         @include flex-jbetween;
         flex-direction: column;
         width: 100%;
-        height: calc(100vh - 235px);
+        height: calc(100vh - 245px);
         position: relative;
         &--about {
             .intro {
@@ -136,15 +136,19 @@
             position: relative;                   
             .reg__list {
                 @include flex-jbetween;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: space-between;
                 height: calc(100vh - 315px);
                 position: relative;
                 z-index: 3;
                 div {
-                    width: 7%;
+                    width: calc(100% / 7 - 43px); 
+                    height: calc(50% - 25px);
                     position: relative;   
                     text-align: center;
-                    border: 5px solid $color1;
-                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    border: 10px solid $color1;
+                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
                     cursor: pointer;
                     img {
                         margin: 25px 0;
@@ -183,7 +187,7 @@
                         z-index: 1;
                     }
                     &:hover {
-                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
                         p {
                             text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
                         }
@@ -270,7 +274,7 @@
                         &__logo {
                             float: left;
                             margin-right: 25px;
-                            padding: 10px;
+                            padding: 10px 8px 8px 10px;
                             background-color: $color1;
                             box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                         }
@@ -297,37 +301,13 @@
                     }
                     .image {
                         @include flex-jbetween;
-                        &__champ {     
-                            width: calc((100% + 70px) / 2 - 50px);               
-                            &--title {
-                                margin-bottom: 35px;
+                        &__reg {
+                            &--champ {
+                                width: calc((100% - 70px) / 2 - 50px);   
                             }
-                            &--list {
-                                @include flex-jstart;
-                                align-content: space-between;
-                                height: calc(100vh - 585px);
-                                flex-wrap: wrap;
-                                .item {
-                                    background-color: $color1;
-                                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                                    text-align: center;
-                                    font-weight: 500;
-                                    margin: 0 25px 0 0;
-                                    cursor: pointer;
-                                    p {
-                                        padding: 6px 0 5px;
-                                        background-color: $color1;
-                                        border-left: 5px solid $color3;
-                                    }
-                                    &:hover {
-                                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
-                                        color: $color3;
-                                    }
-                                }
-                            }
-                        }
-                        &__vision {
-                            width: calc((100% - 570px) / 2 - 50px);  
+                            &--vision {
+                                width: calc((100% - 470px) / 2 - 50px); 
+                            } 
                             &--title {                                
                                 margin-bottom: 35px;                                
                             }
@@ -335,19 +315,34 @@
                                 @include flex-jbetween;
                                 align-content: space-between;
                                 flex-wrap: wrap;
-                                height: calc(100vh - 585px);
-                                .vision01 {
-                                    width: calc(100% / 3 - 10px); 
-                                    height: calc(50% - 10px);
+                                height: calc(100vh - 570px);
+                                .reg-item {
+                                    height: calc(50% - 12.5px);
                                     position: relative;
                                     cursor: pointer;
                                 }
+                                .vision01 {                                    
+                                    width: calc(100% / 3 - 15px); 
+                                }
                                 .vision02 {
                                     width: calc(50% - 10px);
-                                    height: calc(50% - 10px);
-                                    position: relative;
-                                    cursor: pointer;
-                                }                            
+                                } 
+                                .vision03 {
+                                    width: calc(25% - 15px);
+                                } 
+                                .champ01 {
+                                    width: calc(25% - 17.5px);
+                                }  
+                                .champ02 {
+                                    width: calc(20% - 17.5px);
+                                }  
+                                .champ03 {
+                                    width: calc(20% - 17.5px);
+                                    height: calc(100% / 3 - 12.5px);
+                                }                             
+                            }                            
+                            .list-champ {
+                                flex-direction: column;
                             }
                             &--inner {
                                 position: absolute;
@@ -356,52 +351,69 @@
                                 bottom: 0;
                                 right: 0;
                                 overflow: hidden;
-                                z-index: 1;
-                                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                                z-index: 1;                                
+                                padding: 10px 8px 8px 10px;
+                                background-color: $color1;
+                                box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                                transition: all .3s ease;
                                 &:hover {
-                                    .vision-text {
-                                        background-color: rgba($color: #000000, $alpha: 0.7);
+                                    box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.5);
+                                    .reg-text {
                                         &__box {
                                             opacity: 1;
                                         }
                                     }
                                 }
-                                .vision-bg {
+                                .reg-bg {
                                     position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    bottom: 0;
-                                    right: 0;
+                                    top: 10px;
+                                    left: 10px;
+                                    bottom: 8px;
+                                    right: 8px;
                                     background-attachment: local;
                                     background-color: #0a0a0c;
                                     background-repeat: no-repeat;
                                     background-size: cover;
                                     transition: opacity .3s ease;
-                                    width: 100%;
+                                    
                                 }
-                                .vision-text {
+                                .reg-text {
                                     position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    bottom: 0;
-                                    right: 0;
-                                    width: 100%;
+                                    top: 10px;
+                                    left: 10px;
+                                    bottom: 8px;
+                                    right: 8px;
                                     transition: all .3s ease;
+                                    z-index: 5;
                                     &__box {
                                         @include flex-center;
                                         flex-direction: column;
                                         position: absolute;
                                         text-align: center;
-                                        top: 5px;
-                                        right: 5px;
-                                        bottom: 5px;
-                                        left: 5px;
-                                        border: 1px solid $color1;
+                                        top: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        left: 0;
                                         color: $color1;
                                         line-height: 28px;
-                                        z-index: 5;
                                         transition: .2s;
                                         opacity: 0;
+                                        &--champ {
+                                            position: absolute;
+                                            width: 100%;
+                                            bottom: 0;
+                                            background-color: rgba($color: $color3, $alpha: 0.7);
+                                            border-top: 1px solid $color3;
+                                        }
+                                        &--vision {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            padding: 0 5px;
+                                            background-color: rgba($color: $color3, $alpha: 0.7);
+                                            width: 100%;
+                                            height: 100%;
+                                        }
                                     }
                                 }
                             }
@@ -415,7 +427,7 @@
                                 @include flex-jbetween;
                                 flex-wrap: wrap;
                                 align-content: space-between;
-                                height: calc(100vh - 585px);
+                                height: calc(100vh - 570px);
                                 .other-reg {
                                     width: 27%;
                                     box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);

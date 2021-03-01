@@ -2,19 +2,22 @@
 	Header
 ------------------------------------------------------------*/
 .header {
-	 visibility: hidden;
+	visibility: hidden;
 	@include flex-jbetween;
 	&__name {
 		&--main {
 			font-family: 'Playball', cursive;
 			font-size: 48px;
 			color: $color3;
+			font-weight: normal;
 			@include max(1440px) {
 				font-size: 36px;
 			}
 		}
 		&--sub {
+			font-family: 'Roboto', sans-serif;
 			font-size: 24px;
+			font-weight: 500;
 			margin-top: 6px;
 			@include max(1440px) {
 				font-size: 20px;
