@@ -142,6 +142,20 @@ a {
 form label {
   cursor: pointer; }
 
+th, td {
+  padding: 2px 0;
+  vertical-align: top;
+  text-align: left;
+  line-height: 28px; }
+  th a, td a {
+    color: #333; }
+    th a:hover, td a:hover {
+      color: #0099f7; }
+
+th {
+  font-weight: 500;
+  padding-right: 15px; }
+
 /*------------------------------------------------------------
 	Clearfix
 ------------------------------------------------------------*/
@@ -278,6 +292,12 @@ main {
       left: 0;
       bottom: 0; }
 
+.title03 {
+  font-family: 'Playball', cursive;
+  font-size: 24px;
+  color: #0099f7;
+  position: relative; }
+
 /*------------------------------------------------------------
 	Text
 ------------------------------------------------------------*/
@@ -343,10 +363,123 @@ main {
   float: right; }
 
 .about {
-  margin: 100px 0; }
-  .about__inner {
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 120px 0; }
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: calc(100vh - 245px);
+  flex-wrap: wrap;
+  margin: 40px 0 0; }
+  .about__ava {
+    background-color: #0099f7;
+    height: 170px;
+    margin-bottom: 10px; }
+  .about__profile {
+    width: 400px; }
+    .about__profile--title span {
+      border-left: 10px solid #0099f7;
+      padding: 6px 20px 4px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__profile--inner {
+      font-family: 'Roboto', sans-serif;
+      padding: 10px 0 0 27px; }
+  .about__edu {
+    width: 400px; }
+    .about__edu--title span {
+      border-left: 10px solid #0099f7;
+      padding: 6px 20px 4px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__edu--inner {
+      padding: 10px 0 0 27px; }
+      .about__edu--inner .school-uel, .about__edu--inner .school-fpt {
+        padding: 7px 0; }
+      .about__edu--inner .school-name {
+        font-size: 20px;
+        font-weight: 500; }
+      .about__edu--inner .school-major {
+        padding: 12px 0 12px 25px; }
+      .about__edu--inner .school-rank {
+        padding: 0 0 0 25px; }
+        .about__edu--inner .school-rank span {
+          font-weight: 500; }
+  .about__char {
+    width: 400px; }
+    .about__char--title {
+      border-left: 7px solid #0099f7;
+      padding: 6px 0 4px 20px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__char--inner {
+      padding: 10px 0 0 25px; }
+      .about__char--inner p {
+        padding: 3px 0;
+        line-height: 28px; }
+        .about__char--inner p span {
+          font-weight: 500; }
+  .about__exp {
+    width: calc(100% - 800px);
+    height: calc(100vh - 245px);
+    padding: 0 50px; }
+    .about__exp .about-me {
+      line-height: 28px;
+      position: relative;
+      padding: 29px 35px;
+      margin-bottom: 35px; }
+      .about__exp .about-me:before {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: url(../../assets/images/common/border01.png) no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .about__exp .about-me:after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: url(../../assets/images/common/border01.png) no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: scale(-1); }
+      .about__exp .about-me p {
+        text-indent: 25px; }
+    .about__exp--title span {
+      border-left: 10px solid #0099f7;
+      padding: 6px 20px 4px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__exp--inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 25px 0 0 27px; }
+      .about__exp--inner .job {
+        width: 48%;
+        margin-bottom: 20px; }
+        .about__exp--inner .job__logo {
+          margin-bottom: 10px; }
+          .about__exp--inner .job__logo img {
+            padding: 15px 20px;
+            background-color: #fff;
+            box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
+        .about__exp--inner .job__title {
+          font-weight: 500; }
+          .about__exp--inner .job__title--name {
+            font-size: 20px; }
+          .about__exp--inner .job__title--pos {
+            display: flex;
+            justify-content: space-between;
+            color: #0099f7;
+            padding: 10px 0; }
+            .about__exp--inner .job__title--pos span {
+              color: #333; }
+      .about__exp--inner .job__des {
+        line-height: 28px; }
+  .about__skill {
+    width: 300px;
+    height: calc(100vh - 245px); }
 
 .poster {
   margin: 100px 0; }
@@ -650,7 +783,7 @@ main {
       min-width: 215px;
       padding: 15px 20px 11px 30px;
       background-color: #fff;
-      box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
       font-size: 20px;
       font-weight: 500;
       margin-bottom: 20px;
@@ -666,7 +799,7 @@ main {
         top: 0; }
       .lol__menu li:hover, .lol__menu li.active {
         color: #0099f7;
-        box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
+        box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }
   .lol__inner {
     display: flex;
     justify-content: space-between;
@@ -734,12 +867,12 @@ main {
         justify-content: space-between; }
         .lol__inner--cine .list div {
           width: 13%;
-          box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
+          box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
           text-align: center;
           font-weight: 500;
           cursor: pointer; }
           .lol__inner--cine .list div:hover, .lol__inner--cine .list div.active {
-            box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3);
+            box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3);
             color: #0099f7; }
           .lol__inner--cine .list div img {
             width: 100%; }
@@ -771,7 +904,7 @@ main {
           position: relative;
           text-align: center;
           border: 10px solid #fff;
-          box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15);
+          box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
           cursor: pointer; }
           .lol__inner--reg .reg__list div img {
             margin: 25px 0;
@@ -806,7 +939,7 @@ main {
             left: 0;
             z-index: 1; }
           .lol__inner--reg .reg__list div:hover {
-            box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
+            box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }
             .lol__inner--reg .reg__list div:hover p {
               text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7; }
             .lol__inner--reg .reg__list div:hover img {
@@ -893,6 +1026,9 @@ main {
             width: calc(20% - 17.5px); }
           .lol__inner--reg .reg__detail div .image__reg--list .champ03 {
             width: calc(20% - 17.5px);
+            height: calc(100% / 3 - 12.5px); }
+          .lol__inner--reg .reg__detail div .image__reg--list .champ04 {
+            width: calc(14% - 17.5px);
             height: calc(100% / 3 - 12.5px); }
         .lol__inner--reg .reg__detail div .image__reg .list-champ {
           flex-direction: column; }
@@ -996,6 +1132,6 @@ main {
           border-radius: 20px;
           margin: 0 15px;
           background-color: #fff;
-          box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.15); }
+          box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
           .lol__inner--footer .social img:hover {
-            box-shadow: 5px 5px 5px rgba(0, 153, 247, 0.3); }
+            box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }

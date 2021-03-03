@@ -9,7 +9,7 @@
             min-width: 215px;
             padding: 15px 20px 11px 30px;
             background-color: $color1;
-            box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+            box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 20px;
@@ -26,7 +26,7 @@
             }
             &:hover, &.active {
                 color: $color3;
-                box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
             }
         }
     }
@@ -105,12 +105,12 @@
                 @include flex-jbetween;
                 div {
                     width: 13%;
-                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                     text-align: center;
                     font-weight: 500;
                     cursor: pointer;
                     &:hover, &.active {
-                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                         color: $color3;
                     }
                     img {
@@ -148,7 +148,7 @@
                     position: relative;   
                     text-align: center;
                     border: 10px solid $color1;
-                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                     cursor: pointer;
                     img {
                         margin: 25px 0;
@@ -187,7 +187,7 @@
                         z-index: 1;
                     }
                     &:hover {
-                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                         p {
                             text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
                         }
@@ -339,7 +339,11 @@
                                 .champ03 {
                                     width: calc(20% - 17.5px);
                                     height: calc(100% / 3 - 12.5px);
-                                }                             
+                                }  
+                                .champ04 {
+                                    width: calc(14% - 17.5px);
+                                    height: calc(100% / 3 - 12.5px);
+                                }                                 
                             }                            
                             .list-champ {
                                 flex-direction: column;
@@ -463,9 +467,9 @@
                     border-radius: 20px;
                     margin: 0 15px;
                     background-color: $color1;
-                    box-shadow: 5px 5px 5px rgba($color: $color2, $alpha: 0.15);
+                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                     &:hover{
-                        box-shadow: 5px 5px 5px rgba($color: $color3, $alpha: 0.3);
+                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                     }
                 }
             }

@@ -157,3 +157,19 @@ a {
 form label {
 	cursor: pointer;
 }
+th, td {
+	padding: 2px 0;
+	vertical-align: top;
+	text-align: left;
+	line-height: 28px;
+	a {		
+		color: $color2;
+		&:hover {			
+			color: $color3;
+		}
+	}
+}
+th {
+	font-weight: 500;
+	padding-right: 15px;
+}

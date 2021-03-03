@@ -1,7 +1,157 @@
 .about {
-    margin: 100px 0;
-    &__inner {        
-	    background-color: rgba($color: #fff, $alpha: 0.3);
-        padding: 120px 0;
+    @include flex-jbetween;
+    flex-direction: column;
+    height: calc(100vh - 245px);
+    flex-wrap: wrap;
+    margin: 40px 0 0;
+    &__ava {
+        background-color: $color3;
+        height: 170px;
+        margin-bottom: 10px;
+    }
+    &__profile {    
+        width: 400px;  
+        &--title {            
+            span {
+                border-left: 10px solid $color3;
+                padding: 6px 20px 4px;
+                background-color: $color1;
+                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+            }
+        }
+        &--inner {            
+            font-family: 'Roboto', sans-serif;  
+            padding: 10px 0 0 27px;
+        }
+    }
+    &__edu {    
+        width: 400px;    
+        &--title {
+            span {
+                border-left: 10px solid $color3;
+                padding: 6px 20px 4px;
+                background-color: $color1;
+                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+            }
+        }
+        &--inner {            
+            padding: 10px 0 0 27px;
+            .school-uel, .school-fpt {
+                padding: 7px 0;
+            }
+            .school-name {
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .school-major {
+                padding: 12px 0 12px 25px;
+            }
+            .school-rank {
+                padding: 0 0 0 25px;
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &__char {    
+        width: 400px;    
+        &--title {
+            border-left: 7px solid $color3;
+            padding: 6px 0 4px 20px;
+            background-color: $color1;
+            box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+        }
+        &--inner {            
+            padding: 10px 0 0 25px;
+            p {
+                padding: 3px 0;
+                line-height: 28px;
+                span {
+                    font-weight: 500;
+                }
+            }            
+        }
+    }
+    &__exp {
+        width: calc(100% - 800px);
+        height: calc(100vh - 245px);
+        padding: 0 50px;
+        .about-me {
+            line-height: 28px;                
+            position: relative;
+            padding: 29px 35px;
+            margin-bottom: 35px;
+            &:before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: url(../../assets/images/common/border01.png) no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &:after {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: url(../../assets/images/common/border01.png) no-repeat;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: scale(-1);
+            }
+            p {
+                text-indent: 25px;
+            }
+        }     
+        &--title {
+            span {
+                border-left: 10px solid $color3;
+                padding: 6px 20px 4px;
+                background-color: $color1;
+                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+            }
+        }  
+        &--inner {       
+            @include flex-jbetween;
+            flex-wrap: wrap;     
+            padding: 25px 0 0 27px;
+            .job {
+                width: 48%;
+                margin-bottom: 20px;
+                &__logo {
+                    margin-bottom: 10px; 
+                    img {                        
+                        padding: 15px 20px;
+                        background-color: $color1;
+                        box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    }              
+                }
+                &__title {
+                    font-weight: 500;
+                    &--name {
+                        font-size: 20px;
+                    }
+                    &--pos {
+                        @include flex-jbetween;
+                        color: $color3;
+                        padding: 10px 0;
+                        span {
+                            color: $color2;
+                        }
+                    }
+                    
+                }
+            }
+            
+            .job__des {
+                line-height: 28px;
+            }
+        }        
+    }
+    &__skill {
+        width: 300px;
+        height: calc(100vh - 245px);
     }
 }
