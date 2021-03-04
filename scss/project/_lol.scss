@@ -302,11 +302,13 @@
                     .image {
                         @include flex-jbetween;
                         &__reg {
+                            width: calc(100% - 300px);
                             &--champ {
-                                width: calc((100% - 70px) / 2 - 50px);   
+                                width: 100%;   
                             }
                             &--vision {
-                                width: calc((100% - 470px) / 2 - 50px); 
+                                width: 100%; 
+                                margin-top: 30px;
                             } 
                             &--title {                                
                                 margin-bottom: 35px;                                
@@ -314,22 +316,13 @@
                             &--list {
                                 @include flex-jbetween;
                                 align-content: space-between;
-                                flex-wrap: wrap;
-                                height: calc(100vh - 570px);
+                                flex-wrap: wrap;                                
                                 .reg-item {
-                                    height: calc(50% - 12.5px);
+                                    width: calc(20% - 15px);
+                                    height: 105px;
                                     position: relative;
                                     cursor: pointer;
                                 }
-                                .vision01 {                                    
-                                    width: calc(100% / 3 - 15px); 
-                                }
-                                .vision02 {
-                                    width: calc(50% - 10px);
-                                } 
-                                .vision03 {
-                                    width: calc(25% - 15px);
-                                } 
                                 .champ01 {
                                     width: calc(25% - 17.5px);
                                 }  
@@ -341,12 +334,16 @@
                                     height: calc(100% / 3 - 12.5px);
                                 }  
                                 .champ04 {
-                                    width: calc(14% - 17.5px);
-                                    height: calc(100% / 3 - 12.5px);
+                                    width: calc(9% - 12.5px);
+                                    height: calc(100% / 2 - 8px);
                                 }                                 
                             }                            
                             .list-champ {
                                 flex-direction: column;
+                                height: calc(100vh - 764px);
+                            }
+                            .list-vision {
+                                flex-wrap: nowrap;
                             }
                             &--inner {
                                 position: absolute;
@@ -389,6 +386,7 @@
                                     right: 8px;
                                     transition: all .3s ease;
                                     z-index: 5;
+                                    cursor: not-allowed;
                                     &__box {
                                         @include flex-center;
                                         flex-direction: column;
@@ -402,22 +400,7 @@
                                         line-height: 28px;
                                         transition: .2s;
                                         opacity: 0;
-                                        &--champ {
-                                            position: absolute;
-                                            width: 100%;
-                                            bottom: 0;
-                                            background-color: rgba($color: $color3, $alpha: 0.7);
-                                            border-top: 1px solid $color3;
-                                        }
-                                        &--vision {
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            padding: 0 5px;
-                                            background-color: rgba($color: $color3, $alpha: 0.7);
-                                            width: 100%;
-                                            height: 100%;
-                                        }
+                                        background-color: rgba($color: $color3, $alpha: 0.7);
                                     }
                                 }
                             }
@@ -477,3 +460,19 @@
        
     }    
 } 
+.disable {
+    a {
+        pointer-events: none;
+        cursor: default;
+        background: #666;
+        box-shadow: 2px 4px 0px #333;
+        &:before {
+            background: #999;
+        }
+    }
+}
+.soon {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
