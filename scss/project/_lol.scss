@@ -280,22 +280,20 @@
                         }
                         &__text {
                             &--title {
-                                margin-bottom: 5px;
+                                line-height: 1;
+                                margin-bottom: 7px;
                             }
                             &--voice {
                                 font-size: 18px;
                                 font-weight: 500;
                                 font-style: italic;
-                                margin-bottom: 10px;
+                                margin-bottom: 5px;
                                 span {
                                     font-style: normal;
                                 }
                             }                            
                             &--words {                                
 	                            line-height: 28px;
-                                p {
-                                    margin: 10px 0 0;
-                                }
                             }
                         }
                     }
@@ -319,22 +317,24 @@
                                 flex-wrap: wrap;                                
                                 .reg-item {
                                     width: calc(20% - 15px);
-                                    height: 105px;
+                                    height: 117px;
                                     position: relative;
                                     cursor: pointer;
                                 }
                                 .champ01 {
-                                    width: calc(25% - 17.5px);
+                                    width: calc(14% - 12px);
+                                    height: 100%;
                                 }  
                                 .champ02 {
-                                    width: calc(20% - 17.5px);
+                                    width: calc(11% - 15px);
+                                    height: 100%;
                                 }  
                                 .champ03 {
-                                    width: calc(20% - 17.5px);
-                                    height: calc(100% / 3 - 12.5px);
+                                    width: calc(100% / 8 - 17.5px);
+                                    height: calc(100% / 2 - 10px);
                                 }  
                                 .champ04 {
-                                    width: calc(9% - 12.5px);
+                                    width: calc(100% / 11 - 15px);
                                     height: calc(100% / 2 - 8px);
                                 }                                 
                             }                            
@@ -414,7 +414,7 @@
                                 @include flex-jbetween;
                                 flex-wrap: wrap;
                                 align-content: space-between;
-                                height: calc(100vh - 570px);
+                                height: calc(100vh - 558px);
                                 .other-reg {
                                     width: 27%;
                                     box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
@@ -460,19 +460,3 @@
        
     }    
 } 
-.disable {
-    a {
-        pointer-events: none;
-        cursor: default;
-        background: #666;
-        box-shadow: 2px 4px 0px #333;
-        &:before {
-            background: #999;
-        }
-    }
-}
-.soon {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
-}
