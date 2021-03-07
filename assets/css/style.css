@@ -403,20 +403,6 @@ main {
         padding: 0 0 0 25px; }
         .about__edu--inner .school-rank span {
           font-weight: 500; }
-  .about__char {
-    width: 400px; }
-    .about__char--title {
-      border-left: 7px solid #0099f7;
-      padding: 6px 0 4px 20px;
-      background-color: #fff;
-      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
-    .about__char--inner {
-      padding: 10px 0 0 25px; }
-      .about__char--inner p {
-        padding: 3px 0;
-        line-height: 28px; }
-        .about__char--inner p span {
-          font-weight: 500; }
   .about__exp {
     width: calc(100% - 800px);
     height: calc(100vh - 245px);
@@ -425,7 +411,7 @@ main {
       line-height: 28px;
       position: relative;
       padding: 29px 35px;
-      margin-bottom: 35px; }
+      margin-bottom: 44px; }
       .about__exp .about-me:before {
         content: '';
         width: 50px;
@@ -454,9 +440,9 @@ main {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 25px 0 0 27px; }
+      padding: 20px 0 0 27px; }
       .about__exp--inner .job {
-        width: 48%;
+        width: 46%;
         margin-bottom: 20px; }
         .about__exp--inner .job__logo {
           margin-bottom: 10px; }
@@ -477,9 +463,64 @@ main {
               color: #333; }
       .about__exp--inner .job__des {
         line-height: 28px; }
+  .about__char {
+    width: 400px; }
+    .about__char--title {
+      border-left: 7px solid #0099f7;
+      padding: 6px 0 4px 20px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__char--inner {
+      padding: 10px 0 0 25px; }
+      .about__char--inner p {
+        padding: 3px 0;
+        line-height: 28px; }
+        .about__char--inner p span {
+          font-weight: 500; }
   .about__skill {
-    width: 300px;
-    height: calc(100vh - 245px); }
+    width: 400px; }
+    .about__skill--title span {
+      border-left: 10px solid #0099f7;
+      padding: 6px 20px 4px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__skill--inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 25px 0 0 27px; }
+      .about__skill--inner li {
+        width: 21%;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        margin: 0 0 25px 0; }
+        .about__skill--inner li img {
+          width: 100%; }
+        .about__skill--inner li:nth-last-child(1) {
+          width: calc(42% + 16% / 3); }
+  .about__passion {
+    width: 400px; }
+    .about__passion--title span {
+      border-left: 10px solid #0099f7;
+      padding: 6px 20px 4px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__passion--inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 25px 0 0 27px; }
+      .about__passion--inner li {
+        width: 21%;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        margin: 0 0 25px 0; }
+        .about__passion--inner li img {
+          width: 100%; }
+        .about__passion--inner li:nth-last-child(1) {
+          width: calc(42% + 16% / 3); }
 
 .poster {
   margin: 100px 0; }
