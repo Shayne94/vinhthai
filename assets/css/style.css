@@ -403,20 +403,6 @@ main {
         padding: 0 0 0 25px; }
         .about__edu--inner .school-rank span {
           font-weight: 500; }
-  .about__char {
-    width: 400px; }
-    .about__char--title {
-      border-left: 7px solid #0099f7;
-      padding: 6px 0 4px 20px;
-      background-color: #fff;
-      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
-    .about__char--inner {
-      padding: 10px 0 0 25px; }
-      .about__char--inner p {
-        padding: 3px 0;
-        line-height: 28px; }
-        .about__char--inner p span {
-          font-weight: 500; }
   .about__exp {
     width: calc(100% - 800px);
     height: calc(100vh - 245px);
@@ -425,7 +411,7 @@ main {
       line-height: 28px;
       position: relative;
       padding: 29px 35px;
-      margin-bottom: 35px; }
+      margin-bottom: 44px; }
       .about__exp .about-me:before {
         content: '';
         width: 50px;
@@ -454,9 +440,9 @@ main {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 25px 0 0 27px; }
+      padding: 20px 0 0 27px; }
       .about__exp--inner .job {
-        width: 48%;
+        width: 46%;
         margin-bottom: 20px; }
         .about__exp--inner .job__logo {
           margin-bottom: 10px; }
@@ -477,9 +463,64 @@ main {
               color: #333; }
       .about__exp--inner .job__des {
         line-height: 28px; }
+  .about__char {
+    width: 400px; }
+    .about__char--title {
+      border-left: 7px solid #0099f7;
+      padding: 6px 0 4px 20px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__char--inner {
+      padding: 10px 0 0 25px; }
+      .about__char--inner p {
+        padding: 3px 0;
+        line-height: 28px; }
+        .about__char--inner p span {
+          font-weight: 500; }
   .about__skill {
-    width: 300px;
-    height: calc(100vh - 245px); }
+    width: 400px; }
+    .about__skill--title span {
+      border-left: 10px solid #0099f7;
+      padding: 6px 20px 4px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__skill--inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 25px 0 0 27px; }
+      .about__skill--inner li {
+        width: 21%;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        margin: 0 0 25px 0; }
+        .about__skill--inner li img {
+          width: 100%; }
+        .about__skill--inner li:nth-last-child(1) {
+          width: calc(42% + 16% / 3); }
+  .about__passion {
+    width: 400px; }
+    .about__passion--title span {
+      border-left: 10px solid #0099f7;
+      padding: 6px 20px 4px;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
+    .about__passion--inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 25px 0 0 27px; }
+      .about__passion--inner li {
+        width: 21%;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        margin: 0 0 25px 0; }
+        .about__passion--inner li img {
+          width: 100%; }
+        .about__passion--inner li:nth-last-child(1) {
+          width: calc(42% + 16% / 3); }
 
 .poster {
   margin: 100px 0; }
@@ -774,12 +815,12 @@ main {
   margin-top: 50px;
   display: flex;
   justify-content: space-between; }
-  .lol__menu {
+  .lol .lol-menu {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     margin-right: 50px; }
-    .lol__menu li {
+    .lol .lol-menu li {
       min-width: 215px;
       padding: 15px 20px 11px 30px;
       background-color: #fff;
@@ -789,7 +830,7 @@ main {
       margin-bottom: 20px;
       position: relative;
       cursor: pointer; }
-      .lol__menu li:before {
+      .lol .lol-menu li:before {
         content: '';
         width: 10px;
         height: 100%;
@@ -797,21 +838,25 @@ main {
         position: absolute;
         left: 0;
         top: 0; }
-      .lol__menu li:hover, .lol__menu li.active {
-        color: #0099f7;
+      .lol .lol-menu li a {
+        color: #333;
+        text-decoration: none; }
+      .lol .lol-menu li:hover, .lol .lol-menu li.active {
         box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }
-  .lol__inner {
+        .lol .lol-menu li:hover a, .lol .lol-menu li.active a {
+          color: #0099f7; }
+  .lol .lol-inner {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
     height: calc(100vh - 245px);
     position: relative; }
-    .lol__inner--about .intro {
+    .lol .lol-inner__about .intro {
       line-height: 28px;
       position: relative;
       padding: 25px; }
-      .lol__inner--about .intro:before {
+      .lol .lol-inner__about .intro:before {
         content: '';
         width: 50px;
         height: 50px;
@@ -819,7 +864,7 @@ main {
         position: absolute;
         top: 0;
         left: 0; }
-      .lol__inner--about .intro:after {
+      .lol .lol-inner__about .intro:after {
         content: '';
         width: 50px;
         height: 50px;
@@ -828,14 +873,14 @@ main {
         bottom: 0;
         right: 0;
         transform: scale(-1); }
-      .lol__inner--about .intro p {
+      .lol .lol-inner__about .intro p {
         padding: 25px 0;
         position: relative; }
-        .lol__inner--about .intro p span {
+        .lol .lol-inner__about .intro p span {
           font-family: 'Playball', cursive;
           font-size: 32px;
           color: #0099f7; }
-        .lol__inner--about .intro p:before {
+        .lol .lol-inner__about .intro p:before {
           content: '';
           width: 25%;
           height: 2px;
@@ -843,7 +888,7 @@ main {
           position: absolute;
           top: 0;
           right: -25px; }
-        .lol__inner--about .intro p:after {
+        .lol .lol-inner__about .intro p:after {
           content: '';
           width: 25%;
           height: 2px;
@@ -851,189 +896,223 @@ main {
           position: absolute;
           bottom: 0;
           left: -25px; }
-    .lol__inner--about .video {
+    .lol .lol-inner__about .video {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 25px;
       position: relative; }
-      .lol__inner--about .video video {
+      .lol .lol-inner__about .video video {
         width: 50%;
         margin: 0 50px; }
-    .lol__inner--cine {
+    .lol .lol-inner__cine {
       position: relative; }
-      .lol__inner--cine .list {
+      .lol .lol-inner__cine .list {
         display: flex;
         justify-content: space-between; }
-        .lol__inner--cine .list div {
+        .lol .lol-inner__cine .list--item {
           width: 13%;
-          box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
+          position: relative;
           text-align: center;
           font-weight: 500;
+          background-color: #fff;
+          padding: 10px 8px 8px 10px;
+          box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
           cursor: pointer; }
-          .lol__inner--cine .list div:hover, .lol__inner--cine .list div.active {
-            box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3);
-            color: #0099f7; }
-          .lol__inner--cine .list div img {
+          .lol .lol-inner__cine .list--item:hover, .lol .lol-inner__cine .list--item.active {
+            box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3); }
+            .lol .lol-inner__cine .list--item:hover p, .lol .lol-inner__cine .list--item.active p {
+              opacity: 1; }
+          .lol .lol-inner__cine .list--item img {
             width: 100%; }
-          .lol__inner--cine .list div p {
-            padding: 7px 0 5px;
-            background-color: #fff;
-            border-left: 5px solid #0099f7; }
-      .lol__inner--cine .video {
+          .lol .lol-inner__cine .list--item p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            right: 8px;
+            bottom: 8px;
+            left: 10px;
+            opacity: 0;
+            color: #fff;
+            background-color: rgba(0, 153, 247, 0.7);
+            transition: all 0.2s ease; }
+      .lol .lol-inner__cine .video {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 40px; }
-        .lol__inner--cine .video video {
+        .lol .lol-inner__cine .video video {
           width: 50%; }
-    .lol__inner--reg {
-      position: relative; }
-      .lol__inner--reg .reg__list {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: space-between;
-        height: calc(100vh - 315px);
+    .lol .lol-inner__reg {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-between;
+      height: calc(100vh - 315px);
+      position: relative;
+      z-index: 3; }
+      .lol .lol-inner__reg .item {
+        width: calc(100% / 7 - 43px);
+        height: calc(50% - 25px);
         position: relative;
-        z-index: 3; }
-        .lol__inner--reg .reg__list div {
-          width: calc(100% / 7 - 43px);
-          height: calc(50% - 25px);
-          position: relative;
-          text-align: center;
-          border: 10px solid #fff;
-          box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
-          cursor: pointer; }
-          .lol__inner--reg .reg__list div img {
+        text-align: center;
+        background-color: #fff;
+        padding: 10px 8px 8px 10px;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        cursor: pointer; }
+        .lol .lol-inner__reg .item--bg {
+          width: 100%;
+          height: 100%; }
+          .lol .lol-inner__reg .item--bg img {
             margin: 25px 0;
             height: 60px;
             position: relative;
             z-index: 3;
             transition: 0.2s ease-in-out; }
-          .lol__inner--reg .reg__list div p {
+          .lol .lol-inner__reg .item--bg p {
             color: #fff;
             line-height: 24px;
             padding: 0 10px;
             position: relative;
             transition: 0.2s ease-in-out;
             z-index: 3; }
-          .lol__inner--reg .reg__list div:before {
+          .lol .lol-inner__reg .item--bg:before {
             content: '';
-            width: 100%;
-            height: 100%;
-            background-size: cover;
+            width: calc(100% - 18px);
+            height: calc(100% - 18px);
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 10px;
+            right: 8px;
+            bottom: 8px;
+            left: 10px;
             z-index: 1; }
-          .lol__inner--reg .reg__list div:after {
+          .lol .lol-inner__reg .item--bg:after {
             content: '';
-            width: 100%;
-            height: 100%;
+            width: calc(100% - 18px);
+            height: calc(100% - 18px);
             background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2));
-            background-size: cover;
+            background-size: contain;
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 10px;
+            right: 8px;
+            bottom: 8px;
+            left: 10px;
             z-index: 1; }
-          .lol__inner--reg .reg__list div:hover {
-            box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }
-            .lol__inner--reg .reg__list div:hover p {
-              text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7; }
-            .lol__inner--reg .reg__list div:hover img {
-              -webkit-filter: drop-shadow(0px 0px 3px #0099f7) drop-shadow(0px 0px 7px #0099f7);
-              filter: drop-shadow(0px 0px 3 px #0099f7) drop-shadow(0px 0px 7px #0099f7); }
-            .lol__inner--reg .reg__list div:hover:after {
-              background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%); }
-        .lol__inner--reg .reg__list--bandle:before {
-          background: url(../../assets/images/lol/reg-bandle-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--bilge:before {
-          background: url(../../assets/images/lol/reg-bilge-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--demacia:before {
-          background: url(../../assets/images/lol/reg-demacia-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--ionia:before {
-          background: url(../../assets/images/lol/reg-ionia-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--ixtal:before {
-          background: url(../../assets/images/lol/reg-ixtal-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--noxus:before {
-          background: url(../../assets/images/lol/reg-noxus-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--piltover:before {
-          background: url(../../assets/images/lol/reg-piltover-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--shadow:before {
-          background: url(../../assets/images/lol/reg-shadow-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--shurima:before {
-          background: url(../../assets/images/lol/reg-shurima-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--targon:before {
-          background: url(../../assets/images/lol/reg-targon-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--frel:before {
-          background: url(../../assets/images/lol/reg-frel-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--void:before {
-          background: url(../../assets/images/lol/reg-void-bg.png) no-repeat center center; }
-        .lol__inner--reg .reg__list--zaun:before {
-          background: url(../../assets/images/lol/reg-zaun-bg.png) no-repeat center center; }
-      .lol__inner--reg .reg__detail div .intro {
+        .lol .lol-inner__reg .item--bandle:before {
+          background: url(../../assets/images/lol/reg-bandle-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--bilge:before {
+          background: url(../../assets/images/lol/reg-bilge-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--demacia:before {
+          background: url(../../assets/images/lol/reg-demacia-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--ionia:before {
+          background: url(../../assets/images/lol/reg-ionia-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--ixtal:before {
+          background: url(../../assets/images/lol/reg-ixtal-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--noxus:before {
+          background: url(../../assets/images/lol/reg-noxus-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--piltover:before {
+          background: url(../../assets/images/lol/reg-piltover-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--shadow:before {
+          background: url(../../assets/images/lol/reg-shadow-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--shurima:before {
+          background: url(../../assets/images/lol/reg-shurima-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--targon:before {
+          background: url(../../assets/images/lol/reg-targon-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--frel:before {
+          background: url(../../assets/images/lol/reg-frel-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--void:before {
+          background: url(../../assets/images/lol/reg-void-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item--zaun:before {
+          background: url(../../assets/images/lol/reg-zaun-bg.png) center center;
+          background-size: cover; }
+        .lol .lol-inner__reg .item:hover {
+          box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3); }
+          .lol .lol-inner__reg .item:hover p {
+            text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7; }
+          .lol .lol-inner__reg .item:hover img {
+            -webkit-filter: drop-shadow(0px 0px 3px #0099f7) drop-shadow(0px 0px 7px #0099f7);
+            filter: drop-shadow(0px 0px 3 px #0099f7) drop-shadow(0px 0px 7px #0099f7); }
+          .lol .lol-inner__reg .item:hover:after {
+            background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%); }
+      .lol .lol-inner__reg .detail .intro {
         display: block;
         margin-bottom: 30px; }
-        .lol__inner--reg .reg__detail div .intro__logo {
+        .lol .lol-inner__reg .detail .intro__logo {
           float: left;
           margin-right: 25px;
           padding: 10px 8px 8px 10px;
           background-color: #fff;
           box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
-        .lol__inner--reg .reg__detail div .intro__text--title {
+        .lol .lol-inner__reg .detail .intro__text--title {
           line-height: 1;
           margin-bottom: 7px; }
-        .lol__inner--reg .reg__detail div .intro__text--voice {
+        .lol .lol-inner__reg .detail .intro__text--voice {
           font-size: 18px;
           font-weight: 500;
           font-style: italic;
           margin-bottom: 5px; }
-          .lol__inner--reg .reg__detail div .intro__text--voice span {
+          .lol .lol-inner__reg .detail .intro__text--voice span {
             font-style: normal; }
-        .lol__inner--reg .reg__detail div .intro__text--words {
+        .lol .lol-inner__reg .detail .intro__text--words {
           line-height: 28px; }
-      .lol__inner--reg .reg__detail div .image {
+      .lol .lol-inner__reg .detail .image {
         display: flex;
         justify-content: space-between; }
-        .lol__inner--reg .reg__detail div .image__reg {
+        .lol .lol-inner__reg .detail .image__reg {
           width: calc(100% - 300px); }
-          .lol__inner--reg .reg__detail div .image__reg--champ {
+          .lol .lol-inner__reg .detail .image__reg--champ {
             width: 100%; }
-          .lol__inner--reg .reg__detail div .image__reg--vision {
+          .lol .lol-inner__reg .detail .image__reg--vision {
             width: 100%;
             margin-top: 30px; }
-          .lol__inner--reg .reg__detail div .image__reg--title {
+          .lol .lol-inner__reg .detail .image__reg--title {
             margin-bottom: 35px; }
-          .lol__inner--reg .reg__detail div .image__reg--list {
+          .lol .lol-inner__reg .detail .image__reg--list {
             display: flex;
             justify-content: space-between;
             align-content: space-between;
             flex-wrap: wrap; }
-            .lol__inner--reg .reg__detail div .image__reg--list .reg-item {
+            .lol .lol-inner__reg .detail .image__reg--list .reg-item {
               width: calc(20% - 15px);
               height: 117px;
               position: relative;
               cursor: pointer; }
-            .lol__inner--reg .reg__detail div .image__reg--list .champ01 {
+            .lol .lol-inner__reg .detail .image__reg--list .champ01 {
               width: calc(14% - 12px);
               height: 100%; }
-            .lol__inner--reg .reg__detail div .image__reg--list .champ02 {
+            .lol .lol-inner__reg .detail .image__reg--list .champ02 {
               width: calc(11% - 15px);
               height: 100%; }
-            .lol__inner--reg .reg__detail div .image__reg--list .champ03 {
+            .lol .lol-inner__reg .detail .image__reg--list .champ03 {
               width: calc(100% / 8 - 17.5px);
               height: calc(100% / 2 - 10px); }
-            .lol__inner--reg .reg__detail div .image__reg--list .champ04 {
+            .lol .lol-inner__reg .detail .image__reg--list .champ04 {
               width: calc(100% / 11 - 15px);
               height: calc(100% / 2 - 8px); }
-          .lol__inner--reg .reg__detail div .image__reg .list-champ {
+          .lol .lol-inner__reg .detail .image__reg .list-champ {
             flex-direction: column;
             height: calc(100vh - 764px); }
-          .lol__inner--reg .reg__detail div .image__reg .list-vision {
+          .lol .lol-inner__reg .detail .image__reg .list-vision {
             flex-wrap: nowrap; }
-          .lol__inner--reg .reg__detail div .image__reg--inner {
+          .lol .lol-inner__reg .detail .image__reg--inner {
             position: absolute;
             top: 0;
             left: 0;
@@ -1045,11 +1124,11 @@ main {
             background-color: #fff;
             box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
             transition: all .3s ease; }
-            .lol__inner--reg .reg__detail div .image__reg--inner:hover {
+            .lol .lol-inner__reg .detail .image__reg--inner:hover {
               box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.5); }
-              .lol__inner--reg .reg__detail div .image__reg--inner:hover .reg-text__box {
+              .lol .lol-inner__reg .detail .image__reg--inner:hover .reg-text__box {
                 opacity: 1; }
-            .lol__inner--reg .reg__detail div .image__reg--inner .reg-bg {
+            .lol .lol-inner__reg .detail .image__reg--inner .reg-bg {
               position: absolute;
               top: 10px;
               left: 10px;
@@ -1060,7 +1139,7 @@ main {
               background-repeat: no-repeat;
               background-size: cover;
               transition: opacity .3s ease; }
-            .lol__inner--reg .reg__detail div .image__reg--inner .reg-text {
+            .lol .lol-inner__reg .detail .image__reg--inner .reg-text {
               position: absolute;
               top: 10px;
               left: 10px;
@@ -1069,7 +1148,7 @@ main {
               transition: all .3s ease;
               z-index: 5;
               cursor: not-allowed; }
-              .lol__inner--reg .reg__detail div .image__reg--inner .reg-text__box {
+              .lol .lol-inner__reg .detail .image__reg--inner .reg-text__box {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1086,41 +1165,41 @@ main {
                 transition: .2s;
                 opacity: 0;
                 background-color: rgba(0, 153, 247, 0.7); }
-        .lol__inner--reg .reg__detail div .image__other {
+        .lol .lol-inner__reg .detail .image__other {
           width: 250px; }
-          .lol__inner--reg .reg__detail div .image__other--title {
+          .lol .lol-inner__reg .detail .image__other--title {
             margin-bottom: 35px; }
-          .lol__inner--reg .reg__detail div .image__other--list {
+          .lol .lol-inner__reg .detail .image__other--list {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             align-content: space-between;
             height: calc(100vh - 558px); }
-            .lol__inner--reg .reg__detail div .image__other--list .other-reg {
+            .lol .lol-inner__reg .detail .image__other--list .item {
               width: 27%;
               box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
               transition: all .3s ease;
               cursor: pointer; }
-              .lol__inner--reg .reg__detail div .image__other--list .other-reg img {
+              .lol .lol-inner__reg .detail .image__other--list .item img {
                 width: 100%; }
-              .lol__inner--reg .reg__detail div .image__other--list .other-reg:hover {
+              .lol .lol-inner__reg .detail .image__other--list .item:hover {
                 transform: scale(1.2); }
-    .lol__inner--footer {
+    .lol .lol-inner__footer {
       display: flex;
       justify-content: center;
       width: 100%;
       height: 40px; }
-      .lol__inner--footer .logo {
+      .lol .lol-inner__footer .logo {
         height: 40px;
         margin: 0 25px; }
-        .lol__inner--footer .logo img {
+        .lol .lol-inner__footer .logo img {
           margin: 0 15px; }
-      .lol__inner--footer .social {
+      .lol .lol-inner__footer .social {
         margin: 0 25px; }
-        .lol__inner--footer .social img {
+        .lol .lol-inner__footer .social img {
           border-radius: 20px;
           margin: 0 15px;
           background-color: #fff;
           box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3); }
-          .lol__inner--footer .social img:hover {
+          .lol .lol-inner__footer .social img:hover {
             box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }

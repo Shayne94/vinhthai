@@ -72,88 +72,61 @@ $(document).ready(function (e) {
   //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
   // League of Legends
   //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-  var StopVideo = {
-    function() {
+  // var StopVideo = {
+  //   function() {
+  //   }
+  // }
+  // $(".lol-inner li:not(:last-child), .lol-inner__reg .detail").hide();
+  // $(".lol-inner li:first-child").show();
 
-    }
-  }
-  $(".lol__inner li:not(:last-child)").hide();
-  $(".lol__inner li:first-child").show();
-  $(".lol__menu--about").click(function () {
-    const video = document.querySelector(".cine__video");
-    video.pause();
-    video.currentTime = 0;
-    $(".lol__menu li").removeClass("active");
-    $(this).addClass("active");
-    $(".lol__inner li:not(:last-child)").hide();
-    $(".lol__inner--about").fadeIn(1000);
-  });
-  $(".lol__menu--cine").click(function () {
-    const video = document.querySelector(".cine__video");
-    video.pause();
-    video.currentTime = 0;
-    $(".lol__menu li").removeClass("active");
-    $(this).addClass("active");
-    $(".lol__inner li:not(:last-child)").hide();
-    $(".lol__inner--cine").fadeIn(1000);
-  });
-  $(".lol__menu--reg").click(function () {
-    const video = document.querySelector(".cine__video");
-    video.pause();
-    video.currentTime = 0;
-    $(".lol__menu li").removeClass("active");
-    $(this).addClass("active");
-    $(".lol__inner li:not(:last-child), .reg__detail").hide();
-    $(".lol__inner--reg, .reg__list").fadeIn(1000);
-  });
-  $(".lol__menu--champ").click(function () {
-    const video = document.querySelector(".cine__video");
-    video.pause();
-    video.currentTime = 0;
-    $(".lol__menu li").removeClass("active");
-    $(this).addClass("active");
-    $(".lol__inner li:not(:last-child)").hide();
-    $(".lol__inner--champ").fadeIn(1000);
-  });
-  $(".lol__menu--skin").click(function () {
-    const video = document.querySelector(".cine__video");
-    video.pause();
-    video.currentTime = 0;
-    $(".lol__menu li").removeClass("active");
-    $(this).addClass("active");
-    $(".lol__inner li:not(:last-child)").hide();
-    $(".lol__inner--skin").fadeIn(1000);
-  });
+  
+  // $("[class*='lol-menu__']").on('click', function() {
+  //     let lolmenu = $(this).attr('class').split('__')[1];
+  //     $("[class*='lol-menu__']").removeClass("active");
+  //     $(this).addClass("active");
+  //     $("[class*='lol-inner__']").each(function() {
+  //         let lolinner = $(this).attr('class').split('__')[1];
+  //         if (lolmenu === lolinner) {
+  //             $(this).fadeIn(1000);
+  //             const video = document.querySelector(".video-cine");
+  //             video.pause();
+  //             video.currentTime = 0;
+  //         } else {
+  //             $(this).hide();
+  //         }
+  //     })
+  // });
 
   //Cinematic
   $(function () {
-    $(".lol__inner--cine .list div").on("click", function () {
-      $(".cine__video").attr({
+    $(".lol-inner__cine .list--item").on("click", function () {
+      $(".video-cine").attr({
         "src": $(this).attr("movieurl"),
         "autoplay": "autoplay"
 
       });
-      $(".lol__inner--cine .list div").removeClass("active");
+      $(".lol-inner__cine .list--item").removeClass("active");
       $(this).addClass("active");
     })
-    $(".cine__video").attr({
-      "src": $(".lol__inner--cine .list div").eq(0).attr("movieurl"),
+    $(".video-cine").attr({
+      "src": $(".lol-inner__cine .list--item").eq(0).attr("movieurl"),
     });
   });
 
   //Regions
-  $("[class*='reg__detail--']").hide();
-  $("[class*='reg__list--']").on('click', function() {
-      let reglist = $(this).attr('class').split('--')[1];
-      $(".reg__detail").fadeIn(1000);
-      $("[class*='reg__detail--']").each(function() {
+  $("[class*='detail--']").hide();
+  $("[class*='list--']").on('click', function() {
+      let reglist = $(this).attr('class').split('--')[1];      
+      $(".lol-inner__reg .list").hide();
+      $(".lol-inner__reg .detail").fadeIn(1000);
+      $("[class*='detail--']").each(function() {
           let regdetail = $(this).attr('class').split('--')[1];
           if (reglist === regdetail) {
-              $(".reg__list").hide();
               $(this).fadeIn(1000);
           } else {
               $(this).hide();
           }
       })
   });
+
 });
