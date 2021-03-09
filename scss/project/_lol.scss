@@ -10,6 +10,7 @@
             padding: 15px 20px 11px 30px;
             background-color: $color1;
             box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+            margin-bottom: 20px;
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 20px;
@@ -25,8 +26,9 @@
                 top: 0;
             }
             a {
+                display: block;
                 color: $color2;
-                text-decoration: none; 
+                text-decoration: none;  
             }
             &:hover, &.active {
                 box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
@@ -39,7 +41,7 @@
     .lol-inner {
         @include flex-jbetween;
         flex-direction: column;
-        width: 100%;
+        width: calc(100vw - 365px);
         height: calc(100vh - 245px);
         position: relative;
         &__about {
@@ -168,126 +170,130 @@
                 background-color: $color1;
                 padding: 10px 8px 8px 10px;
                 box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                transition: 0.2s ease-in-out;
                 cursor: pointer;
-                &--bg {
-                    width: 100%;
-                    height: 100%;
-                    img {
-                        margin: 25px 0;
-                        height: 60px;
-                        position: relative;
-                        z-index: 3;
-                        transition: 0.2s ease-in-out;
+                a {
+                    text-decoration: none;                    
+                    .reg--bg {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            margin: 25px 0;
+                            height: 60px;
+                            position: relative;
+                            z-index: 3;
+                            transition: 0.2s ease-in-out;
+                        }
+                        p {
+                            color: $color1;
+                            line-height: 24px;
+                            padding: 0 10px;  
+                            position: relative;
+                            transition: 0.2s ease-in-out;
+                            z-index: 3;
+                        }
+                        &:before {
+                            content: '';    
+                            width: calc(100% - 18px);
+                            height: calc(100% - 18px);                
+                            position: absolute;
+                            top: 10px;
+                            right: 8px;
+                            bottom: 8px;
+                            left: 10px;
+                            z-index: 1;
+                        }
+                        &:after {                        
+                            content: '';    
+                            width: calc(100% - 18px);
+                            height: calc(100% - 18px);    
+                            background-image: linear-gradient(to bottom, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
+                            background-size: contain;                
+                            position: absolute;
+                            top: 10px;
+                            right: 8px;
+                            bottom: 8px;
+                            left: 10px;
+                            z-index: 1;
+                        }                      
                     }
-                    p {
-                        color: $color1;
-                        line-height: 24px;
-                        padding: 0 10px;  
-                        position: relative;
-                        transition: 0.2s ease-in-out;
-                        z-index: 3;
+                    .reg--bandle {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-bandle-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                    &:before {
-                        content: '';    
-                        width: calc(100% - 18px);
-                        height: calc(100% - 18px);                
-                        position: absolute;
-                        top: 10px;
-                        right: 8px;
-                        bottom: 8px;
-                        left: 10px;
-                        z-index: 1;
+                    .reg--bilge {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-bilge-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                    &:after {                        
-                        content: '';    
-                        width: calc(100% - 18px);
-                        height: calc(100% - 18px);    
-                        background-image: linear-gradient(to bottom, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0.2));
-                        background-size: contain;                
-                        position: absolute;
-                        top: 10px;
-                        right: 8px;
-                        bottom: 8px;
-                        left: 10px;
-                        z-index: 1;
-                    }                      
-                }
-                &--bandle {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-bandle-bg.png) center center;
-                        background-size: cover;
+                    .reg--demacia {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-demacia-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--bilge {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-bilge-bg.png) center center;
-                        background-size: cover;
+                    .reg--ionia {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-ionia-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--demacia {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-demacia-bg.png) center center;
-                        background-size: cover;
+                    .reg--ixtal {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-ixtal-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--ionia {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-ionia-bg.png) center center;
-                        background-size: cover;
+                    .reg--noxus {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-noxus-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--ixtal {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-ixtal-bg.png) center center;
-                        background-size: cover;
+                    .reg--piltover {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-piltover-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--noxus {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-noxus-bg.png) center center;
-                        background-size: cover;
+                    .reg--shadow {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-shadow-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--piltover {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-piltover-bg.png) center center;
-                        background-size: cover;
+                    .reg--shurima {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-shurima-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--shadow {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-shadow-bg.png) center center;
-                        background-size: cover;
+                    .reg--targon {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-targon-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--shurima {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-shurima-bg.png) center center;
-                        background-size: cover;
+                    .reg--frel {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-frel-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--targon {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-targon-bg.png) center center;
-                        background-size: cover;
+                    .reg--void {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-void-bg.png) center center;
+                            background-size: cover;
+                        }
                     }
-                }
-                &--frel {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-frel-bg.png) center center;
-                        background-size: cover;
-                    }
-                }
-                &--void {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-void-bg.png) center center;
-                        background-size: cover;
-                    }
-                }
-                &--zaun {
-                    &:before {
-                        background: url(../../assets/images/lol/reg-zaun-bg.png) center center;
-                        background-size: cover;
+                    .reg--zaun {
+                        &:before {
+                            background: url(../../assets/images/lol/reg-zaun-bg.png) center center;
+                            background-size: cover;                        
+                        }
                     }
                 }
                 &:hover {
@@ -299,177 +305,177 @@
                         -webkit-filter: drop-shadow(0px 0px 3px $color3) drop-shadow(0px 0px 7px $color3);
                         filter: drop-shadow(0px 0px 3 px $color3) drop-shadow(0px 0px 7px $color3);
                     }
-                    &:after {
-                        background-image: linear-gradient(to bottom, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
-                    } 
                 }             
                 
             }  
-            .detail {     
-                .intro {
-                    display: block;
-                    margin-bottom: 30px;
-                    &__logo {
-                        float: left;
-                        margin-right: 25px;
-                        padding: 10px 8px 8px 10px;
-                        background-color: $color1;
-                        box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                    }
-                    &__text {
-                        &--title {
-                            line-height: 1;
-                            margin-bottom: 7px;
-                        }
-                        &--voice {
-                            font-size: 18px;
-                            font-weight: 500;
-                            font-style: italic;
-                            margin-bottom: 5px;
-                            span {
-                                font-style: normal;
-                            }
-                        }                            
-                        &--words {                                
-                            line-height: 28px;
-                        }
-                    }
-                }
-                .image {
-                    @include flex-jbetween;
-                    &__reg {
-                        width: calc(100% - 300px);
-                        &--champ {
-                            width: 100%;   
-                        }
-                        &--vision {
-                            width: 100%; 
-                            margin-top: 30px;
-                        } 
-                        &--title {                                
-                            margin-bottom: 35px;                                
-                        }
-                        &--list {
-                            @include flex-jbetween;
-                            align-content: space-between;
-                            flex-wrap: wrap;                                
-                            .reg-item {
-                                width: calc(20% - 15px);
-                                height: 117px;
-                                position: relative;
-                                cursor: pointer;
-                            }
-                            .champ01 {
-                                width: calc(14% - 12px);
-                                height: 100%;
-                            }  
-                            .champ02 {
-                                width: calc(11% - 15px);
-                                height: 100%;
-                            }  
-                            .champ03 {
-                                width: calc(100% / 8 - 17.5px);
-                                height: calc(100% / 2 - 10px);
-                            }  
-                            .champ04 {
-                                width: calc(100% / 11 - 15px);
-                                height: calc(100% / 2 - 8px);
-                            }                                 
-                        }                            
-                        .list-champ {
-                            flex-direction: column;
-                            height: calc(100vh - 764px);
-                        }
-                        .list-vision {
-                            flex-wrap: nowrap;
-                        }
-                        &--inner {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            bottom: 0;
-                            right: 0;
-                            overflow: hidden;
-                            z-index: 1;                                
-                            padding: 10px 8px 8px 10px;
-                            background-color: $color1;
-                            box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                            transition: all .3s ease;
-                            &:hover {
-                                box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.5);
-                                .reg-text {
-                                    &__box {
-                                        opacity: 1;
-                                    }
-                                }
-                            }
-                            .reg-bg {
-                                position: absolute;
-                                top: 10px;
-                                left: 10px;
-                                bottom: 8px;
-                                right: 8px;
-                                background-attachment: local;
-                                background-color: #0a0a0c;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                transition: opacity .3s ease;
-                                
-                            }
-                            .reg-text {
-                                position: absolute;
-                                top: 10px;
-                                left: 10px;
-                                bottom: 8px;
-                                right: 8px;
-                                transition: all .3s ease;
-                                z-index: 5;
-                                cursor: not-allowed;
-                                &__box {
-                                    @include flex-center;
-                                    flex-direction: column;
-                                    position: absolute;
-                                    text-align: center;
-                                    top: 0;
-                                    right: 0;
-                                    bottom: 0;
-                                    left: 0;
-                                    color: $color1;
-                                    line-height: 28px;
-                                    transition: .2s;
-                                    opacity: 0;
-                                    background-color: rgba($color: $color3, $alpha: 0.7);
-                                }
-                            }
-                        }
-                    }
-                    &__other {     
-                        width: 250px;               
-                        &--title {
-                            margin-bottom: 35px;
-                        }
-                        &--list {
-                            @include flex-jbetween;
-                            flex-wrap: wrap;
-                            align-content: space-between;
-                            height: calc(100vh - 558px);
-                            .item {
-                                width: 27%;
-                                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                                transition: all .3s ease;
-                                cursor: pointer;
-                                img {
-                                    width: 100%;
-                                }
-                                &:hover {
-                                    transform: scale(1.2);
-                                }
-                            }
-                        }
-                    }
-                }
-            }                 
         }
+        &__detail {
+            .intro {
+                display: block;
+                margin-bottom: 30px;
+                &__logo {
+                    float: left;
+                    margin-right: 25px;
+                    padding: 10px 8px 8px 10px;
+                    background-color: $color1;
+                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                }
+                &__text {
+                    &--title {
+                        line-height: 1;
+                        margin-bottom: 10px;
+                    }
+                    &--voice {
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-style: italic;
+                        margin-bottom: 5px;
+                        span {
+                            font-style: normal;
+                        }
+                    }                            
+                    &--words {                                
+                        line-height: 28px;
+                    }
+                }
+            }
+            .image {       
+                @include flex-jbetween;
+                height: calc(100vh - 610px);
+                margin-bottom: 40px;
+                &__champ {
+                    width: 67%;   
+                }
+                &__vision {
+                    width: 30%; 
+                } 
+                &__title {                                
+                    margin-bottom: 35px;                                
+                }
+                &__list {
+                    @include flex-jbetween;
+                    align-content: space-between;
+                    flex-wrap: wrap;     
+                    height: calc(100vh - 669px);                           
+                    .reg-item {
+                        height: calc(50% - 10px);
+                        position: relative;
+                        cursor: pointer;
+                    }
+                    .champ01 {
+                        width: calc(25% - 15px);
+                    }  
+                    .champ02 {
+                        width: calc(20% - 16px);
+                    }  
+                    .champ03 {
+                        width: calc(100% / 8 - 17.5px);
+                    }  
+                    .champ04 {
+                        width: calc(100% / 7 - 120px / 7);
+                        height: calc(100% / 3 - 40px / 3);
+                    } 
+                    .champ05 {
+                        width: calc(100% / 6 - 50px / 3);
+                        height: 100%;
+                    }  
+                    .vision01 {
+                        width: calc(30% - 12px);
+                    }    
+                    .vision02 {
+                        width: calc(40% - 16px);
+                    }   
+                    .vision03 {
+                        width: calc(50% - 10px);
+                    }  
+                    .vision04 {
+                        width: calc(35% - 10px);
+                    }                          
+                }                            
+                .list-champ {
+                    flex-direction: column;
+                }
+                &__inner {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    overflow: hidden;
+                    z-index: 1;                                
+                    padding: 10px 8px 8px 10px;
+                    background-color: $color1;
+                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    transition: all .3s ease;
+                    &:hover {
+                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.5);
+                        .reg-text {
+                            &__box {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .reg-bg {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        bottom: 8px;
+                        right: 8px;
+                        background-color: #0a0a0c;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        transition: opacity .3s ease;                            
+                    }
+                    .reg-text {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        bottom: 8px;
+                        right: 8px;
+                        transition: all .3s ease;
+                        z-index: 5;
+                        &__box {
+                            @include flex-center;
+                            flex-direction: column;
+                            position: absolute;
+                            text-align: center;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            color: $color1;
+                            text-transform: capitalize;
+                            line-height: 28px;
+                            transition: .2s;
+                            opacity: 0;
+                            background-color: rgba($color: $color3, $alpha: 0.7);
+                        }
+                    }
+                    
+                }
+            }
+            .other {                   
+                @include flex-jcenter;
+                .other-reg {
+                    width: 75px;
+                    padding: 10px 8px 8px 10px;
+                    margin: 0 10px;
+                    background-color: $color1;
+                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    transition: all .4s ease;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                    }
+                    &:hover {
+                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                        transform: scale(1.2);
+                    }
+                }              
+            }
+            
+        }          
+        
         &__footer {
             @include flex-jcenter;
             width: 100%;

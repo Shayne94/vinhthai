@@ -4,7 +4,7 @@
 
 .title01 {
 	font-family: 'Playball', cursive;
-	font-size: 36px;
+	font-size: 32px;
 	color: $color3;
 	position: relative;
 	span {
@@ -31,7 +31,7 @@
 		padding-bottom: 10px;
 		&:before {
 			content: '';
-			width: 25%;
+			width: 50px;
 			height: 2px;
 			background-color: $color2;
 			position: absolute;

@@ -2,10 +2,11 @@
 	Header
 ------------------------------------------------------------*/
 .header {
-	visibility: hidden;
+	opacity: 0;
 	@include flex-jbetween;
 	&__name {
 		&--main {
+			opacity: 0;
 			font-family: 'Playball', cursive;
 			font-size: 48px;
 			color: $color3;

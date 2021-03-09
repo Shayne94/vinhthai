@@ -205,10 +205,11 @@ main {
 	Header
 ------------------------------------------------------------*/
 .header {
-  visibility: hidden;
+  opacity: 0;
   display: flex;
   justify-content: space-between; }
   .header__name--main {
+    opacity: 0;
     font-family: 'Playball', cursive;
     font-size: 48px;
     color: #0099f7;
@@ -260,7 +261,7 @@ main {
 ------------------------------------------------------------*/
 .title01 {
   font-family: 'Playball', cursive;
-  font-size: 36px;
+  font-size: 32px;
   color: #0099f7;
   position: relative; }
   .title01 span {
@@ -285,7 +286,7 @@ main {
     padding-bottom: 10px; }
     .title02 span:before {
       content: '';
-      width: 25%;
+      width: 50px;
       height: 2px;
       background-color: #333;
       position: absolute;
@@ -360,7 +361,9 @@ main {
   font-weight: 500;
   color: #0099f7;
   margin-top: 4px;
-  float: right; }
+  float: right;
+  text-transform: uppercase;
+  font-weight: 500; }
 
 .about {
   display: flex;
@@ -825,6 +828,7 @@ main {
       padding: 15px 20px 11px 30px;
       background-color: #fff;
       box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
+      margin-bottom: 20px;
       font-size: 20px;
       font-weight: 500;
       margin-bottom: 20px;
@@ -839,6 +843,7 @@ main {
         left: 0;
         top: 0; }
       .lol .lol-menu li a {
+        display: block;
         color: #333;
         text-decoration: none; }
       .lol .lol-menu li:hover, .lol .lol-menu li.active {
@@ -849,7 +854,7 @@ main {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 100%;
+    width: calc(100vw - 365px);
     height: calc(100vh - 245px);
     position: relative; }
     .lol .lol-inner__about .intro {
@@ -965,84 +970,87 @@ main {
         background-color: #fff;
         padding: 10px 8px 8px 10px;
         box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        transition: 0.2s ease-in-out;
         cursor: pointer; }
-        .lol .lol-inner__reg .item--bg {
-          width: 100%;
-          height: 100%; }
-          .lol .lol-inner__reg .item--bg img {
-            margin: 25px 0;
-            height: 60px;
-            position: relative;
-            z-index: 3;
-            transition: 0.2s ease-in-out; }
-          .lol .lol-inner__reg .item--bg p {
-            color: #fff;
-            line-height: 24px;
-            padding: 0 10px;
-            position: relative;
-            transition: 0.2s ease-in-out;
-            z-index: 3; }
-          .lol .lol-inner__reg .item--bg:before {
-            content: '';
-            width: calc(100% - 18px);
-            height: calc(100% - 18px);
-            position: absolute;
-            top: 10px;
-            right: 8px;
-            bottom: 8px;
-            left: 10px;
-            z-index: 1; }
-          .lol .lol-inner__reg .item--bg:after {
-            content: '';
-            width: calc(100% - 18px);
-            height: calc(100% - 18px);
-            background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2));
-            background-size: contain;
-            position: absolute;
-            top: 10px;
-            right: 8px;
-            bottom: 8px;
-            left: 10px;
-            z-index: 1; }
-        .lol .lol-inner__reg .item--bandle:before {
-          background: url(../../assets/images/lol/reg-bandle-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--bilge:before {
-          background: url(../../assets/images/lol/reg-bilge-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--demacia:before {
-          background: url(../../assets/images/lol/reg-demacia-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--ionia:before {
-          background: url(../../assets/images/lol/reg-ionia-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--ixtal:before {
-          background: url(../../assets/images/lol/reg-ixtal-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--noxus:before {
-          background: url(../../assets/images/lol/reg-noxus-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--piltover:before {
-          background: url(../../assets/images/lol/reg-piltover-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--shadow:before {
-          background: url(../../assets/images/lol/reg-shadow-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--shurima:before {
-          background: url(../../assets/images/lol/reg-shurima-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--targon:before {
-          background: url(../../assets/images/lol/reg-targon-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--frel:before {
-          background: url(../../assets/images/lol/reg-frel-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--void:before {
-          background: url(../../assets/images/lol/reg-void-bg.png) center center;
-          background-size: cover; }
-        .lol .lol-inner__reg .item--zaun:before {
-          background: url(../../assets/images/lol/reg-zaun-bg.png) center center;
-          background-size: cover; }
+        .lol .lol-inner__reg .item a {
+          text-decoration: none; }
+          .lol .lol-inner__reg .item a .reg--bg {
+            width: 100%;
+            height: 100%; }
+            .lol .lol-inner__reg .item a .reg--bg img {
+              margin: 25px 0;
+              height: 60px;
+              position: relative;
+              z-index: 3;
+              transition: 0.2s ease-in-out; }
+            .lol .lol-inner__reg .item a .reg--bg p {
+              color: #fff;
+              line-height: 24px;
+              padding: 0 10px;
+              position: relative;
+              transition: 0.2s ease-in-out;
+              z-index: 3; }
+            .lol .lol-inner__reg .item a .reg--bg:before {
+              content: '';
+              width: calc(100% - 18px);
+              height: calc(100% - 18px);
+              position: absolute;
+              top: 10px;
+              right: 8px;
+              bottom: 8px;
+              left: 10px;
+              z-index: 1; }
+            .lol .lol-inner__reg .item a .reg--bg:after {
+              content: '';
+              width: calc(100% - 18px);
+              height: calc(100% - 18px);
+              background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%);
+              background-size: contain;
+              position: absolute;
+              top: 10px;
+              right: 8px;
+              bottom: 8px;
+              left: 10px;
+              z-index: 1; }
+          .lol .lol-inner__reg .item a .reg--bandle:before {
+            background: url(../../assets/images/lol/reg-bandle-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--bilge:before {
+            background: url(../../assets/images/lol/reg-bilge-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--demacia:before {
+            background: url(../../assets/images/lol/reg-demacia-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--ionia:before {
+            background: url(../../assets/images/lol/reg-ionia-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--ixtal:before {
+            background: url(../../assets/images/lol/reg-ixtal-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--noxus:before {
+            background: url(../../assets/images/lol/reg-noxus-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--piltover:before {
+            background: url(../../assets/images/lol/reg-piltover-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--shadow:before {
+            background: url(../../assets/images/lol/reg-shadow-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--shurima:before {
+            background: url(../../assets/images/lol/reg-shurima-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--targon:before {
+            background: url(../../assets/images/lol/reg-targon-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--frel:before {
+            background: url(../../assets/images/lol/reg-frel-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--void:before {
+            background: url(../../assets/images/lol/reg-void-bg.png) center center;
+            background-size: cover; }
+          .lol .lol-inner__reg .item a .reg--zaun:before {
+            background: url(../../assets/images/lol/reg-zaun-bg.png) center center;
+            background-size: cover; }
         .lol .lol-inner__reg .item:hover {
           box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3); }
           .lol .lol-inner__reg .item:hover p {
@@ -1050,140 +1058,138 @@ main {
           .lol .lol-inner__reg .item:hover img {
             -webkit-filter: drop-shadow(0px 0px 3px #0099f7) drop-shadow(0px 0px 7px #0099f7);
             filter: drop-shadow(0px 0px 3 px #0099f7) drop-shadow(0px 0px 7px #0099f7); }
-          .lol .lol-inner__reg .item:hover:after {
-            background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%); }
-      .lol .lol-inner__reg .detail .intro {
-        display: block;
-        margin-bottom: 30px; }
-        .lol .lol-inner__reg .detail .intro__logo {
-          float: left;
-          margin-right: 25px;
-          padding: 10px 8px 8px 10px;
-          background-color: #fff;
-          box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
-        .lol .lol-inner__reg .detail .intro__text--title {
-          line-height: 1;
-          margin-bottom: 7px; }
-        .lol .lol-inner__reg .detail .intro__text--voice {
-          font-size: 18px;
-          font-weight: 500;
-          font-style: italic;
-          margin-bottom: 5px; }
-          .lol .lol-inner__reg .detail .intro__text--voice span {
-            font-style: normal; }
-        .lol .lol-inner__reg .detail .intro__text--words {
-          line-height: 28px; }
-      .lol .lol-inner__reg .detail .image {
+    .lol .lol-inner__detail .intro {
+      display: block;
+      margin-bottom: 30px; }
+      .lol .lol-inner__detail .intro__logo {
+        float: left;
+        margin-right: 25px;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
+      .lol .lol-inner__detail .intro__text--title {
+        line-height: 1;
+        margin-bottom: 10px; }
+      .lol .lol-inner__detail .intro__text--voice {
+        font-size: 16px;
+        font-weight: 500;
+        font-style: italic;
+        margin-bottom: 5px; }
+        .lol .lol-inner__detail .intro__text--voice span {
+          font-style: normal; }
+      .lol .lol-inner__detail .intro__text--words {
+        line-height: 28px; }
+    .lol .lol-inner__detail .image {
+      display: flex;
+      justify-content: space-between;
+      height: calc(100vh - 610px);
+      margin-bottom: 40px; }
+      .lol .lol-inner__detail .image__champ {
+        width: 67%; }
+      .lol .lol-inner__detail .image__vision {
+        width: 30%; }
+      .lol .lol-inner__detail .image__title {
+        margin-bottom: 35px; }
+      .lol .lol-inner__detail .image__list {
         display: flex;
-        justify-content: space-between; }
-        .lol .lol-inner__reg .detail .image__reg {
-          width: calc(100% - 300px); }
-          .lol .lol-inner__reg .detail .image__reg--champ {
-            width: 100%; }
-          .lol .lol-inner__reg .detail .image__reg--vision {
-            width: 100%;
-            margin-top: 30px; }
-          .lol .lol-inner__reg .detail .image__reg--title {
-            margin-bottom: 35px; }
-          .lol .lol-inner__reg .detail .image__reg--list {
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+        height: calc(100vh - 669px); }
+        .lol .lol-inner__detail .image__list .reg-item {
+          height: calc(50% - 10px);
+          position: relative;
+          cursor: pointer; }
+        .lol .lol-inner__detail .image__list .champ01 {
+          width: calc(25% - 15px); }
+        .lol .lol-inner__detail .image__list .champ02 {
+          width: calc(20% - 16px); }
+        .lol .lol-inner__detail .image__list .champ03 {
+          width: calc(100% / 8 - 17.5px); }
+        .lol .lol-inner__detail .image__list .champ04 {
+          width: calc(100% / 7 - 120px / 7);
+          height: calc(100% / 3 - 40px / 3); }
+        .lol .lol-inner__detail .image__list .champ05 {
+          width: calc(100% / 6 - 50px / 3);
+          height: 100%; }
+        .lol .lol-inner__detail .image__list .vision01 {
+          width: calc(30% - 12px); }
+        .lol .lol-inner__detail .image__list .vision02 {
+          width: calc(40% - 16px); }
+        .lol .lol-inner__detail .image__list .vision03 {
+          width: calc(50% - 10px); }
+        .lol .lol-inner__detail .image__list .vision04 {
+          width: calc(35% - 10px); }
+      .lol .lol-inner__detail .image .list-champ {
+        flex-direction: column; }
+      .lol .lol-inner__detail .image__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 1;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        transition: all .3s ease; }
+        .lol .lol-inner__detail .image__inner:hover {
+          box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.5); }
+          .lol .lol-inner__detail .image__inner:hover .reg-text__box {
+            opacity: 1; }
+        .lol .lol-inner__detail .image__inner .reg-bg {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          bottom: 8px;
+          right: 8px;
+          background-color: #0a0a0c;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: opacity .3s ease; }
+        .lol .lol-inner__detail .image__inner .reg-text {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          bottom: 8px;
+          right: 8px;
+          transition: all .3s ease;
+          z-index: 5; }
+          .lol .lol-inner__detail .image__inner .reg-text__box {
             display: flex;
-            justify-content: space-between;
-            align-content: space-between;
-            flex-wrap: wrap; }
-            .lol .lol-inner__reg .detail .image__reg--list .reg-item {
-              width: calc(20% - 15px);
-              height: 117px;
-              position: relative;
-              cursor: pointer; }
-            .lol .lol-inner__reg .detail .image__reg--list .champ01 {
-              width: calc(14% - 12px);
-              height: 100%; }
-            .lol .lol-inner__reg .detail .image__reg--list .champ02 {
-              width: calc(11% - 15px);
-              height: 100%; }
-            .lol .lol-inner__reg .detail .image__reg--list .champ03 {
-              width: calc(100% / 8 - 17.5px);
-              height: calc(100% / 2 - 10px); }
-            .lol .lol-inner__reg .detail .image__reg--list .champ04 {
-              width: calc(100% / 11 - 15px);
-              height: calc(100% / 2 - 8px); }
-          .lol .lol-inner__reg .detail .image__reg .list-champ {
-            flex-direction: column;
-            height: calc(100vh - 764px); }
-          .lol .lol-inner__reg .detail .image__reg .list-vision {
-            flex-wrap: nowrap; }
-          .lol .lol-inner__reg .detail .image__reg--inner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            overflow: hidden;
-            z-index: 1;
-            padding: 10px 8px 8px 10px;
-            background-color: #fff;
-            box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
-            transition: all .3s ease; }
-            .lol .lol-inner__reg .detail .image__reg--inner:hover {
-              box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.5); }
-              .lol .lol-inner__reg .detail .image__reg--inner:hover .reg-text__box {
-                opacity: 1; }
-            .lol .lol-inner__reg .detail .image__reg--inner .reg-bg {
-              position: absolute;
-              top: 10px;
-              left: 10px;
-              bottom: 8px;
-              right: 8px;
-              background-attachment: local;
-              background-color: #0a0a0c;
-              background-repeat: no-repeat;
-              background-size: cover;
-              transition: opacity .3s ease; }
-            .lol .lol-inner__reg .detail .image__reg--inner .reg-text {
-              position: absolute;
-              top: 10px;
-              left: 10px;
-              bottom: 8px;
-              right: 8px;
-              transition: all .3s ease;
-              z-index: 5;
-              cursor: not-allowed; }
-              .lol .lol-inner__reg .detail .image__reg--inner .reg-text__box {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                flex-direction: column;
-                position: absolute;
-                text-align: center;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                color: #fff;
-                line-height: 28px;
-                transition: .2s;
-                opacity: 0;
-                background-color: rgba(0, 153, 247, 0.7); }
-        .lol .lol-inner__reg .detail .image__other {
-          width: 250px; }
-          .lol .lol-inner__reg .detail .image__other--title {
-            margin-bottom: 35px; }
-          .lol .lol-inner__reg .detail .image__other--list {
-            display: flex;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
-            align-content: space-between;
-            height: calc(100vh - 558px); }
-            .lol .lol-inner__reg .detail .image__other--list .item {
-              width: 27%;
-              box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
-              transition: all .3s ease;
-              cursor: pointer; }
-              .lol .lol-inner__reg .detail .image__other--list .item img {
-                width: 100%; }
-              .lol .lol-inner__reg .detail .image__other--list .item:hover {
-                transform: scale(1.2); }
+            flex-direction: column;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            text-transform: capitalize;
+            line-height: 28px;
+            transition: .2s;
+            opacity: 0;
+            background-color: rgba(0, 153, 247, 0.7); }
+    .lol .lol-inner__detail .other {
+      display: flex;
+      justify-content: center; }
+      .lol .lol-inner__detail .other .other-reg {
+        width: 75px;
+        padding: 10px 8px 8px 10px;
+        margin: 0 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        transition: all .4s ease;
+        cursor: pointer; }
+        .lol .lol-inner__detail .other .other-reg img {
+          width: 100%; }
+        .lol .lol-inner__detail .other .other-reg:hover {
+          box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3);
+          transform: scale(1.2); }
     .lol .lol-inner__footer {
       display: flex;
       justify-content: center;
