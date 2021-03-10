@@ -113,15 +113,16 @@ $(document).ready(function (e) {
     });
   });
 
-  //Regions
-  $("[class*='detail--']").hide();
-  $("[class*='list--']").on('click', function() {
-      let reglist = $(this).attr('class').split('--')[1];      
-      $(".lol-inner__reg .list").hide();
-      $(".lol-inner__reg .detail").fadeIn(1000);
-      $("[class*='detail--']").each(function() {
-          let regdetail = $(this).attr('class').split('--')[1];
-          if (reglist === regdetail) {
+  //Champions
+  $("[class*='champ-list--']").hide();
+  $(".champ-list--01").show();
+  $("[class*='champ-pagi--']").on('click', function() {
+      let champpagi = $(this).attr('class').split('--')[1];  
+      $(".pagi-item").removeClass("active");  
+      $(this).addClass("active");    
+      $("[class*='champ-list--']").each(function() {
+          let champlist = $(this).attr('class').split('--')[1];
+          if (champpagi === champlist) {
               $(this).fadeIn(1000);
           } else {
               $(this).hide();
