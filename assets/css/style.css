@@ -938,8 +938,12 @@ main {
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            flex-direction: column;
+            align-items: flex-end;
             text-align: center;
+            padding-bottom: 2px;
+            font-family: 'Playball', cursive;
+            font-size: 20px;
+            letter-spacing: 1px;
             position: absolute;
             top: 10px;
             right: 8px;
@@ -947,7 +951,7 @@ main {
             left: 10px;
             opacity: 0;
             color: #fff;
-            background-color: rgba(0, 153, 247, 0.7);
+            background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0) 50%);
             transition: all 0.2s ease; }
       .lol .lol-inner__cine .video {
         display: flex;
@@ -1019,7 +1023,7 @@ main {
               content: '';
               width: 100%;
               height: 100%;
-              background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+              background-color: rgba(0, 0, 0, 0.3);
               background-size: contain;
               position: absolute;
               top: 0;
@@ -1174,12 +1178,14 @@ main {
           transform: scale(1.2); }
     .lol .lol-inner__champ .champ-list {
       display: flex;
-      justify-content: space-between;
-      align-content: space-between;
+      justify-content: flex-start;
+      align-content: flex-start;
       flex-wrap: wrap;
-      flex-direction: column;
+      width: calc(100% + 20px);
       height: calc(100vh - 395px); }
       .lol .lol-inner__champ .champ-list .champ-item {
+        margin: 0 20px 20px 0;
+        max-width: 242.5px;
         width: calc(100% / 6 - 50px / 3);
         height: calc(100% / 3 - 40px / 3);
         position: relative;
@@ -1223,6 +1229,9 @@ main {
               left: 0;
               z-index: 1; }
           .lol .lol-inner__champ .champ-list .champ-item__inner .champ-text {
+            font-family: 'Playball', cursive;
+            font-size: 20px;
+            letter-spacing: 1px;
             width: calc(100% - 18px);
             text-align: center;
             text-transform: capitalize;
