@@ -835,7 +835,8 @@ main {
       font-weight: 500;
       margin-bottom: 20px;
       position: relative;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.3s ease-in-out; }
       .lol .lol-menu li:before {
         content: '';
         width: 10px;
@@ -1258,6 +1259,150 @@ main {
         .lol .lol-inner__champ .champ-pagi .pagi-item.active {
           color: #0099f7;
           box-shadow: inset 2px 2px 2px rgba(0, 153, 247, 0.3); }
+    .lol .lol-inner__champ-detail .intro {
+      display: block;
+      margin-bottom: 30px; }
+      .lol .lol-inner__champ-detail .intro__avatar {
+        float: left;
+        margin-right: 25px;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
+        .lol .lol-inner__champ-detail .intro__avatar img {
+          max-height: 153px; }
+      .lol .lol-inner__champ-detail .intro__text--name {
+        line-height: 1;
+        margin-bottom: 10px; }
+      .lol .lol-inner__champ-detail .intro__text--nick {
+        font-size: 16px;
+        font-weight: 500;
+        font-style: italic;
+        margin-bottom: 5px; }
+      .lol .lol-inner__champ-detail .intro__text--about {
+        line-height: 28px;
+        text-align: justify; }
+    .lol .lol-inner__champ-detail .image {
+      display: flex;
+      justify-content: space-between;
+      height: calc(100vh - 523px);
+      position: relative; }
+      .lol .lol-inner__champ-detail .image__vision {
+        width: calc(65% - 50px); }
+      .lol .lol-inner__champ-detail .image__title {
+        margin-bottom: 35px; }
+      .lol .lol-inner__champ-detail .image__ability {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 35%;
+        margin-right: 50px; }
+        .lol .lol-inner__champ-detail .image__ability .ability-list {
+          display: flex;
+          justify-content: space-between; }
+          .lol .lol-inner__champ-detail .image__ability .ability-list__item {
+            padding: 10px 8px 8px 10px;
+            background-color: #fff;
+            box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out; }
+            .lol .lol-inner__champ-detail .image__ability .ability-list__item img {
+              width: 50px; }
+            .lol .lol-inner__champ-detail .image__ability .ability-list__item:hover {
+              transform: scale(1.2); }
+            .lol .lol-inner__champ-detail .image__ability .ability-list__item.active {
+              box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3); }
+        .lol .lol-inner__champ-detail .image__ability .ability-text__item p {
+          font-size: 20px;
+          font-weight: 500;
+          margin: 20px 0 10px; }
+        .lol .lol-inner__champ-detail .image__ability .ability-text__item span {
+          line-height: 28px;
+          text-align: justify; }
+      .lol .lol-inner__champ-detail .image__champ-list {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px 25px 15px;
+        background-color: #fff;
+        box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out; }
+        .lol .lol-inner__champ-detail .image__champ-list a {
+          color: #333;
+          text-decoration: none; }
+        .lol .lol-inner__champ-detail .image__champ-list:hover {
+          box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }
+          .lol .lol-inner__champ-detail .image__champ-list:hover a {
+            color: #0099f7; }
+      .lol .lol-inner__champ-detail .image__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 1;
+        padding: 10px 8px 8px 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        transition: all .3s ease; }
+        .lol .lol-inner__champ-detail .image__inner:hover {
+          box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.5); }
+          .lol .lol-inner__champ-detail .image__inner:hover .reg-text__box {
+            opacity: 1; }
+        .lol .lol-inner__champ-detail .image__inner .reg-bg {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          bottom: 8px;
+          right: 8px;
+          background-color: #0a0a0c;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: opacity .3s ease; }
+        .lol .lol-inner__champ-detail .image__inner .reg-text {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          bottom: 8px;
+          right: 8px;
+          transition: all .3s ease;
+          z-index: 5; }
+          .lol .lol-inner__champ-detail .image__inner .reg-text__box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            text-transform: capitalize;
+            line-height: 28px;
+            transition: .2s;
+            opacity: 0;
+            background-color: rgba(0, 153, 247, 0.7); }
+    .lol .lol-inner__champ-detail .other {
+      display: flex;
+      justify-content: center; }
+      .lol .lol-inner__champ-detail .other .other-reg {
+        width: 75px;
+        padding: 10px 8px 8px 10px;
+        margin: 0 10px;
+        background-color: #fff;
+        box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+        transition: all .4s ease;
+        cursor: pointer; }
+        .lol .lol-inner__champ-detail .other .other-reg img {
+          width: 100%; }
+        .lol .lol-inner__champ-detail .other .other-reg:hover {
+          box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3);
+          transform: scale(1.2); }
     .lol .lol-inner__footer {
       display: flex;
       justify-content: center;

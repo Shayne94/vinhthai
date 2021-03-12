@@ -130,4 +130,8 @@ $(document).ready(function (e) {
       })
   });
 
+  //Ability
+  $(".ability-text__item [class*='item-']").hide();
+  $(".ability-text__item .item-01").show();
+ 
 });

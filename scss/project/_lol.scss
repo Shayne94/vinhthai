@@ -16,6 +16,7 @@
             margin-bottom: 20px;
             position: relative;               
             cursor: pointer;  
+            transition: all 0.3s ease-in-out;
             &:before {
                 content: '';
                 width: 10px;
@@ -513,6 +514,189 @@
                     }
                 }
             }    
+        }  
+        &__champ-detail {
+            .intro {
+                display: block;
+                margin-bottom: 30px;
+                &__avatar {
+                    float: left;
+                    margin-right: 25px;
+                    padding: 10px 8px 8px 10px;
+                    background-color: $color1;
+                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    img {
+                        max-height: 153px;
+                    }
+                }
+                &__text {
+                    &--name {
+                        line-height: 1;
+                        margin-bottom: 10px;
+                    }
+                    &--nick {
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-style: italic;
+                        margin-bottom: 5px;
+                    }                            
+                    &--about {                                
+                        line-height: 28px;
+                        text-align: justify;
+                    }
+                }
+            }
+            .image {       
+                @include flex-jbetween;
+                height: calc(100vh - 523px);
+                position: relative;
+                &__vision {
+                    width: calc(65% - 50px); 
+                } 
+                &__title {                                
+                    margin-bottom: 35px;                                
+                }     
+                &__ability {
+                    @include flex-jstart;
+                    flex-direction: column;                    
+                    width: 35%;
+                    margin-right: 50px;
+                    .ability-list {
+                        @include flex-jbetween;
+                        &__item {
+                            padding: 10px 8px 8px 10px;
+                            background-color: $color1;
+                            box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+                            img {
+                                width: 50px;
+                            }
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                            &.active {
+                                box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                            }
+                        }
+                    } 
+                    .ability-text {
+                        &__item {
+                            p {
+                                font-size: 20px;
+                                font-weight: 500;
+                                margin: 20px 0 10px;
+                            }
+                            span {
+                                line-height: 28px;
+                                text-align: justify;
+                            }
+                        }
+                    } 
+                }               
+                &__champ-list {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: 16px 25px 15px;
+                    background-color: $color1;
+                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    a {
+                        color: $color2;
+                        text-decoration: none;
+                    }
+                    &:hover {
+                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                        a {
+                            color: $color3;
+                        }
+                    }
+                }  
+                
+                
+
+                &__inner {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    overflow: hidden;
+                    z-index: 1;                                
+                    padding: 10px 8px 8px 10px;
+                    background-color: $color1;
+                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    transition: all .3s ease;
+                    &:hover {
+                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.5);
+                        .reg-text {
+                            &__box {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .reg-bg {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        bottom: 8px;
+                        right: 8px;
+                        background-color: #0a0a0c;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        transition: opacity .3s ease;                            
+                    }
+                    .reg-text {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        bottom: 8px;
+                        right: 8px;
+                        transition: all .3s ease;
+                        z-index: 5;
+                        &__box {
+                            @include flex-center;
+                            flex-direction: column;
+                            position: absolute;
+                            text-align: center;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            color: $color1;
+                            text-transform: capitalize;
+                            line-height: 28px;
+                            transition: .2s;
+                            opacity: 0;
+                            background-color: rgba($color: $color3, $alpha: 0.7);
+                        }
+                    }
+                    
+                }
+            }
+            .other {                   
+                @include flex-jcenter;
+                .other-reg {
+                    width: 75px;
+                    padding: 10px 8px 8px 10px;
+                    margin: 0 10px;
+                    background-color: $color1;
+                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    transition: all .4s ease;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                    }
+                    &:hover {
+                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                        transform: scale(1.2);
+                    }
+                }              
+            }
+            
         }   
         &__footer {
             @include flex-jcenter;
