@@ -1043,11 +1043,14 @@ main {
       display: block;
       margin-bottom: 30px; }
       .lol .lol-inner__reg-detail .intro__logo {
+        max-width: 240px;
         float: left;
         margin-right: 25px;
         padding: 10px 8px 8px 10px;
         background-color: #fff;
         box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
+        .lol .lol-inner__reg-detail .intro__logo img {
+          width: 100%; }
       .lol .lol-inner__reg-detail .intro__text--title {
         line-height: 1;
         margin-bottom: 10px; }
@@ -1260,16 +1263,16 @@ main {
           color: #0099f7;
           box-shadow: inset 2px 2px 2px rgba(0, 153, 247, 0.3); }
     .lol .lol-inner__champ-detail .intro {
-      display: block;
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 30px; }
       .lol .lol-inner__champ-detail .intro__avatar {
-        float: left;
         margin-right: 25px;
         padding: 10px 8px 8px 10px;
         background-color: #fff;
         box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3); }
         .lol .lol-inner__champ-detail .intro__avatar img {
-          max-height: 153px; }
+          max-height: 160px; }
       .lol .lol-inner__champ-detail .intro__text--name {
         line-height: 1;
         margin-bottom: 10px; }
@@ -1286,8 +1289,6 @@ main {
       justify-content: space-between;
       height: calc(100vh - 523px);
       position: relative; }
-      .lol .lol-inner__champ-detail .image__vision {
-        width: calc(65% - 50px); }
       .lol .lol-inner__champ-detail .image__title {
         margin-bottom: 35px; }
       .lol .lol-inner__champ-detail .image__ability {
@@ -1295,7 +1296,7 @@ main {
         justify-content: flex-start;
         flex-direction: column;
         width: 35%;
-        margin-right: 50px; }
+        margin-left: 50px; }
         .lol .lol-inner__champ-detail .image__ability .ability-list {
           display: flex;
           justify-content: space-between; }
@@ -1307,9 +1308,7 @@ main {
             transition: all 0.3s ease-in-out; }
             .lol .lol-inner__champ-detail .image__ability .ability-list__item img {
               width: 50px; }
-            .lol .lol-inner__champ-detail .image__ability .ability-list__item:hover {
-              transform: scale(1.2); }
-            .lol .lol-inner__champ-detail .image__ability .ability-list__item.active {
+            .lol .lol-inner__champ-detail .image__ability .ability-list__item:hover, .lol .lol-inner__champ-detail .image__ability .ability-list__item.active {
               box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3); }
         .lol .lol-inner__champ-detail .image__ability .ability-text__item p {
           font-size: 20px;
@@ -1318,10 +1317,78 @@ main {
         .lol .lol-inner__champ-detail .image__ability .ability-text__item span {
           line-height: 28px;
           text-align: justify; }
+      .lol .lol-inner__champ-detail .image__skin {
+        width: 65%;
+        height: calc(100vh - 523px); }
+        .lol .lol-inner__champ-detail .image__skin .skin-box {
+          display: flex;
+          justify-content: space-between; }
+          .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            width: 38.5%;
+            height: calc(100vh - 582px);
+            flex-direction: column;
+            flex-wrap: wrap; }
+            .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list__item {
+              height: 30%;
+              margin-right: 20px;
+              padding: 10px 8px 8px 10px;
+              background-color: #fff;
+              box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+              padding: 10px 8px 8px 10px;
+              background-color: #fff;
+              box-shadow: inset 3px 3px 3px rgba(51, 51, 51, 0.3);
+              cursor: pointer;
+              transition: all 0.3s ease-in-out; }
+              .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list__item img {
+                width: auto;
+                height: 100%; }
+              .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list__item:hover, .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list__item.active {
+                box-shadow: inset 3px 3px 3px rgba(0, 153, 247, 0.3); }
+          .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list-01 {
+            flex-direction: row;
+            width: 36.5%; }
+            .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list-01 .skin-list__item {
+              margin-right: 0; }
+              .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list-01 .skin-list__item:nth-last-child(1) {
+                width: 100%;
+                height: auto; }
+                .lol .lol-inner__champ-detail .image__skin .skin-box .skin-list-01 .skin-list__item:nth-last-child(1) img {
+                  width: 100%;
+                  height: auto; }
+          .lol .lol-inner__champ-detail .image__skin .skin-box .skin-inner {
+            width: 61.5%; }
+            .lol .lol-inner__champ-detail .image__skin .skin-box .skin-inner__item {
+              height: calc(100vh - 582px);
+              position: relative; }
+              .lol .lol-inner__champ-detail .image__skin .skin-box .skin-inner__item img {
+                width: 100%; }
+              .lol .lol-inner__champ-detail .image__skin .skin-box .skin-inner__item p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                text-align: center;
+                padding-bottom: 5px;
+                font-family: 'Playball', cursive;
+                font-size: 20px;
+                letter-spacing: 1px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                color: #fff;
+                background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0) 50%); }
       .lol .lol-inner__champ-detail .image__champ-list {
         position: absolute;
         bottom: 0;
-        left: 0;
+        right: 0;
         padding: 16px 25px 15px;
         background-color: #fff;
         box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);

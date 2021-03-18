@@ -251,11 +251,15 @@
                 display: block;
                 margin-bottom: 30px;
                 &__logo {
+                    max-width: 240px;
                     float: left;
                     margin-right: 25px;
                     padding: 10px 8px 8px 10px;
                     background-color: $color1;
                     box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    img {
+                        width: 100%;
+                    }
                 }
                 &__text {
                     &--title {
@@ -517,16 +521,15 @@
         }  
         &__champ-detail {
             .intro {
-                display: block;
+                @include flex-jbetween;
                 margin-bottom: 30px;
                 &__avatar {
-                    float: left;
                     margin-right: 25px;
                     padding: 10px 8px 8px 10px;
                     background-color: $color1;
                     box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                     img {
-                        max-height: 153px;
+                        max-height: 160px;
                     }
                 }
                 &__text {
@@ -550,17 +553,14 @@
                 @include flex-jbetween;
                 height: calc(100vh - 523px);
                 position: relative;
-                &__vision {
-                    width: calc(65% - 50px); 
-                } 
                 &__title {                                
-                    margin-bottom: 35px;                                
+                    margin-bottom: 35px;                               
                 }     
                 &__ability {
                     @include flex-jstart;
-                    flex-direction: column;                    
+                    flex-direction: column;                   
                     width: 35%;
-                    margin-right: 50px;
+                    margin-left: 50px;
                     .ability-list {
                         @include flex-jbetween;
                         &__item {
@@ -572,10 +572,7 @@
                             img {
                                 width: 50px;
                             }
-                            &:hover {
-                                transform: scale(1.2);
-                            }
-                            &.active {
+                            &:hover, &.active {
                                 box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                             }
                         }
@@ -593,11 +590,87 @@
                             }
                         }
                     } 
-                }               
+                }   
+                &__skin {    
+                    width: 65%;             
+                    height: calc(100vh - 523px);
+                    .skin-box {                        
+                        @include flex-jbetween;
+                        .skin-list {
+                            @include flex-jbetween;
+                            align-content: space-between;
+                            width: 38.5%;
+                            height: calc(100vh - 582px);
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            &__item {
+                                height: 30%;
+                                margin-right: 20px;
+                                padding: 10px 8px 8px 10px;
+                                background-color: $color1;
+                                box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;padding: 10px 8px 8px 10px;
+                                background-color: $color1;
+                                box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+                                img {
+                                    width: auto;
+                                    height: 100%;
+                                }
+                                &:hover, &.active {
+                                    box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                                }
+                            }
+                        }
+                        .skin-list-01 {
+                            flex-direction: row;
+                            width: 36.5%;
+                            .skin-list__item {
+                                margin-right: 0;
+                                &:nth-last-child(1) {
+                                    width: 100%;
+                                    height: auto;
+                                    img {
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                        .skin-inner {
+                            width: 61.5%;
+                            &__item {                                
+                                height: calc(100vh - 582px);
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                }
+                                p {
+                                    @include flex-center;
+                                    align-items: flex-end;
+                                    text-align: center;
+                                    padding-bottom: 5px;
+                                    font-family: 'Playball', cursive;
+                                    font-size: 20px;
+                                    letter-spacing: 1px;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    color: $color1;
+                                    background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
+                                }
+                            }
+                        }  
+                    }
+                }           
                 &__champ-list {
                     position: absolute;
                     bottom: 0;
-                    left: 0;
+                    right: 0;
                     padding: 16px 25px 15px;
                     background-color: $color1;
                     box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
@@ -617,7 +690,7 @@
                 }  
                 
                 
-
+                
                 &__inner {
                     position: absolute;
                     top: 0;

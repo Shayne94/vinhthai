@@ -45,7 +45,7 @@ $(document).ready(function (e) {
     $(".webdesign__inner--icd, .webdesign__inner--qbb, .webdesign__inner--bread, .webdesign__inner--cheese, .webdesign__inner--star, .webdesign__inner--sbc").hide();
     $(".webdesign__inner--lol").fadeIn(1000);
   });
-
+  
   //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
   // Model 3d
   //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
@@ -68,7 +68,7 @@ $(document).ready(function (e) {
     $(".model3d__inner--hog, .model3d__inner--talon").hide();
     $(".model3d__inner--tank").fadeIn(1000);
   });
-
+  
   //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
   // League of Legends
   //≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
@@ -78,7 +78,7 @@ $(document).ready(function (e) {
   // }
   // $(".lol-inner li:not(:last-child), .lol-inner__reg .detail").hide();
   // $(".lol-inner li:first-child").show();
-
+  
   
   // $("[class*='lol-menu__']").on('click', function() {
   //     let lolmenu = $(this).attr('class').split('__')[1];
@@ -96,14 +96,14 @@ $(document).ready(function (e) {
   //         }
   //     })
   // });
-
+  
   //Cinematic
   $(function () {
     $(".lol-inner__cine .list--item").on("click", function () {
       $(".video-cine").attr({
         "src": $(this).attr("movieurl"),
         "autoplay": "autoplay"
-
+        
       });
       $(".lol-inner__cine .list--item").removeClass("active");
       $(this).addClass("active");
@@ -112,26 +112,54 @@ $(document).ready(function (e) {
       "src": $(".lol-inner__cine .list--item").eq(0).attr("movieurl"),
     });
   });
-
+  
   //Champions
   $("[class*='champ-list--']").hide();
   $(".champ-list--01").show();
   $("[class*='champ-pagi--']").on('click', function() {
-      let champpagi = $(this).attr('class').split('--')[1];  
-      $(".pagi-item").removeClass("active");  
-      $(this).addClass("active");    
-      $("[class*='champ-list--']").each(function() {
-          let champlist = $(this).attr('class').split('--')[1];
-          if (champpagi === champlist) {
-              $(this).fadeIn(1000);
-          } else {
-              $(this).hide();
-          }
-      })
+    let champpagi = $(this).attr('class').split('--')[1];  
+    $(".pagi-item").removeClass("active");  
+    $(this).addClass("active");    
+    $("[class*='champ-list--']").each(function() {
+      let champlist = $(this).attr('class').split('--')[1];
+      if (champpagi === champlist) {
+        $(this).fadeIn(1000);
+      } else {
+        $(this).hide();
+      }
+    })
   });
-
+  
   //Ability
-  $(".ability-text__item [class*='item-']").hide();
-  $(".ability-text__item .item-01").show();
- 
+  $("[class*='ability-text--']").hide();
+  $(".ability-text--01").show();
+  $("[class*='ability-list--']").on('click', function() {
+    let abilitylist = $(this).attr('class').split('--')[1];  
+    $(".ability-list__item").removeClass("active");  
+    $(this).addClass("active");    
+    $("[class*='ability-text--']").each(function() {
+      let abilitytext = $(this).attr('class').split('--')[1];
+      if (abilitylist === abilitytext) {
+        $(this).fadeIn(1000);
+      } else {
+        $(this).hide();
+      }
+    })
+  });
+   //Skin
+   $("[class*='skin-inner--']").hide();
+   $(".skin-inner--01").show();
+   $("[class*='skin-list--']").on('click', function() {
+     let skinlist = $(this).attr('class').split('--')[1];  
+     $(".skin-list__item").removeClass("active");  
+     $(this).addClass("active");    
+     $("[class*='skin-inner--']").each(function() {
+       let skininner = $(this).attr('class').split('--')[1];
+       if (skinlist === skininner) {
+         $(this).fadeIn(1000);
+       } else {
+         $(this).hide();
+       }
+     })
+   });
 });
