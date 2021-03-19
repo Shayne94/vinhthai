@@ -770,7 +770,77 @@
                 }              
             }
             
-        }   
+        }  
+        &__skin {
+            @include flex-jbetween;
+            align-content: space-between;
+            flex-wrap: wrap;     
+            height: calc(100vh - 315px);                           
+            .skin-item {
+                max-width: 242.5px;
+                width: calc(100% / 6 - 50px / 3);
+                height: calc(100% / 3 - 40px / 3);
+                position: relative;
+                cursor: pointer;                   
+                &__inner {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    overflow: hidden;
+                    z-index: 1;                                
+                    padding: 10px 8px 8px 10px;
+                    background-color: $color1;
+                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    transition: all .3s ease;
+                    &:hover {
+                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.5);
+                        .skin-text {
+                            text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
+                        }
+                    }
+                    .skin-bg {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        bottom: 8px;
+                        right: 8px;
+                        background-color: #0a0a0c;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        transition: opacity .3s ease; 
+                        &:before {
+                            content: '';    
+                            width: 100%;
+                            height: 100%;    
+                            background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
+                            background-size: contain;                
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 1;
+                        }                                             
+                    }
+                    .skin-text {
+                        font-family: 'Playball', cursive;
+                        font-size: 20px;
+                        letter-spacing: 1px;
+                        width: calc(100% - 18px);
+                        text-align: center;
+                        text-transform: capitalize;
+                        position: absolute;
+                        bottom: 8px;
+                        color: $color1;
+                        line-height: 24px;  
+                        transition: all .3s ease;                          
+                        z-index: 3;
+                    }                    
+                }
+            }
+        } 
         &__footer {
             @include flex-jcenter;
             width: 100%;
