@@ -205,7 +205,6 @@ main {
 	Header
 ------------------------------------------------------------*/
 .header {
-  opacity: 0;
   display: flex;
   justify-content: space-between; }
   .header__name--main {
@@ -1521,33 +1520,48 @@ main {
       display: flex;
       justify-content: center;
       margin-top: 20px;
-      height: calc(100vh - 607.75px); }
-      .lol .lol-inner__skin-detail .image .image-inner__box {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        height: calc(100vh - 607.75px); }
-        .lol .lol-inner__skin-detail .image .image-inner__box img {
+      height: calc(100vh - 607.75px);
+      position: relative; }
+      .lol .lol-inner__skin-detail .image .image-inner__item {
+        position: relative; }
+        .lol .lol-inner__skin-detail .image .image-inner__item img {
           height: calc(100vh - 607.75px); }
-        .lol .lol-inner__skin-detail .image .image-inner__box p {
+        .lol .lol-inner__skin-detail .image .image-inner__item p {
           display: flex;
           justify-content: center;
           align-content: flex-end;
           flex-wrap: wrap;
-          text-align: center;
-          padding-bottom: 5px;
-          font-family: 'Playball', cursive;
-          font-size: 20px;
-          letter-spacing: 1px;
           position: absolute;
           top: 0;
           right: 0;
           bottom: 0;
           left: 0;
           color: #fff;
-          background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0) 50%); }
-          .lol .lol-inner__skin-detail .image .image-inner__box p span {
+          padding: 0 10px 10px;
+          background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0) 60%); }
+          .lol .lol-inner__skin-detail .image .image-inner__item p span {
             width: 100%; }
+          .lol .lol-inner__skin-detail .image .image-inner__item p .title {
+            font-family: 'Playball', cursive;
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #0099f7; }
+          .lol .lol-inner__skin-detail .image .image-inner__item p .text {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify; }
+      .lol .lol-inner__skin-detail .image .image-inner__char {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        width: calc((100vw - 928px)/2); }
+        .lol .lol-inner__skin-detail .image .image-inner__char--left {
+          left: 0; }
+        .lol .lol-inner__skin-detail .image .image-inner__char--right {
+          right: 0; }
+        .lol .lol-inner__skin-detail .image .image-inner__char img {
+          width: 50%; }
     .lol .lol-inner__skin-detail .image__champ-list {
       position: absolute;
       bottom: 0;

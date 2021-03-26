@@ -130,7 +130,7 @@ $(document).ready(function (e) {
     })
   });
   
-  //Ability
+  //Champ-detail Ability
   $("[class*='ability-text--']").hide();
   $(".ability-text--01").show();
   $("[class*='ability-list--']").on('click', function() {
@@ -146,7 +146,7 @@ $(document).ready(function (e) {
       }
     })
   });
-   //Skin
+   //Champ-detail Skin
    $("[class*='skin-inner--']").hide();
    $(".skin-inner--01").show();
    $("[class*='skin-list--']").on('click', function() {
@@ -162,4 +162,20 @@ $(document).ready(function (e) {
        }
      })
    });
+    //Skin-detail
+    $("[class*='image-inner--']").hide();
+    $(".image-inner--01").show();
+    $("[class*='image-list--']").on('click', function() {
+      let imglist = $(this).attr('class').split('--')[1];  
+      $(".image-list__item").removeClass("active");  
+      $(this).addClass("active");    
+      $("[class*='image-inner--']").each(function() {
+        let imginner = $(this).attr('class').split('--')[1];
+        if (imglist === imginner) {
+          $(this).fadeIn(1000);
+        } else {
+          $(this).hide();
+        }
+      })
+    });
 });

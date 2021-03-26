@@ -834,11 +834,9 @@
                     @include flex-jcenter;
                     margin-top: 20px;
                     height: calc(100vh - 607.75px);
-                    &__box {   
-                        overflow: hidden;
-                        position: relative;
-                        width: 100%;
-                        height: calc(100vh - 607.75px);                     
+                    position: relative;
+                    &__item {   
+                        position: relative;                   
                         img {
                             height: calc(100vh - 607.75px);
                         }
@@ -846,24 +844,46 @@
                             @include flex-jcenter;
                             align-content: flex-end;
                             flex-wrap: wrap;
-                            text-align: center;
-                            padding-bottom: 5px;
-                            font-family: 'Playball', cursive;
-                            font-size: 20px;
-                            letter-spacing: 1px;
                             position: absolute;
                             top: 0;
                             right: 0;
                             bottom: 0;
                             left: 0;
-                            color: $color1;
-                            background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
+                            color: $color1;                            
+                            padding: 0 10px 10px;
+                            background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 60%);
                             span {
-                                width: 100%;
-                                
+                                width: 100%;                           
+                            }
+                            .title {
+                                font-family: 'Playball', cursive;
+                                font-size: 24px;
+                                margin-bottom: 5px;
+                                color: $color3;
+
+                            }
+                            .text {
+                                font-size: 14px;
+                                line-height: 20px;
+                                text-align: justify;
                             }
                         }
-                    }                   
+                    } 
+                    &__char {
+                        @include flex-jbetween;
+                        position: absolute;
+                        bottom: 0;
+                        width: calc((100vw - 928px)/2);
+                        &--left {
+                            left: 0;
+                        }
+                        &--right {
+                            right: 0;
+                        }
+                        img {
+                            width: 50%;
+                        }
+                    }                  
                 }         
                 &__champ-list {
                     position: absolute;
