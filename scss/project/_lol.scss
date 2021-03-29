@@ -519,6 +519,7 @@
             }    
         }  
         &__champ-detail {
+            position: relative;
             .intro {
                 @include flex-jbetween;
                 margin-bottom: 30px;
@@ -661,53 +662,34 @@
                                     left: 0;
                                     color: $color1;
                                     background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
+                                    text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
                                 }
                             }
                         }  
                     }
-                }           
-                &__champ-list {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    padding: 16px 25px 15px;
-                    background-color: $color1;
-                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                    font-weight: 500;
-                    cursor: pointer;
-                    transition: all 0.3s ease-in-out;
+                } 
+            }          
+            .other {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 11px 25px 10px;
+                background-color: $color1;
+                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                a {
+                    color: $color2;
+                    text-decoration: none;
+                }
+                &:hover {
+                    box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                     a {
-                        color: $color2;
-                        text-decoration: none;
+                        color: $color3;
                     }
-                    &:hover {
-                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
-                        a {
-                            color: $color3;
-                        }
-                    }
-                }  
-            }
-            .other {                   
-                @include flex-jcenter;
-                .other-reg {
-                    width: 75px;
-                    padding: 10px 8px 8px 10px;
-                    margin: 0 10px;
-                    background-color: $color1;
-                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                    transition: all .4s ease;
-                    cursor: pointer;
-                    img {
-                        width: 100%;
-                    }
-                    &:hover {
-                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
-                        transform: scale(1.2);
-                    }
-                }              
-            }
-            
+                }
+            }             
         }  
         &__skin {
             @include flex-jbetween;
@@ -780,8 +762,9 @@
             }
         } 
         &__skin-detail {
+            position: relative;
             .intro {    
-                margin-bottom: 30px;          
+                margin-bottom: 15px;          
                 &__name {
                     line-height: 1;
                     margin-bottom: 10px;
@@ -796,49 +779,55 @@
             }            
             .image {       
                 .image-list {
-                    @include flex-jstart;
-                    align-content: space-between;   
-                    flex-wrap: wrap;    
-                    margin-right: -21.25px;                
-                    &__item {
-                        width: 100px;
-                        height: 66.38px;
-                        margin:  0 21.25px 20px 0;
+                    @include flex-jcenter;
+                    align-content: center;   
+                    flex-wrap: wrap;     
+                    height: 150px;           
+                    &__item {                 
                         padding: 10px 8px 8px 10px;
                         background-color: $color1;
                         box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                         cursor: pointer;
                         transition: all 0.3s ease-in-out;
                         img {
-                            height: 100%;
+                            width: 100%;
                         }
                         &:hover, &.active {
                             box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
                         }                        
                     } 
-                    .ability-text {
-                        &__item {
-                            p {
-                                font-size: 20px;
-                                font-weight: 500;
-                                margin: 20px 0 10px;
-                            }
-                            span {
-                                line-height: 28px;
-                                text-align: justify;
-                            }
+                    .size01 {
+                        width: calc(100% / 13 - 260px / 12);       
+                        margin: 5px 20px;  
+                    }
+                    .size02 {
+                        width: calc(100% / 11 - 220px / 10);         
+                        margin: 0 10px;  
+                    }
+                    .size03 {
+                        width: calc(100% / 7 - 140px / 6);  
+                        margin: 0 10px;  
+                    }
+                    .size04 {
+                        max-width: calc(100% / 5 - 100px / 4);  
+                        height: 150px;
+                        margin: 0 15px;  
+                        img {
+                            width: auto;
+                            height: 100%;
                         }
-                    } 
+                    }
                 }   
                 .image-inner {
                     @include flex-jcenter;
-                    margin-top: 20px;
-                    height: calc(100vh - 607.75px);
+                    margin-top: 25px;
+                    height: calc(100vh - 575px);
                     position: relative;
                     &__item {   
-                        position: relative;                   
+                        position: relative; 
+                        margin: 0 25px;        
                         img {
-                            height: calc(100vh - 607.75px);
+                            height: calc(100vh - 575px);
                         }
                         p {
                             @include flex-jcenter;
@@ -859,8 +848,8 @@
                                 font-family: 'Playball', cursive;
                                 font-size: 24px;
                                 margin-bottom: 5px;
-                                color: $color3;
-
+                                color: $color1;
+                                text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
                             }
                             .text {
                                 font-size: 14px;
@@ -869,19 +858,11 @@
                             }
                         }
                     } 
-                    &__char {
-                        @include flex-jbetween;
-                        position: absolute;
-                        bottom: 0;
-                        width: calc((100vw - 928px)/2);
-                        &--left {
-                            left: 0;
-                        }
-                        &--right {
-                            right: 0;
-                        }
+                    &__char {                        
+                        display: flex;
+                        align-items: center;
                         img {
-                            width: 50%;
+                            width: 100%;
                         }
                     }                  
                 }         
@@ -907,25 +888,27 @@
                     }
                 }  
             }
-            .other {                   
-                @include flex-jcenter;
-                .other-reg {
-                    width: 75px;
-                    padding: 10px 8px 8px 10px;
-                    margin: 0 10px;
-                    background-color: $color1;
-                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                    transition: all .4s ease;
-                    cursor: pointer;
-                    img {
-                        width: 100%;
+            .other {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 11px 25px 10px;
+                background-color: $color1;
+                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                a {
+                    color: $color2;
+                    text-decoration: none;
+                }
+                &:hover {
+                    box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                    a {
+                        color: $color3;
                     }
-                    &:hover {
-                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
-                        transform: scale(1.2);
-                    }
-                }              
-            }
+                }
+            }  
             
         }  
         &__footer {

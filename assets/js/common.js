@@ -171,6 +171,7 @@ $(document).ready(function (e) {
       $(this).addClass("active");    
       $("[class*='image-inner--']").each(function() {
         let imginner = $(this).attr('class').split('--')[1];
+        console.log(imginner, imglist)
         if (imglist === imginner) {
           $(this).fadeIn(1000);
         } else {
