@@ -1,40 +1,42 @@
+.lol-bg{
+    position: relative;
+    &:before {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
 .lol {
-    margin-top: 50px;
+    margin-top: 40px;
     @include flex-jbetween;
     .lol-menu {
         @include flex-jstart;
         flex-direction: column;
-        margin-right: 50px;
         li {
-            min-width: 215px;
-            padding: 15px 20px 11px 30px;
-            background-color: $color1;
-            box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+            min-width: 165px;
+            padding: 15px 20px 11px;
             margin-bottom: 20px;
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 20px;
-            position: relative;               
+            position: relative; 
+            background-color: rgba($color: #000, $alpha: 0.5);
+            backdrop-filter: blur(5px);        
             cursor: pointer;  
             transition: all 0.3s ease-in-out;
-            &:before {
-                content: '';
-                width: 10px;
-                height: 100%;
-                background-color: $color3;
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
             a {
-                display: block;
-                color: $color2;
+                display: block; 
+                color: $color1;   
                 text-decoration: none;  
             }
             &:hover, &.active {
-                box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
-                a {                    
-                    color: $color3;
+                background-color: rgba($color: #fff, $alpha: 1);
+                a {               
+                    color: $color2;     
                 }
             }
         }
@@ -42,9 +44,14 @@
     .lol-inner {
         @include flex-jbetween;
         flex-direction: column;
-        width: calc(100vw - 365px);
-        height: calc(100vh - 245px);
+        width: calc(100vw - 315px);
         position: relative;
+        padding: 25px;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        backdrop-filter: blur(5px);
+        @include max(1440px) {
+            height: calc(100vh - 225px);
+        }
         &__about {
             .intro {
                 line-height: 28px;                
@@ -673,12 +680,21 @@
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                padding: 11px 25px 10px;
+                padding: 11px 20px 10px 27px;
                 background-color: $color1;
                 box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                 font-weight: 500;
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
+                &:before {
+                    content: '';
+                    width: 7px;
+                    height: 100%;
+                    background-color: $color3;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
                 a {
                     color: $color2;
                     text-decoration: none;
@@ -698,8 +714,8 @@
             height: calc(100vh - 315px);                           
             .skin-item {
                 max-width: 242.5px;
-                width: calc(100% / 6 - 50px / 3);
-                height: calc(100% / 3 - 40px / 3);
+                width: calc(100% / 6 - 120px / 5);
+                height: calc(100% / 3 - 60px / 3);
                 position: relative;
                 cursor: pointer;                   
                 &__inner {
@@ -710,22 +726,21 @@
                     right: 0;
                     overflow: hidden;
                     z-index: 1;                                
-                    padding: 10px 8px 8px 10px;
+                    padding: 5px;
                     background-color: $color1;
-                    box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
                     transition: all .3s ease;
                     &:hover {
-                        box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.5);
+                        transform: scale(1.1);
                         .skin-text {
                             text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
                         }
                     }
                     .skin-bg {
                         position: absolute;
-                        top: 10px;
-                        left: 10px;
-                        bottom: 8px;
-                        right: 8px;
+                        top: 5px;
+                        left: 5px;
+                        bottom: 5px;
+                        right: 5px;
                         background-color: #0a0a0c;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -762,9 +777,14 @@
             }
         } 
         &__skin-detail {
+            @include flex-jbetween;
+            flex-direction: column; 
+            height: calc(100vh - 305px);
             position: relative;
-            .intro {    
-                margin-bottom: 15px;          
+            @include max(1440px) {
+                height: calc(100vh - 305px);
+            }
+            .intro {           
                 &__name {
                     line-height: 1;
                     margin-bottom: 10px;
@@ -772,41 +792,36 @@
                 &__about {                                
                     line-height: 28px;
                     text-align: justify;
-                    span {
-                        font-weight: 500;
-                    }
+                    color: $color1;
                 }
-            }            
-            .image {       
+            }         
                 .image-list {
                     @include flex-jcenter;
                     align-content: center;   
-                    flex-wrap: wrap;     
-                    height: 150px;           
+                    flex-wrap: wrap; 
+                    margin-bottom: 15px;         
                     &__item {                 
-                        padding: 10px 8px 8px 10px;
+                        padding: 5px;
                         background-color: $color1;
-                        box-shadow: inset 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                        cursor: pointer;
+                        cursor: pointer;     
+                        margin: 0 10px;  
                         transition: all 0.3s ease-in-out;
                         img {
                             width: 100%;
                         }
                         &:hover, &.active {
-                            box-shadow: inset 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                            box-shadow: 0px 3px 5px rgba($color: $color3, $alpha: 0.7), 0px -3px 5px rgba($color: $color3, $alpha: 0.7), 3px 0px 5px rgba($color: $color3, $alpha: 0.7), -3px 0px 5px rgba($color: $color3, $alpha: 0.7);
                         }                        
                     } 
                     .size01 {
                         width: calc(100% / 13 - 260px / 12);       
-                        margin: 5px 20px;  
+                        margin: 10px 20px;  
                     }
                     .size02 {
-                        width: calc(100% / 11 - 220px / 10);         
-                        margin: 0 10px;  
+                        width: calc(100% / 11 - 220px / 10);    
                     }
                     .size03 {
                         width: calc(100% / 7 - 140px / 6);  
-                        margin: 0 10px;  
                     }
                     .size04 {
                         max-width: calc(100% / 5 - 100px / 4);  
@@ -817,29 +832,35 @@
                             height: 100%;
                         }
                     }
+                    .size05 {
+                        width: calc(100% / 9 - 180px / 8);  
+                    }
                 }   
                 .image-inner {
                     @include flex-jcenter;
-                    margin-top: 25px;
-                    height: calc(100vh - 575px);
                     position: relative;
                     &__item {   
                         position: relative; 
-                        margin: 0 25px;        
-                        img {
-                            height: calc(100vh - 575px);
+                        margin: 0 25px;   
+                        padding: 15px;                      
+                        box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
+                        img, video {
+                            height: calc(100vh - 600px);
+                            @include max(1440px) {
+                                height: calc(100vh - 500px);
+                            }
                         }
                         p {
                             @include flex-jcenter;
                             align-content: flex-end;
                             flex-wrap: wrap;
                             position: absolute;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
+                            top: 15px;
+                            right: 15px;
+                            bottom: 15px;
+                            left: 15px;
                             color: $color1;                            
-                            padding: 0 10px 10px;
+                            padding: 10px 15px;
                             background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 60%);
                             span {
                                 width: 100%;                           
@@ -863,6 +884,9 @@
                         align-items: center;
                         img {
                             width: 100%;
+                            @include max(1440px) {
+                                width: 80%;
+                            }
                         }
                     }                  
                 }         
@@ -887,29 +911,27 @@
                         }
                     }
                 }  
-            }
+            
             .other {
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                padding: 11px 25px 10px;
-                background-color: $color1;
-                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                padding: 11px 20px 10px;
+                background-color: rgba($color: #000, $alpha: 0.5);
                 font-weight: 500;
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
                 a {
-                    color: $color2;
+                    color: $color1;
                     text-decoration: none;
                 }
                 &:hover {
-                    box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                    background-color: rgba($color: #fff, $alpha: 1);
                     a {
-                        color: $color3;
+                        color: $color2;
                     }
                 }
-            }  
-            
+            }              
         }  
         &__footer {
             @include flex-jcenter;
@@ -919,6 +941,7 @@
                 height: 40px;
                 margin: 0 25px;
                 img {
+                    height: 100%;
                     margin: 0 15px;
                 }
             }
@@ -928,9 +951,9 @@
                     border-radius: 20px;
                     margin: 0 15px;
                     background-color: $color1;
-                    box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
+                    transition: all 0.3s ease-in-out;
                     &:hover{
-                        box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
+                        transform: scale(1.2);
                     }
                 }
             }
