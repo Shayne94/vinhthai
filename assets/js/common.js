@@ -113,6 +113,9 @@ $(document).ready(function (e) {
     });
   });
   
+  //Regions-detail
+  
+
   //Champions
   $("[class*='champ-list--']").hide();
   $(".champ-list--01").show();

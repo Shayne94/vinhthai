@@ -27,6 +27,9 @@
 	font-size: 20px;
 	color: $color3;
 	position: relative;
+	@include max(1440px) {
+		font-size: 16px;
+	}
 	span {
 		position: relative;
 		padding-bottom: 10px;
