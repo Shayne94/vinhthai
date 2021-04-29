@@ -16,12 +16,10 @@ html {
 body {
 	margin: 0;
 	padding: 40px 50px 50px;
-	overflow: hidden;
+	overflow-x: hidden;
 	font-size: 16px;
 	color: $color2;	
 	font-family: 'Roboto', sans-serif;
-	width: 100vw;
-	height: 100vh;
 	background: url(../../assets/images/common/background.png) no-repeat;	
 	background-color: rgba($color: $color2, $alpha: 0.2);
 	@include flex-jbetween;

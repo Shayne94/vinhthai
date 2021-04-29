@@ -134,15 +134,16 @@ $(document).ready(function (e) {
   });
   
   //Champ-detail Ability
-  $("[class*='ability-text--']").hide();
-  $(".ability-text--01").show();
+  $("[class*='ability-text--'], [class*='ability-video--']").hide();
+  $(".ability-text--01, .ability-video--01").show();
   $("[class*='ability-list--']").on('click', function() {
     let abilitylist = $(this).attr('class').split('--')[1];  
     $(".ability-list__item").removeClass("active");  
     $(this).addClass("active");    
-    $("[class*='ability-text--']").each(function() {
+    $("[class*='ability-text--'], [class*='ability-video--']").each(function() {
       let abilitytext = $(this).attr('class').split('--')[1];
-      if (abilitylist === abilitytext) {
+      let abilityvideo = $(this).attr('class').split('--')[1];
+      if (abilitylist === abilitytext && abilitylist === abilityvideo) {
         $(this).fadeIn(1000);
       } else {
         $(this).hide();
@@ -150,21 +151,22 @@ $(document).ready(function (e) {
     })
   });
    //Champ-detail Skin
-   $("[class*='skin-inner--']").hide();
-   $(".skin-inner--01").show();
-   $("[class*='skin-list--']").on('click', function() {
-     let skinlist = $(this).attr('class').split('--')[1];  
-     $(".skin-list__item").removeClass("active");  
-     $(this).addClass("active");    
-     $("[class*='skin-inner--']").each(function() {
-       let skininner = $(this).attr('class').split('--')[1];
-       if (skinlist === skininner) {
-         $(this).fadeIn(1000);
-       } else {
-         $(this).hide();
-       }
-     })
-   });
+   $("[class*='champ-skin-inner--']").hide();
+  $(".champ-skin-inner--01").show();
+  $("[class*='champ-skin-list--']").on('click', function() {
+    let champskinlist = $(this).attr('class').split('--')[1];  
+    $(".champ-skin-list__item").removeClass("active");  
+    $(this).addClass("active");    
+    $("[class*='champ-skin-inner--']").each(function() {
+      let champskininner = $(this).attr('class').split('--')[1];
+      if (champskinlist === champskininner) {
+        $(this).fadeIn(1000);
+      } else {
+        $(this).hide();
+      }
+    })
+  });
+
     //Skin-detail
     $("[class*='image-inner--']").hide();
     $(".image-inner--01").show();
