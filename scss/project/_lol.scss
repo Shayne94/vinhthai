@@ -138,7 +138,8 @@
                 &--item {
                     width: 13%;
                     position: relative;
-                    text-align: center;
+                    text-align: justify;
+                    text-align-last: center;
                     font-weight: 500;
                     background-color: $color1;
                     padding: 10px 8px 8px 10px;
@@ -156,7 +157,8 @@
                     p {
                         @include flex-center;
                         align-items: flex-end;
-                        text-align: center;
+                        text-align: justify;
+                        text-align-last: center;
                         padding-bottom: 2px;
                         font-family: 'Playball', cursive;
                         font-size: 20px;
@@ -185,26 +187,27 @@
         &__reg {  
             margin-bottom: 80px;
             .reg-title {
-                text-align: center;
+                text-align: justify;
+                text-align-last: center;
                 font-family: 'Playball', cursive;
-                font-size: 36px;
+                font-size: 48px;
                 color: $color1;
                 text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
                 margin-bottom: 50px;
                 position: relative;
                 &:before {
                     content: '\27A2';
-                    font-size: 36px;
+                    font-size: 48px;
                     position: absolute;
                     top: -4px;
-                    left: 400px;
+                    left: 325px;
                 }
                 &:after {
                     content: '\27A3';
-                    font-size: 36px;
+                    font-size: 48px;
                     position: absolute;
                     top: -4px;
-                    right: 400px;
+                    right: 325px;
                     transform: scaleX(-1);
                 }
             }        
@@ -222,7 +225,8 @@
                     width: calc(25% - 20px);
                     margin: 0 10px 20px;
                     position: relative;   
-                    text-align: center;
+                    text-align: justify;
+                    text-align-last: center;
                     transition: all 0.3s ease;
                     cursor: pointer;
                     a {
@@ -234,7 +238,7 @@
                         video {
                             position: relative;
                             width: 100%;
-                            border: 2px solid $color1;
+                            border: 1px solid $color1;
                             z-index: 1;
                         }   
                         img {
@@ -255,7 +259,8 @@
                             color: $color1;
                             letter-spacing: 1px;
                             position: absolute;
-                            text-align: center;
+                            text-align: justify;
+                            text-align-last: center;
                             transition: all 0.3s ease;
                             z-index: 3;
                         }  
@@ -291,7 +296,7 @@
                 img {
                     width: 100%;
                     -webkit-filter: drop-shadow(0px 0px 3px $color1) drop-shadow(0px 0px 3px $color3);
-                filter: drop-shadow(0px 0px 3px $color1) drop-shadow(0px 0px 3px $color3);
+                    filter: drop-shadow(0px 0px 3px $color1) drop-shadow(0px 0px 3px $color3);
                 }
             }
             .intro {
@@ -300,7 +305,8 @@
                     font-family: 'Playball', cursive;
                     font-size: 48px;
                     letter-spacing: 1px;
-                    text-align: center;
+                    text-align: justify;
+                    text-align-last: center;
                     text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
                     color: $color1;
                 }  
@@ -353,7 +359,7 @@
                         cursor: pointer;
                         transition: all 0.3s ease;
                         &:hover {
-                        text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
+                            text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
                         }
                     }
                 }
@@ -391,7 +397,8 @@
                     }
                     &--text {
                         color: $color1;
-                        text-align: center;
+                        text-align: justify;
+                        text-align-last: center;
                         p {
                             font-family: 'Playball', cursive;
                             font-size: 32px;
@@ -403,25 +410,12 @@
                         }
                     }
                 }
-                &__fade {
-                    -webkit-animation-name: fade;
-                    -webkit-animation-duration: 1.5s;
-                    animation-name: fade;
-                    animation-duration: 1.5s;
-                }                
-                @-webkit-keyframes fade {
-                    from {opacity: .4} 
-                    to {opacity: 1}
-                }                
-                @keyframes fade {
-                    from {opacity: .4} 
-                    to {opacity: 1}
-                }
                 &__pagi {
                     position: absolute;
                     top: 666px;
                     width: 100%;
-                    text-align: center;
+                    text-align: justify;
+                    text-align-last: center;
                     &--dot {
                         cursor: pointer;
                         height: 15px;
@@ -475,14 +469,15 @@
                         }          
                         img {
                             width: 100%;
-                            border: 2px solid $color1;
+                            border: 1px solid $color1;
                         } 
                         .champ-text {
                             font-family: 'Playball', cursive;
                             font-size: 20px;
                             letter-spacing: 1px;
                             width: calc(100% - 14px);
-                            text-align: center;
+                            text-align: justify;
+                            text-align-last: center;
                             text-transform: capitalize;
                             position: absolute;
                             bottom: 10px;
@@ -520,43 +515,43 @@
                     margin: 0 10px;
                     width: calc(100% / 5 - 20px);
                     cursor: pointer;                          
-                        position: relative;  
-                        padding: 7px;
-                        transition: all 0.3s ease;       
-                        img {
-                            width: 100%;
-                            border: 2px solid $color1;
-                        } 
-                        &:hover, &.active {
-                            box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
-                        }                  
-                    
+                    position: relative;  
+                    padding: 7px;
+                    transition: all 0.3s ease;       
+                    img {
+                        width: 100%;
+                        border: 1px solid $color1;
+                    } 
+                    &:hover, &.active {
+                        box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
+                    }  
                 }
             }
         }       
         &__champ {    
             margin-bottom: 80px;
             .champ-title {
-                text-align: center;
+                text-align: justify;
+                text-align-last: center;
                 font-family: 'Playball', cursive;
-                font-size: 36px;
+                font-size: 48px;
                 color: $color1;
                 text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
                 margin-bottom: 50px;
                 position: relative;
                 &:before {
                     content: '\27A2';
-                    font-size: 36px;
+                    font-size: 48px;
                     position: absolute;
                     top: -4px;
-                    left: 410px;
+                    left: 300px;
                 }
                 &:after {
                     content: '\27A3';
-                    font-size: 36px;
+                    font-size: 48px;
                     position: absolute;
                     top: -4px;
-                    right: 410px;
+                    right: 300px;
                     transform: scaleX(-1);
                 }
             }
@@ -586,14 +581,15 @@
                         }          
                         img {
                             width: 100%;
-                            border: 2px solid $color1;
+                            border: 1px solid $color1;
                         } 
                         .champ-text {
                             font-family: 'Playball', cursive;
                             font-size: 20px;
                             letter-spacing: 1px;
                             width: calc(100% - 14px);
-                            text-align: center;
+                            text-align: justify;
+                            text-align-last: center;
                             text-transform: capitalize;
                             position: absolute;
                             bottom: 10px;
@@ -624,7 +620,8 @@
                         font-family: 'Playball', cursive;
                         font-size: 48px;
                         letter-spacing: 1px;
-                        text-align: center;
+                        text-align: justify;
+                        text-align-last: center;
                         text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
                     }
                     &--sub {
@@ -632,7 +629,8 @@
                         color: $color3;
                         font-weight: 500;
                         font-size: 28px;
-                        text-align: center;
+                        text-align: justify;
+                        text-align-last: center;
                     }
                 }  
                 &__about {
@@ -646,7 +644,8 @@
                             padding-top: 10px;
                         }
                         p {
-                            text-align: center;
+                            text-align: justify;
+                            text-align-last: center;
                             text-transform: uppercase;
                             margin-top: 20px;
                             color: $color3;
@@ -668,7 +667,8 @@
                 }
             }  
             .screenshot {
-                text-align: center;
+                text-align: justify;
+                text-align-last: center;
                 margin-bottom: 70px;
             }           
             .ability {
@@ -695,7 +695,7 @@
                         img {
                             width: 100%;
                             height: 100%;
-                            border: 2px solid $color1;
+                            border: 1px solid $color1;
                         }
                         &:hover, &.active {
                             box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
@@ -794,7 +794,8 @@
                             width: 100%;
                             position: absolute;
                             bottom: 25px;
-                            text-align: center;
+                            text-align: justify;
+                            text-align-last: center;
                             font-family: 'Playball', cursive;
                             font-size: 28px;
                             text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
@@ -817,7 +818,7 @@
                         transition: all 0.3s ease;
                         img {
                             width: 100%;
-                            border: 2px solid $color1;
+                            border: 1px solid $color1;
                         }
                         &:hover, &.active {
                             box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
@@ -830,263 +831,218 @@
             }            
         }  
         &__skin {
-            @include flex-jbetween;
-            align-content: space-between;
-            flex-wrap: wrap;     
-            height: calc(100vh - 305px);  
-            @include max(1440px) {
-                height: calc(100vh - 285px); 
-            }                          
-            .skin-item {
-                max-width: 242.5px;
-                width: calc(100% / 6 - 120px / 5);
-                height: calc(100% / 3 - 60px / 3);
+            margin-bottom: 80px;
+            .skin-title {
+                text-align: justify;
+                text-align-last: center;
+                font-family: 'Playball', cursive;
+                font-size: 48px;
+                color: $color1;
+                text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
+                margin-bottom: 50px;
                 position: relative;
-                cursor: pointer;   
-                @include max(1440px) {
-                    width: calc(100% / 6 - 125px / 6);
-                    height: calc(100% / 3 - 60px / 3);
-                }              
-                &__inner {
+                &:before {
+                    content: '\27A2';
+                    font-size: 48px;
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    overflow: hidden;
-                    z-index: 1;                                
-                    padding: 5px;
-                    background-color: $color1;
-                    transition: all .3s ease;
-                    @include max(1440px) {
-                        padding: 3px;
-                    }
-                    &:hover {
-                        transform: scale(1.1);
-                        .skin-text {
-                            text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3;
-                        }
-                    }
-                    .skin-bg {
-                        position: absolute;
-                        top: 5px;
-                        left: 5px;
-                        bottom: 5px;
-                        right: 5px;
-                        background-color: #0a0a0c;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        transition: opacity .3s ease; 
-                        @include max(1440px) {
-                            top: 3px;
-                            left: 3px;
-                            bottom: 3px;
-                            right: 3px;
-                        }
+                    top: -4px;
+                    left: 375px;
+                }
+                &:after {
+                    content: '\27A3';
+                    font-size: 48px;
+                    position: absolute;
+                    top: -4px;
+                    right: 375px;
+                    transform: scaleX(-1);
+                }
+            }
+            .skin-list {
+                @include flex-jcenter;
+                flex-wrap: wrap;  
+                width: calc(100% + 20px);
+                margin: 0 -10px;   
+                .skin-item {
+                    margin: 0 10px 20px;
+                    width: calc(100% / 5 - 20px);
+                    cursor: pointer;                   
+                    &__inner {                        
+                        position: relative;  
+                        padding: 7px;
+                        transition: all 0.3s ease;
                         &:before {
                             content: '';    
-                            width: 100%;
-                            height: 100%;    
+                            width: calc(100% - 18px);
+                            height: calc(100% - 18px);   
                             background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 50%);
                             background-size: contain;                
                             position: absolute;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
+                            top: 9px;
+                            left: 9px;
                             z-index: 1;
-                        }                                             
+                        }          
+                        img {
+                            width: 100%;
+                            border: 1px solid $color1;
+                        } 
+                        .skin-text {
+                            font-family: 'Playball', cursive;
+                            font-size: 20px;
+                            letter-spacing: 1px;
+                            width: calc(100% - 14px);
+                            text-align: justify;
+                            text-align-last: center;
+                            text-transform: capitalize;
+                            position: absolute;
+                            bottom: 10px;
+                            color: $color1;
+                            line-height: 24px;  
+                            transition: all .3s ease;                          
+                            z-index: 3;
+                        }  
+                        &:hover, &.active {
+                            box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
+                            .skin-text {
+                                text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
+                            }
+                        }                  
                     }
-                    .skin-text {
-                        font-family: 'Playball', cursive;
-                        font-size: 20px;
-                        letter-spacing: 1px;
-                        width: calc(100% - 10px);
-                        text-align: center;
-                        text-transform: capitalize;
-                        position: absolute;
-                        bottom: 8px;
-                        color: $color1;
-                        line-height: 24px;  
-                        transition: all .3s ease;                          
-                        z-index: 3;
-                        @include max(1440px) {
-                            width: calc(100% - 6px);
-                            font-size: 16px;
-                            bottom: 4px;
-                        }
-                    }                    
-                }
-            }
-        } 
-        &__skin-detail {
-            @include flex-jbetween;
-            flex-direction: column; 
-            height: calc(100vh - 305px);
-            position: relative;
-            @include max(1440px) {
-                height: calc(100vh - 305px);
-            }
-            .intro {           
-                &__name {
-                    line-height: 1;
-                    margin-bottom: 10px;
-                }                           
-                &__about {                                
-                    line-height: 1.75;
-                    text-align: justify;
-                    color: $color1;
-                }
-            }         
-            .image-list {
-                @include flex-jcenter;
-                align-content: center;   
-                flex-wrap: wrap; 
-                margin-bottom: 15px;         
-                &__item {                 
-                    padding: 5px;
-                    background-color: $color1;
-                    cursor: pointer;     
-                    margin: 0 10px;  
-                    transition: all 0.3s ease-in-out;
-                    img {
-                        width: 100%;
-                    }
-                    &:hover, &.active {
-                        box-shadow: 0px 3px 5px rgba($color: $color3, $alpha: 0.7), 0px -3px 5px rgba($color: $color3, $alpha: 0.7), 3px 0px 5px rgba($color: $color3, $alpha: 0.7), -3px 0px 5px rgba($color: $color3, $alpha: 0.7);
-                    }                        
-                } 
-                .size01 {
-                    width: calc(100% / 13 - 260px / 12);       
-                    margin: 10px 20px;  
-                }
-                .size02 {
-                    width: calc(100% / 11 - 220px / 10);    
-                }
-                .size03 {
-                    width: calc(100% / 7 - 140px / 6);  
-                }
-                .size04 {
-                    max-width: calc(100% / 5 - 100px / 4);  
-                    height: 150px;
-                    margin: 0 15px;  
-                    img {
-                        width: auto;
-                        height: 100%;
-                    }
-                }
-                .size05 {
-                    width: calc(100% / 9 - 180px / 8);  
-                }
-                .size06 {
-                    width: calc(100% / 13 - 260px / 12); 
-                    margin: 10px 30px;  
-                }
-                .size07 {
-                    width: calc(100% / 10 - 200px / 9); 
-                }
-                .size08 {
-                    width: calc(100% / 13 - 260px / 12);       
-                    margin: 10px 15px;  
                 }
             }   
-            .image-inner {
+        }
+        &__skin-detail {    
+            margin-bottom: 90px;       
+            .intro {           
+                &__name {
+                    margin-bottom: 10px;
+                    font-family: 'Playball', cursive;
+                    font-size: 48px;
+                    letter-spacing: 1px;
+                    text-align: justify;
+                    text-align-last: center;
+                    text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
+                    color: $color1;
+                }  
+                &__about {
+                    padding: 25px 0 55px;
+                    margin: 0 auto;
+                    max-width: 960px;
+                    width: 80%;
+                    color: $color1;
+                    text-align: justify;
+                    text-align-last: center;
+                    line-height: 1.75;
+                }
+            } 
+            .skin-group {
                 @include flex-jcenter;
-                position: relative;
-                &__item {   
-                    backdrop-filter: blur(3px);
-                    position: relative; 
-                    margin: 0 25px;   
-                    padding: 15px;                      
-                    box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
-                    img, video {
-                        height: calc(100vh - 600px);
-                        @include max(1440px) {
-                            height: calc(100vh - 500px);
-                        }
-                    }
-                    p {
-                        @include flex-jcenter;
-                        align-content: flex-end;
-                        flex-wrap: wrap;
+                width: calc(100% + 20px);
+                margin: 0 -10px 26px;  
+                &__tab {
+                    position: relative;
+                    border: none;
+                    cursor: pointer;
+                    background-color: transparent;
+                    font-family: 'Playball', cursive;
+                    font-size: 24px;
+                    padding: 15px 40px;
+                    margin: 0 10px;
+                    color: $color1;
+                    transition: all 0.3s ease;
+                    &:before {
+                        content: '';
                         position: absolute;
-                        top: 15px;
-                        right: 15px;
-                        bottom: 15px;
-                        left: 15px;
-                        color: $color1;                            
-                        padding: 10px 15px;
-                        background-image: linear-gradient(to top, rgba($color: #000, $alpha: 1), rgba($color: #000, $alpha: 0) 60%);
-                        span {
-                            width: 100%;                           
-                        }
-                        .title {
-                            font-family: 'Playball', cursive;
-                            font-size: 24px;
-                            margin-bottom: 5px;
-                            color: $color1;
-                            text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
-                        }
-                        .text {
-                            font-size: 14px;
-                            line-height: 20px;
-                            text-align: justify;
-                        }
+                        top: 7px;
+                        left: 7px;
+                        right: 7px;
+                        bottom: 7px;                        
+                        border: 1px solid $color1;
                     }
-                } 
-                &__char {                        
-                    display: flex;
-                    align-items: center;
+                    &:hover, &.active {
+                        text-shadow: 0px 0px 5px $color3, 0px 0px 10px $color3, 0px 0px 15px $color3, 0px 0px 20px $color3, 0px 0px 25px $color3;
+                        box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
+                    }
+                }
+            }      
+            .skin-detail {
+                position: relative;
+                &__left, &__right {
+                    position: absolute;
+                    width: 20%;
+                    max-width: 220px;
                     img {
                         width: 100%;
-                        @include max(1440px) {
-                            width: 80%;
+                    }
+                }
+                &__left {
+                    left: 0;
+                }
+                &__right {
+                    right: 0;
+                }
+                &__box {
+                    display: none;
+                }
+                &__list {
+                    @include flex-jcenter;
+                    flex-wrap: wrap;
+                    width: calc(100% + 20px);
+                    margin: 0 -10px;  
+                    &--item {
+                        margin: 0 10px;
+                        width: calc(100% / 8 - 20px);
+                        cursor: pointer;                          
+                        position: relative;  
+                        padding: 7px;
+                        transition: all 0.3s ease;    
+                        margin-bottom: 20px;   
+                        img {
+                            width: 100%;
+                            border: 1px solid $color1;
+                        } 
+                        &:hover, &.active {
+                            box-shadow: 0px 3px 5px rgba($color: $color1, $alpha: 0.7), 0px -3px 5px rgba($color: $color1, $alpha: 0.7), 3px 0px 5px rgba($color: $color1, $alpha: 0.7), -3px 0px 5px rgba($color: $color1, $alpha: 0.7);
+                        }   
+                    }
+                }
+                &__inner {
+                    position: relative;
+                    &--item {
+                        max-width: 750px;
+                        margin: 13px auto 0;
+                    }
+                    &--img {
+                        position: relative;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 20px;
+                            left: 20px;
+                            right: 20px;
+                            bottom: 20px;
+                            border: 1px solid rgba($color: $color1, $alpha: 0.5);
+                            z-index: 3;
+                        }
+                        img {
+                            width: 100%;
                         }
                     }
-                }                  
-            }         
-            &__champ-list {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                padding: 16px 25px 15px;
-                background-color: $color1;
-                box-shadow: 3px 3px 3px rgba($color: $color2, $alpha: 0.3);
-                font-weight: 500;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
-                a {
-                    color: $color2;
-                    text-decoration: none;
-                }
-                &:hover {
-                    box-shadow: 3px 3px 3px rgba($color: $color3, $alpha: 0.3);
-                    a {
-                        color: $color3;
+                    &--text {
+                        color: $color1;
+                        text-align: justify;
+                        text-align-last: center;
+                        p {
+                            font-family: 'Playball', cursive;
+                            font-size: 32px;
+                            color: $color3;
+                            padding: 25px 0 10px;
+                        }
+                        span {
+                            line-height: 1.75;
+                        }
                     }
                 }
-            }  
-            
-            .other {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                padding: 11px 20px 10px;
-                background-color: rgba($color: #000, $alpha: 0.5);
-                font-weight: 500;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
-                a {
-                    color: $color1;
-                    text-decoration: none;
-                }
-                &:hover {
-                    background-color: rgba($color: #fff, $alpha: 1);
-                    a {
-                        color: $color2;
-                    }
-                }
-            }              
+            }
         }  
         &__footer {
             @include flex-jcenter;
@@ -1149,4 +1105,18 @@
         z-index: 3;
         transition: all 0.3s ease;
     } 
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}                
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}                
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }

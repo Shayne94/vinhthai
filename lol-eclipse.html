@@ -14,7 +14,8 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="lol-bg" style="background: url(assets/images/lol/skin-eclipse.png) no-repeat center center; background-size: cover;">
+<body class="lol-bg"
+	style="background: url(assets/images/lol/skin-eclipse.png) no-repeat center center; background-size: cover;">
 	<header>
 		<div class="header">
 			<div class="header__name">
@@ -43,232 +44,326 @@
 		<ul class="lol-inner">
 			<li class="lol-inner__skin-detail">
 				<div class="intro">
-					<p class="intro__name title01">Eclipse</p>
+					<p class="intro__name">Eclipse</p>
 					<p class="intro__about">
-						<span>Eclipse</span> is a series of alternate future/universe skins in League of Legends, featuring champions as monastic knights, forest inhabitants, evil witches and gods of an old world.
+						Eclipse is a series of alternate future/universe skins in League of Legends, featuring champions
+						as monastic knights, forest inhabitants, evil witches and gods of an old world. Eclipse
+						officially encompasses four skin lines: General Eclipse, Coven, Death Blossom, and Elderwood.
 					</p>
 				</div>
-					<div class="image-list">
-						<div class="image-list__item active size01 image-list--01">
-							<img src="assets/images/lol/leona-06.png" alt="leona-eclipse">
+				<div class="skin-group">
+					<button id="skin-group__General" class="skin-group__tab active">General</button>
+					<button id="skin-group__Coven" class="skin-group__tab">Coven</button>
+					<button id="skin-group__Blossom" class="skin-group__tab">Death Blossom</button>
+					<button id="skin-group__Elderwood" class="skin-group__tab">Elderwood</button>
+				</div>
+				<div class="skin-detail">
+					<div class="skin-detail__left">
+						<img src="assets/images/lol/eclipse-01.png" src="eclipse-01">
+					</div>
+					<div class="skin-detail__right">
+						<img src="assets/images/lol/eclipse-02.png" src="eclipse-02">
+					</div>
+					<div id="skin-detail__General" class="skin-detail__box" style="display: block;">
+						<div class="skin-detail__list">
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/leona-06.png" alt="leona-eclipse"
+									onclick="currentSlide(1)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/leona-07.png" alt="leona-eclipse"
+									onclick="currentSlide(2)">
+							</div>
 						</div>
-						<div class="image-list__item size01 image-list--02">
-							<img src="assets/images/lol/leona-07.png" alt="leona-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--03">
-							<img src="assets/images/lol/camille-02.png" alt="camille-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--04">
-							<img src="assets/images/lol/leblanc-03.png" alt="leblanc-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--05">
-							<img src="assets/images/lol/liss-04.png" alt="liss-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--06">
-							<img src="assets/images/lol/mor-05.png" alt="mor-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--07">
-							<img src="assets/images/lol/zyra-04.png" alt="zyra-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--08">
-							<img src="assets/images/lol/elise-01.png" alt="elise-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--09">
-							<img src="assets/images/lol/khazix-03.png" alt="khazix-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--10">
-							<img src="assets/images/lol/ahri-09.png" alt="ahri-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--11">
-							<img src="assets/images/lol/azir-03.png" alt="azir-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--12">
-							<img src="assets/images/lol/bard-01.png" alt="bard-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--13">
-							<img src="assets/images/lol/hecarim-03.png" alt="hecarim-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--14">
-							<img src="assets/images/lol/leblanc-05.png" alt="leblanc-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--15">
-							<img src="assets/images/lol/ornn-02.png" alt="ornn-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--16">
-							<img src="assets/images/lol/rakan-03.png" alt="rakan-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--17">
-							<img src="assets/images/lol/soraka-01.png" alt="soraka-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--18">
-							<img src="assets/images/lol/veigar-07.png" alt="veigar-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--19">
-							<img src="assets/images/lol/xayah-03.png" alt="xayah-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--20">
-							<img src="assets/images/lol/ivern-03.png" alt="ivern-eclipse">
-						</div>
-						<div class="image-list__item size01 image-list--21">
-							<img src="assets/images/lol/nocturne-05.png" alt="nocturne-eclipse">
+						<div class="skin-detail__inner">
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/leona-06.png" alt="leona-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Solar Eclipse Leona</p>
+									<span>Hearken! We beseech thee, O Cruel Sun, and deign to bless with the cleansing flame of thy celestial majesty. May this shield guard against the scourge of dark enchantments, which choke our land. May this blade be the hammer against the servants of witchery and evil. I, Leona, do take this oath forevermore.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/leona-07.png" alt="leona-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Lunar Eclipse Leona</p>
+									<span>Hearken! We beseech thee, O Savage Moon, and deign to bless with the vermillion shadow of thy celestial majesty. May this shield guard against the scourge of dark enchantments, which choke our land. May this blade be the hammer against the servants of witchery and evil. I, Leona, do take this oath forevermore.</span>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="image-inner">
-						<div class="image-inner__char image-inner__char--left">
-							<img src="assets/images/lol/eclipse-01.png" src="eclipse-01">
+					<div id="skin-detail__Coven" class="skin-detail__box">
+						<div class="skin-detail__list">
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/camille-02.png" alt="camille-eclipse"
+									onclick="currentSlide(3)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/leblanc-05.png" alt="leblanc-eclipse"
+									onclick="currentSlide(4)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/liss-04.png" alt="liss-eclipse"
+									onclick="currentSlide(5)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/mor-05.png" alt="mor-eclipse"
+									onclick="currentSlide(6)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/zyra-04.png" alt="zyra-eclipse"
+									onclick="currentSlide(7)">
+							</div>
 						</div>
-						<div class="image-inner__item image-inner--01">
-							<img src="assets/images/lol/leona-06.png" alt="leona-eclipse">
-							<p>
-								<span class="title">Solar Eclipse Leona</span><br>
-								<span class="text">Hearken! We beseech thee, O Cruel Sun, and deign to bless with the cleansing flame of thy celestial majesty. May this shield guard against the scourge of dark enchantments, which choke our land. May this blade be the hammer against the servants of witchery and evil. I, Leona, do take this oath forevermore.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--02">
-							<img src="assets/images/lol/leona-07.png" alt="leona-eclipse">
-							<p>
-								<span class="title">Lunar Eclipse Leona</span><br>
-								<span class="text">Hearken! We beseech thee, O Savage Moon, and deign to bless with the vermillion shadow of thy celestial majesty. May this shield guard against the scourge of dark enchantments, which choke our land. May this blade be the hammer against the servants of witchery and evil. I, Leona, do take this oath forevermore.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--03">
-							<img src="assets/images/lol/camille-02.png" alt="camille-eclipse">
-							<p>
-								<span class="title">Coven Camille</span><br>
-								<span class="text">They came to Camille as if in some dark slumber—whispers of the Ebony Ram, and the nameless things tumbling up from long-forgotten sepulchers. Her throat full of hearsay, she cuts down the vestiges of the new world, seeding the earth with the magics and witchery of her ancient, grinning masters.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--04">
-							<img src="assets/images/lol/leblanc-05.png" alt="leblanc-eclipse">
-							<p>
-								<span class="title">Coven Leblanc</span><br>
-								<span class="text">They came to LeBlanc as if in some forgotten melody -- songs of the Black Crane, and its titanic heart long-imprisoned within the deepest reaches of the Elderwood. Her sisters fell before the forest's defenders, but LeBlanc did find her prize... and now her patron has begun to wake, stirring itself from a dreamless slumber of unhallowed centuries.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--05">
-							<img src="assets/images/lol/liss-04.png" alt="liss-eclipse">
-							<p>
-								<span class="title">Coven Lissandra</span><br>
-								<span class="text">They came to Lissandra as if in some waking dream—visions of the Ivory Stag, and the old magics long lost to antiquity. Even now, the ageless witch resides among those twisted shadows of the old growth, awaiting the day her dead gods spill forth from their rotten and accursed graves.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--06">
-							<img src="assets/images/lol/mor-05.png" alt="mor-eclipse">
-							<p>
-								<span class="title">Coven Morgana</span><br>
-								<span class="text">Queen of the coven, and patron of that called Ashen Owl. Morgana worshipped the Old Gods, and wept when they were slain -- betrayed when her sister murdered the primordial sun and delivered its power to an army of witch-knights. Now Morgana has returned to end the reign of mankind, returning the world's true lords to their rightful, mouldering thrones.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--07">
-							<img src="assets/images/lol/zyra-04.png" alt="zyra-eclipse">
-							<p>
-								<span class="title">Coven Zyra</span><br>
-								<span class="text">They came to Zyra from the roots and rocks -- stirrings of the Night Dove, its beating wings twisting the very land that is its grave. Tied now to the whispers beneath the loam, she rips away humanity's works of stone and glass, each broken vestige another step towards a world returned to nature.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--08">
-							<img src="assets/images/lol/elise-01.png" alt="elise-eclipse">
-							<p>
-								<span class="title">Death Blossom Elise</span><br>
-								<span class="text">An enchanting beauty she is, lithe in form, and colored like the flowering valleys frozen mid-bloom by winter's chill. Yet the creature Elise dines upon the flesh of maidens, allured by her delicate pulchritude, who dance softly into the jaws of a monster.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--09">
-							<img src="assets/images/lol/khazix-03.png" alt="khazix-eclipse">
-							<p>
-								<span class="title">Death Blossom Kha'Zix</span><br>
-								<span class="text">Hidden among the great flower-fields of the north are the Death Blossoms, primeval hunters whose disarming beauty would lull even the bravest knight to tears, if but for a moment. For Kha'Zix, feeding upon these hardy souls offers yet another chance at metamorphosis… and a moment is all he needs.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--10">
-							<img src="assets/images/lol/ahri-09.png" alt="ahri-eclipse">
-							<p>
-								<span class="title">Elderwood Ahri</span><br>
-								<span class="text">Fables of the trickster spirit Ahri have been part of mankind's history for countless generations. Fair-skinned and eternally youthful, she is portrayed as a curious, quizzical member of the Elderwood's feyfolk… though in recent years her heart has hardened, as she fights a growing corruption within her ancestral home.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--11">
-							<img src="assets/images/lol/azir-03.png" alt="azir-eclipse">
-							<p>
-								<span class="title">Elderwood Azir</span><br>
-								<span class="text">An ancient druid-king of the Elderwood, who has called the forest his home since it stood nameless in the shadow of the gods. Though his people are a dying breed, he has raised an ensorcelled army in their likeness, including the shell of a human king whose story rings all too familiar...</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--12">
-							<img src="assets/images/lol/bard-01.png" alt="bard-eclipse">
-							<p>
-								<span class="title">Elderwood Bard</span><br>
-								<span class="text">Bard is a creature of the old world, they say, older than the great forest, and older even than the seeds it sprouted from. Few records remain of the age before the gods, but it is likely Bard predates them - a truly primordial being, tending the land since time's first dawn.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--13">
-							<img src="assets/images/lol/hecarim-03.png" alt="hecarim-eclipse">
-							<p>
-								<span class="title">Elderwood Hecarim</span><br>
-								<span class="text">His is armor of soft-spun summerwood and rowan—the stones upon him carved in a time before the old gods danced among the trees. Even now, Hecarim travels the shallow rivers and moss-flecked paths of the Elderwood, that ageless guardian who protects the forest from mankind's darkest yearnings.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--14">
-							<img src="assets/images/lol/leblanc-03.png" alt="leblanc-eclipse">
-							<p>
-								<span class="title">Elderwood Leblanc</span><br>
-								<span class="text">When the Coven first rose to power, they craved the living enchantments of the Elderwood - a tool, they believed, for the resurrection of their dark patrons. Thus did they fall upon the great forest, and slaughter its children… until a lone sylvan stood against them, stealing the witches' lives, their magic, and even their names.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--15">
-							<img src="assets/images/lol/ornn-02.png" alt="ornn-eclipse">
-							<p>
-								<span class="title">Elderwood Ornn</span><br>
-								<span class="text">A truly ancient shaper of the Elderwood, and keeper of divine knowledge. Beings who tended the trees and directed the rivers are rare in this time of fell magic and endless twilight, yet Ornn continues on, stubbornly clinging to what remains of the old way.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--16">
-							<img src="assets/images/lol/rakan-03.png" alt="rakan-eclipse">
-							<p>
-								<span class="title">Elderwood Rakan</span><br>
-								<span class="text">Deep in the shaded canopies of the Elderwood, the Fey Prince Rakan and Princess Xayah hold court over two rival fairy dominions. Star-crossed lovers uninterested in the affairs of mortals, their playful romance has insulated their people from the horrors befalling the outside world.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--17">
-							<img src="assets/images/lol/soraka-01.png" alt="soraka-eclipse">
-							<p>
-								<span class="title">Dryad Soraka</span><br>
-								<span class="text">Too many forget that the heart of the Elderwood was once gentle and kind. Within its confines rested fae, sylvans, and dryads - creatures from another age, who looked upon humanity with curious eyes. Now only a scattered few remain, and fewer still, like Soraka, who regard humans fondly.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--18">
-							<img src="assets/images/lol/veigar-07.png" alt="veigar-eclipse">
-							<p>
-								<span class="title">Elderwood Veigar</span><br>
-								<span class="text">A small number of the Elderwood's children remain largely unaffected by the growing influence of the Coven, to the relief of scholars and storytellers alike. Unfortunately, those particular children are some of the most whimsical and dangerous, including among their number the insane goblin Veigar and his cursed, hallucinogenic toadstools.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--19">
-							<img src="assets/images/lol/xayah-03.png" alt="xayah-eclipse">
-							<p>
-								<span class="title">Elderwood Xayah</span><br>
-								<span class="text">Deep in the shaded canopies of the Elderwood, the Fey Prince Rakan and Princess Xayah hold court over two rival fairy dominions. Though Princess Xayah has seen the darkness of the world beyond, she has chosen to simply adopt its colors for her court rather than confront it.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--20">
-							<img src="assets/images/lol/ivern-03.png" alt="ivern-eclipse">
-							<p>
-								<span class="title">Elderwood Ivern</span><br>
-								<span class="text">A nightmarish totem forged of witchcraft and forbidden incantations, Ivern stood among the Old Gods in the days before their destruction. Left inert for hundreds of years, he has risen along with his brethren to annihilate the paltry works of man.</span>
-							</p>
-						</div>
-						<div class="image-inner__item image-inner--21">
-							<img src="assets/images/lol/nocturne-05.png" alt="nocturne-eclipse">
-							<p>
-								<span class="title">Elderwood Nocturne</span><br>
-								<span class="text">The great corpses of the Old Gods fed the land, and in time even the Elderwood would come to grow over their putrid rot - hiding it, perhaps, for a time. But the Gods never truly died and, with the resurgence of the Coven, one has risen again–Nocturne, the Eternal Nightmare.</span>
-							</p>
-						</div>
-						<div class="image-inner__char image-inner__char--right">
-							<img src="assets/images/lol/eclipse-02.png" src="eclipse-02">
+						<div class="skin-detail__inner">
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/camille-02.png" alt="camille-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Coven Camille</p>
+									<span>They came to Camille as if in some dark slumber—whispers of the Ebony Ram, and the nameless things tumbling up from long-forgotten sepulchers. Her throat full of hearsay, she cuts down the vestiges of the new world, seeding the earth with the magics and witchery of her ancient, grinning masters.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/leblanc-05.png" alt="leblanc-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Coven Leblanc</p>
+									<span>They came to LeBlanc as if in some forgotten melody -- songs of the Black Crane, and its titanic heart long-imprisoned within the deepest reaches of the Elderwood. Her sisters fell before the forest's defenders, but LeBlanc did find her prize... and now her patron has begun to wake, stirring itself from a dreamless slumber of unhallowed centuries.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/liss-04.png" alt="liss-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Coven Lissandra</p>
+									<span>They came to Lissandra as if in some waking dream—visions of the Ivory Stag, and the old magics long lost to antiquity. Even now, the ageless witch resides among those twisted shadows of the old growth, awaiting the day her dead gods spill forth from their rotten and accursed graves.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/mor-05.png" alt="mor-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Coven Morgana</p>
+									<span>Queen of the coven, and patron of that called Ashen Owl. Morgana worshipped the Old Gods, and wept when they were slain -- betrayed when her sister murdered the primordial sun and delivered its power to an army of witch-knights. Now Morgana has returned to end the reign of mankind, returning the world's true lords to their rightful, mouldering thrones.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/zyra-04.png" alt="zyra-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Coven Zyra</p>
+									<span>They came to Zyra from the roots and rocks -- stirrings of the Night Dove, its beating wings twisting the very land that is its grave. Tied now to the whispers beneath the loam, she rips away humanity's works of stone and glass, each broken vestige another step towards a world returned to nature.</span>
+								</div>
+							</div>
 						</div>
 					</div>
-				<div class="other"><a href="lol-skin.html">Other Skins</a></div>
+					<div id="skin-detail__Blossom" class="skin-detail__box">
+						<div class="skin-detail__list">
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/elise-01.png" alt="elise-eclipse"
+									onclick="currentSlide(8)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/khazix-03.png" alt="khazix-eclipse"
+									onclick="currentSlide(9)">
+							</div>
+						</div>
+						<div class="skin-detail__inner">
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/elise-01.png" alt="elise-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Death Blossom Elise</p>
+									<span>An enchanting beauty she is, lithe in form, and colored like the flowering valleys frozen mid-bloom by winter's chill. Yet the creature Elise dines upon the flesh of maidens, allured by her delicate pulchritude, who dance softly into the jaws of a monster.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/khazix-03.png" alt="khazix-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Death Blossom Kha'Zix</p>
+									<span>Hidden among the great flower-fields of the north are the Death Blossoms, primeval hunters whose disarming beauty would lull even the bravest knight to tears, if but for a moment. For Kha'Zix, feeding upon these hardy souls offers yet another chance at metamorphosis… and a moment is all he needs.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="skin-detail__Elderwood" class="skin-detail__box">
+						<div class="skin-detail__list">
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/ahri-09.png" alt="ahri-eclipse"
+									onclick="currentSlide(10)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/azir-03.png" alt="azir-eclipse"
+									onclick="currentSlide(11)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/bard-01.png" alt="bard-eclipse"
+									onclick="currentSlide(12)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/hecarim-03.png" alt="hecarim-eclipse"
+									onclick="currentSlide(13)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/leblanc-03.png" alt="leblanc-eclipse"
+									onclick="currentSlide(14)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/ornn-02.png" alt="ornn-eclipse"
+									onclick="currentSlide(15)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/rakan-03.png" alt="rakan-eclipse"
+									onclick="currentSlide(16)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/soraka-01.png" alt="soraka-eclipse"
+									onclick="currentSlide(17)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/veigar-07.png" alt="veigar-eclipse"
+									onclick="currentSlide(18)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/xayah-03.png" alt="xayah-eclipse"
+									onclick="currentSlide(19)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/ivern-03.png" alt="ivern-eclipse"
+									onclick="currentSlide(20)">
+							</div>
+							<div class="skin-detail__list--item">
+								<img src="assets/images/lol/nocturne-05.png" alt="nocturne-eclipse"
+									onclick="currentSlide(21)">
+							</div>
+						</div>
+						<div class="skin-detail__inner">
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/ahri-09.png" alt="ahri-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Ahri</p>
+									<span>Fables of the trickster spirit Ahri have been part of mankind's history for countless generations. Fair-skinned and eternally youthful, she is portrayed as a curious, quizzical member of the Elderwood's feyfolk… though in recent years her heart has hardened, as she fights a growing corruption within her ancestral home.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/azir-03.png" alt="azir-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Azir</p>
+									<span>An ancient druid-king of the Elderwood, who has called the forest his home since it stood nameless in the shadow of the gods. Though his people are a dying breed, he has raised an ensorcelled army in their likeness, including the shell of a human king whose story rings all too familiar...</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/bard-01.png" alt="bard-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Bard</p>
+									<span>Bard is a creature of the old world, they say, older than the great forest, and older even than the seeds it sprouted from. Few records remain of the age before the gods, but it is likely Bard predates them - a truly primordial being, tending the land since time's first dawn.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/hecarim-03.png" alt="hecarim-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Hecarim</p>
+									<span>His is armor of soft-spun summerwood and rowan—the stones upon him carved in a time before the old gods danced among the trees. Even now, Hecarim travels the shallow rivers and moss-flecked paths of the Elderwood, that ageless guardian who protects the forest from mankind's darkest yearnings.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/leblanc-03.png" alt="leblanc-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Leblanc</p>
+									<span>When the Coven first rose to power, they craved the living enchantments of the Elderwood - a tool, they believed, for the resurrection of their dark patrons. Thus did they fall upon the great forest, and slaughter its children… until a lone sylvan stood against them, stealing the witches' lives, their magic, and even their names.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/ornn-02.png" alt="ornn-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Ornn</p>
+									<span>A truly ancient shaper of the Elderwood, and keeper of divine knowledge. Beings who tended the trees and directed the rivers are rare in this time of fell magic and endless twilight, yet Ornn continues on, stubbornly clinging to what remains of the old way.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/rakan-03.png" alt="rakan-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Rakan</p>
+									<span>Deep in the shaded canopies of the Elderwood, the Fey Prince Rakan and Princess Xayah hold court over two rival fairy dominions. Star-crossed lovers uninterested in the affairs of mortals, their playful romance has insulated their people from the horrors befalling the outside world.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/soraka-01.png" alt="soraka-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Dryad Soraka</p>
+									<span>Too many forget that the heart of the Elderwood was once gentle and kind. Within its confines rested fae, sylvans, and dryads - creatures from another age, who looked upon humanity with curious eyes. Now only a scattered few remain, and fewer still, like Soraka, who regard humans fondly.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/veigar-07.png" alt="veigar-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Veigar</p>
+									<span>A small number of the Elderwood's children remain largely unaffected by the growing influence of the Coven, to the relief of scholars and storytellers alike. Unfortunately, those particular children are some of the most whimsical and dangerous, including among their number the insane goblin Veigar and his cursed, hallucinogenic toadstools.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/xayah-03.png" alt="xayah-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Xayah</p>
+									<span>Deep in the shaded canopies of the Elderwood, the Fey Prince Rakan and Princess Xayah hold court over two rival fairy dominions. Though Princess Xayah has seen the darkness of the world beyond, she has chosen to simply adopt its colors for her court rather than confront it.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/ivern-03.png" alt="ivern-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Ivern</p>
+									<span>A nightmarish totem forged of witchcraft and forbidden incantations, Ivern stood among the Old Gods in the days before their destruction. Left inert for hundreds of years, he has risen along with his brethren to annihilate the paltry works of man.</span>
+								</div>
+							</div>
+							<div class="skin-detail__inner--item fade">
+								<div class="skin-detail__inner--img">
+									<img src="assets/images/lol/nocturne-05.png" alt="nocturne-eclipse">
+								</div>
+								<div class="skin-detail__inner--text">
+									<p>Elderwood Nocturne</p>
+									<span>The great corpses of the Old Gods fed the land, and in time even the Elderwood would come to grow over their putrid rot - hiding it, perhaps, for a time. But the Gods never truly died and, with the resurgence of the Coven, one has risen again–Nocturne, the Eternal Nightmare.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 			</li>
 			<li class="lol-inner__footer">
 				<div class="logo">
@@ -297,6 +392,7 @@
 	</footer><!-- /footer -->
 
 	<script src="assets/js/common.js"></script>
+	<script src="assets/js/lol-skin.js"></script>
 </body>
 
 </html>

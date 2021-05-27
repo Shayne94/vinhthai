@@ -967,7 +967,8 @@ main {
         .lol .lol-inner__cine .list--item {
           width: 13%;
           position: relative;
-          text-align: center;
+          text-align: justify;
+          text-align-last: center;
           font-weight: 500;
           background-color: #fff;
           padding: 10px 8px 8px 10px;
@@ -985,7 +986,8 @@ main {
             justify-content: center;
             flex-wrap: wrap;
             align-items: flex-end;
-            text-align: center;
+            text-align: justify;
+            text-align-last: center;
             padding-bottom: 2px;
             font-family: 'Playball', cursive;
             font-size: 20px;
@@ -1009,25 +1011,26 @@ main {
     .lol .lol-inner__reg {
       margin-bottom: 80px; }
       .lol .lol-inner__reg .reg-title {
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
         font-family: 'Playball', cursive;
-        font-size: 36px;
+        font-size: 48px;
         color: #fff;
         text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7;
         margin-bottom: 50px;
         position: relative; }
         .lol .lol-inner__reg .reg-title:before {
           content: '\27A2';
-          font-size: 36px;
+          font-size: 48px;
           position: absolute;
           top: -4px;
-          left: 400px; }
+          left: 325px; }
         .lol .lol-inner__reg .reg-title:after {
           content: '\27A3';
-          font-size: 36px;
+          font-size: 48px;
           position: absolute;
           top: -4px;
-          right: 400px;
+          right: 325px;
           transform: scaleX(-1); }
       .lol .lol-inner__reg .reg-list {
         display: flex;
@@ -1047,7 +1050,8 @@ main {
           width: calc(25% - 20px);
           margin: 0 10px 20px;
           position: relative;
-          text-align: center;
+          text-align: justify;
+          text-align-last: center;
           transition: all 0.3s ease;
           cursor: pointer; }
           .lol .lol-inner__reg .reg-list .reg-item a {
@@ -1060,7 +1064,7 @@ main {
             .lol .lol-inner__reg .reg-list .reg-item a video {
               position: relative;
               width: 100%;
-              border: 2px solid #fff;
+              border: 1px solid #fff;
               z-index: 1; }
             .lol .lol-inner__reg .reg-list .reg-item a img {
               left: 50%;
@@ -1079,7 +1083,8 @@ main {
               color: #fff;
               letter-spacing: 1px;
               position: absolute;
-              text-align: center;
+              text-align: justify;
+              text-align-last: center;
               transition: all 0.3s ease;
               z-index: 3; }
             .lol .lol-inner__reg .reg-list .reg-item a:before {
@@ -1111,7 +1116,8 @@ main {
       font-family: 'Playball', cursive;
       font-size: 48px;
       letter-spacing: 1px;
-      text-align: center;
+      text-align: justify;
+      text-align-last: center;
       text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7;
       color: #fff; }
     .lol .lol-inner__reg-detail .intro__about {
@@ -1189,7 +1195,8 @@ main {
           max-height: 518px; }
       .lol .lol-inner__reg-detail .reg-vision__item--text {
         color: #fff;
-        text-align: center; }
+        text-align: justify;
+        text-align-last: center; }
         .lol .lol-inner__reg-detail .reg-vision__item--text p {
           font-family: 'Playball', cursive;
           font-size: 32px;
@@ -1197,28 +1204,12 @@ main {
           margin: 70px 0 10px; }
         .lol .lol-inner__reg-detail .reg-vision__item--text span {
           line-height: 1.75; }
-      .lol .lol-inner__reg-detail .reg-vision__fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s; }
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
-
-@keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
       .lol .lol-inner__reg-detail .reg-vision__pagi {
         position: absolute;
         top: 666px;
         width: 100%;
-        text-align: center; }
+        text-align: justify;
+        text-align-last: center; }
         .lol .lol-inner__reg-detail .reg-vision__pagi--dot {
           cursor: pointer;
           height: 15px;
@@ -1266,13 +1257,14 @@ main {
             z-index: 1; }
           .lol .lol-inner__reg-detail .reg-champ__item--inner img {
             width: 100%;
-            border: 2px solid #fff; }
+            border: 1px solid #fff; }
           .lol .lol-inner__reg-detail .reg-champ__item--inner .champ-text {
             font-family: 'Playball', cursive;
             font-size: 20px;
             letter-spacing: 1px;
             width: calc(100% - 14px);
-            text-align: center;
+            text-align: justify;
+            text-align-last: center;
             text-transform: capitalize;
             position: absolute;
             bottom: 10px;
@@ -1308,31 +1300,32 @@ main {
         transition: all 0.3s ease; }
         .lol .lol-inner__reg-detail .reg-other__item img {
           width: 100%;
-          border: 2px solid #fff; }
+          border: 1px solid #fff; }
         .lol .lol-inner__reg-detail .reg-other__item:hover, .lol .lol-inner__reg-detail .reg-other__item.active {
           box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7), 0px -3px 5px rgba(255, 255, 255, 0.7), 3px 0px 5px rgba(255, 255, 255, 0.7), -3px 0px 5px rgba(255, 255, 255, 0.7); }
     .lol .lol-inner__champ {
       margin-bottom: 80px; }
       .lol .lol-inner__champ .champ-title {
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
         font-family: 'Playball', cursive;
-        font-size: 36px;
+        font-size: 48px;
         color: #fff;
         text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7;
         margin-bottom: 50px;
         position: relative; }
         .lol .lol-inner__champ .champ-title:before {
           content: '\27A2';
-          font-size: 36px;
+          font-size: 48px;
           position: absolute;
           top: -4px;
-          left: 410px; }
+          left: 300px; }
         .lol .lol-inner__champ .champ-title:after {
           content: '\27A3';
-          font-size: 36px;
+          font-size: 48px;
           position: absolute;
           top: -4px;
-          right: 410px;
+          right: 300px;
           transform: scaleX(-1); }
       .lol .lol-inner__champ .champ-list {
         display: flex;
@@ -1360,13 +1353,14 @@ main {
               z-index: 1; }
             .lol .lol-inner__champ .champ-list .champ-item__inner img {
               width: 100%;
-              border: 2px solid #fff; }
+              border: 1px solid #fff; }
             .lol .lol-inner__champ .champ-list .champ-item__inner .champ-text {
               font-family: 'Playball', cursive;
               font-size: 20px;
               letter-spacing: 1px;
               width: calc(100% - 14px);
-              text-align: center;
+              text-align: justify;
+              text-align-last: center;
               text-transform: capitalize;
               position: absolute;
               bottom: 10px;
@@ -1391,14 +1385,16 @@ main {
             font-family: 'Playball', cursive;
             font-size: 48px;
             letter-spacing: 1px;
-            text-align: center;
+            text-align: justify;
+            text-align-last: center;
             text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7; }
           .lol .lol-inner__champ-detail .intro__name--sub {
             text-transform: uppercase;
             color: #0099f7;
             font-weight: 500;
             font-size: 28px;
-            text-align: center; }
+            text-align: justify;
+            text-align-last: center; }
         .lol .lol-inner__champ-detail .intro__about {
           display: flex;
           justify-content: space-between;
@@ -1410,7 +1406,8 @@ main {
               height: 100px;
               padding-top: 10px; }
             .lol .lol-inner__champ-detail .intro__about .role p {
-              text-align: center;
+              text-align: justify;
+              text-align-last: center;
               text-transform: uppercase;
               margin-top: 20px;
               color: #0099f7;
@@ -1424,7 +1421,8 @@ main {
             margin-top: 10px;
             text-align: justify; }
       .lol .lol-inner__champ-detail .screenshot {
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
         margin-bottom: 70px; }
       .lol .lol-inner__champ-detail .ability {
         position: relative;
@@ -1450,7 +1448,7 @@ main {
             .lol .lol-inner__champ-detail .ability .ability-list__item img {
               width: 100%;
               height: 100%;
-              border: 2px solid #fff; }
+              border: 1px solid #fff; }
             .lol .lol-inner__champ-detail .ability .ability-list__item:hover, .lol .lol-inner__champ-detail .ability .ability-list__item.active {
               box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7), 0px -3px 5px rgba(255, 255, 255, 0.7), 3px 0px 5px rgba(255, 255, 255, 0.7), -3px 0px 5px rgba(255, 255, 255, 0.7); }
         .lol .lol-inner__champ-detail .ability .ability-text {
@@ -1532,7 +1530,8 @@ main {
               width: 100%;
               position: absolute;
               bottom: 25px;
-              text-align: center;
+              text-align: justify;
+              text-align-last: center;
               font-family: 'Playball', cursive;
               font-size: 28px;
               text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7;
@@ -1553,231 +1552,189 @@ main {
             transition: all 0.3s ease; }
             .lol .lol-inner__champ-detail .champ-skin .champ-skin-list__item img {
               width: 100%;
-              border: 2px solid #fff; }
+              border: 1px solid #fff; }
             .lol .lol-inner__champ-detail .champ-skin .champ-skin-list__item:hover, .lol .lol-inner__champ-detail .champ-skin .champ-skin-list__item.active {
               box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7), 0px -3px 5px rgba(255, 255, 255, 0.7), 3px 0px 5px rgba(255, 255, 255, 0.7), -3px 0px 5px rgba(255, 255, 255, 0.7); }
           .lol .lol-inner__champ-detail .champ-skin .champ-skin-list .size01 {
             width: calc(100% / 2 - 10px); }
     .lol .lol-inner__skin {
-      display: flex;
-      justify-content: space-between;
-      align-content: space-between;
-      flex-wrap: wrap;
-      height: calc(100vh - 305px); }
-      @media screen and (max-width: 1440px) {
-        .lol .lol-inner__skin {
-          height: calc(100vh - 285px); } }
-      .lol .lol-inner__skin .skin-item {
-        max-width: 242.5px;
-        width: calc(100% / 6 - 120px / 5);
-        height: calc(100% / 3 - 60px / 3);
-        position: relative;
-        cursor: pointer; }
-        @media screen and (max-width: 1440px) {
-          .lol .lol-inner__skin .skin-item {
-            width: calc(100% / 6 - 125px / 6);
-            height: calc(100% / 3 - 60px / 3); } }
-        .lol .lol-inner__skin .skin-item__inner {
+      margin-bottom: 80px; }
+      .lol .lol-inner__skin .skin-title {
+        text-align: justify;
+        text-align-last: center;
+        font-family: 'Playball', cursive;
+        font-size: 48px;
+        color: #fff;
+        text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7;
+        margin-bottom: 50px;
+        position: relative; }
+        .lol .lol-inner__skin .skin-title:before {
+          content: '\27A2';
+          font-size: 48px;
           position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          overflow: hidden;
-          z-index: 1;
-          padding: 5px;
-          background-color: #fff;
-          transition: all .3s ease; }
-          @media screen and (max-width: 1440px) {
-            .lol .lol-inner__skin .skin-item__inner {
-              padding: 3px; } }
-          .lol .lol-inner__skin .skin-item__inner:hover {
-            transform: scale(1.1); }
-            .lol .lol-inner__skin .skin-item__inner:hover .skin-text {
-              text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7; }
-          .lol .lol-inner__skin .skin-item__inner .skin-bg {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            bottom: 5px;
-            right: 5px;
-            background-color: #0a0a0c;
-            background-repeat: no-repeat;
-            background-size: cover;
-            transition: opacity .3s ease; }
-            @media screen and (max-width: 1440px) {
-              .lol .lol-inner__skin .skin-item__inner .skin-bg {
-                top: 3px;
-                left: 3px;
-                bottom: 3px;
-                right: 3px; } }
-            .lol .lol-inner__skin .skin-item__inner .skin-bg:before {
+          top: -4px;
+          left: 375px; }
+        .lol .lol-inner__skin .skin-title:after {
+          content: '\27A3';
+          font-size: 48px;
+          position: absolute;
+          top: -4px;
+          right: 375px;
+          transform: scaleX(-1); }
+      .lol .lol-inner__skin .skin-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: calc(100% + 20px);
+        margin: 0 -10px; }
+        .lol .lol-inner__skin .skin-list .skin-item {
+          margin: 0 10px 20px;
+          width: calc(100% / 5 - 20px);
+          cursor: pointer; }
+          .lol .lol-inner__skin .skin-list .skin-item__inner {
+            position: relative;
+            padding: 7px;
+            transition: all 0.3s ease; }
+            .lol .lol-inner__skin .skin-list .skin-item__inner:before {
               content: '';
-              width: 100%;
-              height: 100%;
+              width: calc(100% - 18px);
+              height: calc(100% - 18px);
               background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0) 50%);
               background-size: contain;
               position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
+              top: 9px;
+              left: 9px;
               z-index: 1; }
-          .lol .lol-inner__skin .skin-item__inner .skin-text {
-            font-family: 'Playball', cursive;
-            font-size: 20px;
-            letter-spacing: 1px;
-            width: calc(100% - 10px);
-            text-align: center;
-            text-transform: capitalize;
-            position: absolute;
-            bottom: 8px;
-            color: #fff;
-            line-height: 24px;
-            transition: all .3s ease;
-            z-index: 3; }
-            @media screen and (max-width: 1440px) {
-              .lol .lol-inner__skin .skin-item__inner .skin-text {
-                width: calc(100% - 6px);
-                font-size: 16px;
-                bottom: 4px; } }
-    .lol .lol-inner__skin-detail {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      height: calc(100vh - 305px);
-      position: relative; }
-      @media screen and (max-width: 1440px) {
-        .lol .lol-inner__skin-detail {
-          height: calc(100vh - 305px); } }
-      .lol .lol-inner__skin-detail .intro__name {
-        line-height: 1;
-        margin-bottom: 10px; }
-      .lol .lol-inner__skin-detail .intro__about {
-        line-height: 1.75;
-        text-align: justify;
-        color: #fff; }
-      .lol .lol-inner__skin-detail .image-list {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 15px; }
-        .lol .lol-inner__skin-detail .image-list__item {
-          padding: 5px;
-          background-color: #fff;
-          cursor: pointer;
-          margin: 0 10px;
-          transition: all 0.3s ease-in-out; }
-          .lol .lol-inner__skin-detail .image-list__item img {
-            width: 100%; }
-          .lol .lol-inner__skin-detail .image-list__item:hover, .lol .lol-inner__skin-detail .image-list__item.active {
-            box-shadow: 0px 3px 5px rgba(0, 153, 247, 0.7), 0px -3px 5px rgba(0, 153, 247, 0.7), 3px 0px 5px rgba(0, 153, 247, 0.7), -3px 0px 5px rgba(0, 153, 247, 0.7); }
-        .lol .lol-inner__skin-detail .image-list .size01 {
-          width: calc(100% / 13 - 260px / 12);
-          margin: 10px 20px; }
-        .lol .lol-inner__skin-detail .image-list .size02 {
-          width: calc(100% / 11 - 220px / 10); }
-        .lol .lol-inner__skin-detail .image-list .size03 {
-          width: calc(100% / 7 - 140px / 6); }
-        .lol .lol-inner__skin-detail .image-list .size04 {
-          max-width: calc(100% / 5 - 100px / 4);
-          height: 150px;
-          margin: 0 15px; }
-          .lol .lol-inner__skin-detail .image-list .size04 img {
-            width: auto;
-            height: 100%; }
-        .lol .lol-inner__skin-detail .image-list .size05 {
-          width: calc(100% / 9 - 180px / 8); }
-        .lol .lol-inner__skin-detail .image-list .size06 {
-          width: calc(100% / 13 - 260px / 12);
-          margin: 10px 30px; }
-        .lol .lol-inner__skin-detail .image-list .size07 {
-          width: calc(100% / 10 - 200px / 9); }
-        .lol .lol-inner__skin-detail .image-list .size08 {
-          width: calc(100% / 13 - 260px / 12);
-          margin: 10px 15px; }
-      .lol .lol-inner__skin-detail .image-inner {
-        display: flex;
-        justify-content: center;
-        position: relative; }
-        .lol .lol-inner__skin-detail .image-inner__item {
-          backdrop-filter: blur(3px);
-          position: relative;
-          margin: 0 25px;
-          padding: 15px;
-          box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7), 0px -3px 5px rgba(255, 255, 255, 0.7), 3px 0px 5px rgba(255, 255, 255, 0.7), -3px 0px 5px rgba(255, 255, 255, 0.7); }
-          .lol .lol-inner__skin-detail .image-inner__item img, .lol .lol-inner__skin-detail .image-inner__item video {
-            height: calc(100vh - 600px); }
-            @media screen and (max-width: 1440px) {
-              .lol .lol-inner__skin-detail .image-inner__item img, .lol .lol-inner__skin-detail .image-inner__item video {
-                height: calc(100vh - 500px); } }
-          .lol .lol-inner__skin-detail .image-inner__item p {
-            display: flex;
-            justify-content: center;
-            align-content: flex-end;
-            flex-wrap: wrap;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            bottom: 15px;
-            left: 15px;
-            color: #fff;
-            padding: 10px 15px;
-            background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0) 60%); }
-            .lol .lol-inner__skin-detail .image-inner__item p span {
-              width: 100%; }
-            .lol .lol-inner__skin-detail .image-inner__item p .title {
+            .lol .lol-inner__skin .skin-list .skin-item__inner img {
+              width: 100%;
+              border: 1px solid #fff; }
+            .lol .lol-inner__skin .skin-list .skin-item__inner .skin-text {
               font-family: 'Playball', cursive;
-              font-size: 24px;
-              margin-bottom: 5px;
+              font-size: 20px;
+              letter-spacing: 1px;
+              width: calc(100% - 14px);
+              text-align: justify;
+              text-align-last: center;
+              text-transform: capitalize;
+              position: absolute;
+              bottom: 10px;
               color: #fff;
-              text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7; }
-            .lol .lol-inner__skin-detail .image-inner__item p .text {
-              font-size: 14px;
-              line-height: 20px;
-              text-align: justify; }
-        .lol .lol-inner__skin-detail .image-inner__char {
-          display: flex;
-          align-items: center; }
-          .lol .lol-inner__skin-detail .image-inner__char img {
-            width: 100%; }
-            @media screen and (max-width: 1440px) {
-              .lol .lol-inner__skin-detail .image-inner__char img {
-                width: 80%; } }
-      .lol .lol-inner__skin-detail__champ-list {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 16px 25px 15px;
-        background-color: #fff;
-        box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.3);
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out; }
-        .lol .lol-inner__skin-detail__champ-list a {
-          color: #333;
-          text-decoration: none; }
-        .lol .lol-inner__skin-detail__champ-list:hover {
-          box-shadow: 3px 3px 3px rgba(0, 153, 247, 0.3); }
-          .lol .lol-inner__skin-detail__champ-list:hover a {
-            color: #0099f7; }
-      .lol .lol-inner__skin-detail .other {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 11px 20px 10px;
-        background-color: rgba(0, 0, 0, 0.5);
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out; }
-        .lol .lol-inner__skin-detail .other a {
+              line-height: 24px;
+              transition: all .3s ease;
+              z-index: 3; }
+            .lol .lol-inner__skin .skin-list .skin-item__inner:hover, .lol .lol-inner__skin .skin-list .skin-item__inner.active {
+              box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7), 0px -3px 5px rgba(255, 255, 255, 0.7), 3px 0px 5px rgba(255, 255, 255, 0.7), -3px 0px 5px rgba(255, 255, 255, 0.7); }
+              .lol .lol-inner__skin .skin-list .skin-item__inner:hover .skin-text, .lol .lol-inner__skin .skin-list .skin-item__inner.active .skin-text {
+                text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7; }
+    .lol .lol-inner__skin-detail {
+      margin-bottom: 90px; }
+      .lol .lol-inner__skin-detail .intro__name {
+        margin-bottom: 10px;
+        font-family: 'Playball', cursive;
+        font-size: 48px;
+        letter-spacing: 1px;
+        text-align: justify;
+        text-align-last: center;
+        text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7;
+        color: #fff; }
+      .lol .lol-inner__skin-detail .intro__about {
+        padding: 25px 0 55px;
+        margin: 0 auto;
+        max-width: 960px;
+        width: 80%;
+        color: #fff;
+        text-align: justify;
+        text-align-last: center;
+        line-height: 1.75; }
+      .lol .lol-inner__skin-detail .skin-group {
+        display: flex;
+        justify-content: center;
+        width: calc(100% + 20px);
+        margin: 0 -10px 26px; }
+        .lol .lol-inner__skin-detail .skin-group__tab {
+          position: relative;
+          border: none;
+          cursor: pointer;
+          background-color: transparent;
+          font-family: 'Playball', cursive;
+          font-size: 24px;
+          padding: 15px 40px;
+          margin: 0 10px;
           color: #fff;
-          text-decoration: none; }
-        .lol .lol-inner__skin-detail .other:hover {
-          background-color: white; }
-          .lol .lol-inner__skin-detail .other:hover a {
-            color: #333; }
+          transition: all 0.3s ease; }
+          .lol .lol-inner__skin-detail .skin-group__tab:before {
+            content: '';
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            right: 7px;
+            bottom: 7px;
+            border: 1px solid #fff; }
+          .lol .lol-inner__skin-detail .skin-group__tab:hover, .lol .lol-inner__skin-detail .skin-group__tab.active {
+            text-shadow: 0px 0px 5px #0099f7, 0px 0px 10px #0099f7, 0px 0px 15px #0099f7, 0px 0px 20px #0099f7, 0px 0px 25px #0099f7;
+            box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7), 0px -3px 5px rgba(255, 255, 255, 0.7), 3px 0px 5px rgba(255, 255, 255, 0.7), -3px 0px 5px rgba(255, 255, 255, 0.7); }
+      .lol .lol-inner__skin-detail .skin-detail {
+        position: relative; }
+        .lol .lol-inner__skin-detail .skin-detail__left, .lol .lol-inner__skin-detail .skin-detail__right {
+          position: absolute;
+          width: 20%;
+          max-width: 220px; }
+          .lol .lol-inner__skin-detail .skin-detail__left img, .lol .lol-inner__skin-detail .skin-detail__right img {
+            width: 100%; }
+        .lol .lol-inner__skin-detail .skin-detail__left {
+          left: 0; }
+        .lol .lol-inner__skin-detail .skin-detail__right {
+          right: 0; }
+        .lol .lol-inner__skin-detail .skin-detail__box {
+          display: none; }
+        .lol .lol-inner__skin-detail .skin-detail__list {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: calc(100% + 20px);
+          margin: 0 -10px; }
+          .lol .lol-inner__skin-detail .skin-detail__list--item {
+            margin: 0 10px;
+            width: calc(100% / 8 - 20px);
+            cursor: pointer;
+            position: relative;
+            padding: 7px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px; }
+            .lol .lol-inner__skin-detail .skin-detail__list--item img {
+              width: 100%;
+              border: 1px solid #fff; }
+            .lol .lol-inner__skin-detail .skin-detail__list--item:hover, .lol .lol-inner__skin-detail .skin-detail__list--item.active {
+              box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7), 0px -3px 5px rgba(255, 255, 255, 0.7), 3px 0px 5px rgba(255, 255, 255, 0.7), -3px 0px 5px rgba(255, 255, 255, 0.7); }
+        .lol .lol-inner__skin-detail .skin-detail__inner {
+          position: relative; }
+          .lol .lol-inner__skin-detail .skin-detail__inner--item {
+            max-width: 750px;
+            margin: 13px auto 0; }
+          .lol .lol-inner__skin-detail .skin-detail__inner--img {
+            position: relative; }
+            .lol .lol-inner__skin-detail .skin-detail__inner--img:before {
+              content: '';
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              right: 20px;
+              bottom: 20px;
+              border: 1px solid rgba(255, 255, 255, 0.5);
+              z-index: 3; }
+            .lol .lol-inner__skin-detail .skin-detail__inner--img img {
+              width: 100%; }
+          .lol .lol-inner__skin-detail .skin-detail__inner--text {
+            color: #fff;
+            text-align: justify;
+            text-align-last: center; }
+            .lol .lol-inner__skin-detail .skin-detail__inner--text p {
+              font-family: 'Playball', cursive;
+              font-size: 32px;
+              color: #0099f7;
+              padding: 25px 0 10px; }
+            .lol .lol-inner__skin-detail .skin-detail__inner--text span {
+              line-height: 1.75; }
     .lol .lol-inner__footer {
       display: flex;
       justify-content: center;
@@ -1830,3 +1787,21 @@ main {
     left: 0;
     z-index: 3;
     transition: all 0.3s ease; }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
