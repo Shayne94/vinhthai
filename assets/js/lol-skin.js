@@ -22,6 +22,8 @@ function showSlides(n) {
 }
 
   $("[id*='skin-group__']").on('click', function() {
+    var h_skintext = $('.skin-detail__inner--text').height();
+    $('.skin-detail__left, .skin-detail__right').css({'bottom': h_skintext});
     let skingrouptab = $(this).attr('id').split('__')[1];  
     $("[class*='skin-group__']").removeClass("active");  
     $(this).addClass("active");    
@@ -37,6 +39,6 @@ function showSlides(n) {
     })
   });
 
-var h_skintext = $('.skin-detail__inner--text').height();
-$('.skin-detail__left, .skin-detail__right').css({'bottom': h_skintext});
 
+  var h_skintext = $('.skin-detail__inner--text').height();
+  $('.skin-detail__left, .skin-detail__right').css({'bottom': h_skintext})
